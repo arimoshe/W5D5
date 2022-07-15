@@ -698,3 +698,224 @@ FOREIGN KEY ("movie_id")
   [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK[0m
   [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
   [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Pluck (0.4ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "schema_sha1"], ["LIMIT", 1]]
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mMovie Load (27.5ms)[0m  [1m[34mSELECT "movies".* FROM "movies" INNER JOIN "castings" ON "castings"."movie_id" = "movies"."id" INNER JOIN "actors" ON "actors"."id" = "castings"."actor_id" GROUP BY "movies"."id" ORDER BY COUNT(actors.id) DESC LIMIT $1[0m  [["LIMIT", 3]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mMovie Load (19.6ms)[0m  [1m[34mSELECT "movies".* FROM "movies" INNER JOIN "castings" ON "castings"."movie_id" = "movies"."id" INNER JOIN "actors" ON "actors"."id" = "castings"."actor_id" GROUP BY "movies"."id" ORDER BY COUNT(actors.id) DESC LIMIT $1[0m  [["LIMIT", 3]]
+  [1m[36mTRANSACTION (4.7ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mActiveRecord::InternalMetadata Pluck (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "schema_sha1"], ["LIMIT", 1]]
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mMovie Load (10.2ms)[0m  [1m[34mSELECT "movies"."id", "movies"."title" FROM "movies" INNER JOIN "castings" ON "castings"."movie_id" = "movies"."id" INNER JOIN "actors" ON "actors"."id" = "castings"."actor_id" GROUP BY "movies"."id" ORDER BY COUNT(actors.id) DESC LIMIT $1[0m  [["LIMIT", 3]]
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mMovie Load (16.2ms)[0m  [1m[34mSELECT "movies"."id", "movies"."title" FROM "movies" INNER JOIN "castings" ON "castings"."movie_id" = "movies"."id" INNER JOIN "actors" ON "actors"."id" = "castings"."actor_id" GROUP BY "movies"."id" ORDER BY COUNT(actors.id) DESC LIMIT $1[0m  [["LIMIT", 3]]
+  [1m[36mTRANSACTION (0.9ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mActiveRecord::InternalMetadata Pluck (0.4ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "schema_sha1"], ["LIMIT", 1]]
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mMovie Load (1.1ms)[0m  [1m[34mSELECT "movies"."id", "movies"."title" FROM "movies" INNER JOIN "actors" ON "actors"."id" = "movies"."director_id" WHERE "actors"."name" IN ($1, $2)[0m  [["name", "George Lucas"], ["name", "Steven Spielberg"]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mMovie Load (1.6ms)[0m  [1m[34mSELECT "movies"."id", "movies"."title" FROM "movies" INNER JOIN "actors" ON "actors"."id" = "movies"."director_id" WHERE "actors"."name" IN ($1, $2)[0m  [["name", "George Lucas"], ["name", "Steven Spielberg"]]
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mActiveRecord::InternalMetadata Pluck (0.4ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "schema_sha1"], ["LIMIT", 1]]
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mMovie Pluck (0.7ms)[0m  [1m[34mSELECT "movies"."title" FROM "movies" WHERE (yr < 1940)[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mMovie Pluck (0.5ms)[0m  [1m[34mSELECT "movies"."title" FROM "movies" WHERE (yr < 1940)[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mActiveRecord::InternalMetadata Pluck (0.3ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "schema_sha1"], ["LIMIT", 1]]
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTRANSACTION (1.5ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mActiveRecord::InternalMetadata Pluck (1.6ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "schema_sha1"], ["LIMIT", 1]]
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mTRANSACTION (1.6ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mMovie Load (0.5ms)[0m  [1m[34mSELECT "movies"."id", "movies"."title", "movies"."yr", "movies"."score" FROM "movies" WHERE "movies"."yr" BETWEEN $1 AND $2 AND "movies"."score" BETWEEN $3 AND $4[0m  [["yr", 1980], ["yr", 1989], ["score", 3.0], ["score", 5.0]]
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mMovie Load (0.5ms)[0m  [1m[34mSELECT "movies"."id", "movies"."title", "movies"."yr", "movies"."score" FROM "movies" WHERE "movies"."yr" BETWEEN $1 AND $2 AND "movies"."score" BETWEEN $3 AND $4[0m  [["yr", 1980], ["yr", 1989], ["score", 3.0], ["score", 5.0]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mMovie Pluck (0.4ms)[0m  [1m[34mSELECT "movies"."yr" FROM "movies" WHERE (rating > 8) GROUP BY "movies"."yr"[0m
+  [1m[36mMovie Pluck (1.0ms)[0m  [1m[34mSELECT "movies"."yr" FROM "movies" WHERE (score > 8) GROUP BY "movies"."yr"[0m
+  [1m[36mActiveRecord::InternalMetadata Pluck (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "schema_sha1"], ["LIMIT", 1]]
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mMovie Load (1.2ms)[0m  [1m[34mSELECT "movies"."yr" FROM "movies" GROUP BY "movies"."yr" HAVING (MAX(score) <= 7)[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mMovie Load (0.8ms)[0m  [1m[34mSELECT "movies"."yr" FROM "movies" GROUP BY "movies"."yr" HAVING (MAX(score) <= 7)[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mMovie Pluck (0.4ms)[0m  [1m[34mSELECT "movies"."yr" FROM "movies" WHERE (rating > 8) GROUP BY "movies"."yr"[0m
+  [1m[36mActiveRecord::InternalMetadata Pluck (0.3ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "schema_sha1"], ["LIMIT", 1]]
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mTRANSACTION (1.0ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mMovie Load (1.7ms)[0m  [1m[34mSELECT "movies"."yr" FROM "movies" GROUP BY "movies"."yr" HAVING (MAX(score) <= 8)[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mMovie Load (0.9ms)[0m  [1m[34mSELECT "movies"."yr" FROM "movies" GROUP BY "movies"."yr" HAVING (MAX(score) <= 8)[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mActiveRecord::InternalMetadata Pluck (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "schema_sha1"], ["LIMIT", 1]]
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mMovie Load (0.6ms)[0m  [1m[34mSELECT "movies"."id", "movies"."title", "movies"."yr", "movies"."score" FROM "movies" WHERE "movies"."yr" BETWEEN $1 AND $2 AND "movies"."score" BETWEEN $3 AND $4[0m  [["yr", 1980], ["yr", 1989], ["score", 3.0], ["score", 5.0]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mMovie Load (0.7ms)[0m  [1m[34mSELECT "movies"."id", "movies"."title", "movies"."yr", "movies"."score" FROM "movies" WHERE "movies"."yr" BETWEEN $1 AND $2 AND "movies"."score" BETWEEN $3 AND $4[0m  [["yr", 1980], ["yr", 1989], ["score", 3.0], ["score", 5.0]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mActiveRecord::InternalMetadata Pluck (0.3ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "schema_sha1"], ["LIMIT", 1]]
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mMovie Load (0.6ms)[0m  [1m[34mSELECT "movies"."id", "movies"."title", "movies"."yr", "movies"."score" FROM "movies" WHERE "movies"."yr" BETWEEN $1 AND $2 AND "movies"."score" BETWEEN $3 AND $4[0m  [["yr", 1980], ["yr", 1989], ["score", 3.0], ["score", 5.0]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mMovie Load (0.5ms)[0m  [1m[34mSELECT "movies"."id", "movies"."title", "movies"."yr", "movies"."score" FROM "movies" WHERE "movies"."yr" BETWEEN $1 AND $2 AND "movies"."score" BETWEEN $3 AND $4[0m  [["yr", 1980], ["yr", 1989], ["score", 3.0], ["score", 5.0]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mActiveRecord::InternalMetadata Pluck (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "schema_sha1"], ["LIMIT", 1]]
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mMovie Pluck (1.2ms)[0m  [1m[34mSELECT "movies"."yr" FROM "movies" GROUP BY "movies"."yr" HAVING (MAX(score) <= 8)[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mMovie Pluck (0.7ms)[0m  [1m[34mSELECT "movies"."yr" FROM "movies" GROUP BY "movies"."yr" HAVING (MAX(score) <= 8)[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mActiveRecord::InternalMetadata Pluck (0.4ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "schema_sha1"], ["LIMIT", 1]]
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mActiveRecord::InternalMetadata Pluck (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "schema_sha1"], ["LIMIT", 1]]
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Pluck (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "schema_sha1"], ["LIMIT", 1]]
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Pluck (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "schema_sha1"], ["LIMIT", 1]]
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActor Load (1.5ms)[0m  [1m[34mSELECT "actors"."id", "actors"."name" FROM "actors" INNER JOIN "castings" ON "castings"."actor_id" = "actors"."id" INNER JOIN "movies" ON "movies"."id" = "castings"."movie_id" WHERE (movies.title = 'Star Wars') ORDER BY "ord" DESC[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActor Load (0.7ms)[0m  [1m[34mSELECT "actors"."id", "actors"."name" FROM "actors" INNER JOIN "castings" ON "castings"."actor_id" = "actors"."id" INNER JOIN "movies" ON "movies"."id" = "castings"."movie_id" WHERE (movies.title = 'Star Wars') ORDER BY "ord" DESC[0m
+  [1m[36mActor Load (0.8ms)[0m  [1m[34mSELECT "actors"."id", "actors"."name" FROM "actors" INNER JOIN "castings" ON "castings"."actor_id" = "actors"."id" INNER JOIN "movies" ON "movies"."id" = "castings"."movie_id" WHERE (movies.title = 'Forrest Gump') ORDER BY "ord" DESC[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mActiveRecord::InternalMetadata Pluck (0.4ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "schema_sha1"], ["LIMIT", 1]]
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActor Load (2.7ms)[0m  [1m[34mSELECT "actors"."id", "actors"."name" FROM "actors" INNER JOIN "castings" ON "castings"."actor_id" = "actors"."id" INNER JOIN "movies" ON "movies"."id" = "castings"."movie_id" WHERE (movies.title = 'Star Wars') ORDER BY "ord" ASC[0m
+  [1m[36mActor Load (0.7ms)[0m  [1m[34mSELECT "actors"."id", "actors"."name" FROM "actors" INNER JOIN "castings" ON "castings"."actor_id" = "actors"."id" INNER JOIN "movies" ON "movies"."id" = "castings"."movie_id" WHERE (movies.title = 'Forrest Gump') ORDER BY "ord" ASC[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActor Load (0.8ms)[0m  [1m[34mSELECT "actors"."id", "actors"."name" FROM "actors" INNER JOIN "castings" ON "castings"."actor_id" = "actors"."id" INNER JOIN "movies" ON "movies"."id" = "castings"."movie_id" WHERE (movies.title = 'Star Wars') ORDER BY "ord" ASC[0m
+  [1m[36mActor Load (1.3ms)[0m  [1m[34mSELECT "actors"."id", "actors"."name" FROM "actors" INNER JOIN "castings" ON "castings"."actor_id" = "actors"."id" INNER JOIN "movies" ON "movies"."id" = "castings"."movie_id" WHERE (movies.title = 'Forrest Gump') ORDER BY "ord" ASC[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mActiveRecord::InternalMetadata Pluck (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "schema_sha1"], ["LIMIT", 1]]
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mMovie Load (0.9ms)[0m  [1m[34mSELECT "movies".* FROM "movies" INNER JOIN "castings" ON "castings"."movie_id" = "movies"."id" INNER JOIN "actors" ON "actors"."id" = "castings"."actor_id" WHERE "movies"."director_id" = $1[0m  [["director_id", nil]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mMovie Load (0.5ms)[0m  [1m[34mSELECT "movies".* FROM "movies" INNER JOIN "castings" ON "castings"."movie_id" = "movies"."id" INNER JOIN "actors" ON "actors"."id" = "castings"."actor_id" WHERE "movies"."director_id" = $1[0m  [["director_id", nil]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mActiveRecord::InternalMetadata Pluck (0.3ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "schema_sha1"], ["LIMIT", 1]]
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mMovie Load (15.7ms)[0m  [1m[34mSELECT "movies".* FROM "movies" INNER JOIN "castings" ON "castings"."movie_id" = "movies"."id" INNER JOIN "actors" ON "actors"."id" = "castings"."actor_id" WHERE (movies.director_id = actors.id)[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mMovie Load (7.6ms)[0m  [1m[34mSELECT "movies".* FROM "movies" INNER JOIN "castings" ON "castings"."movie_id" = "movies"."id" INNER JOIN "actors" ON "actors"."id" = "castings"."actor_id" WHERE (movies.director_id = actors.id)[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mActiveRecord::InternalMetadata Pluck (0.3ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "schema_sha1"], ["LIMIT", 1]]
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Pluck (0.3ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "schema_sha1"], ["LIMIT", 1]]
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mMovie Load (12.2ms)[0m  [1m[34mSELECT "movies"."id", "movies"."title", "actors"."name" FROM "movies" INNER JOIN "castings" ON "castings"."movie_id" = "movies"."id" INNER JOIN "actors" ON "actors"."id" = "castings"."actor_id" WHERE (movies.director_id = actors.id)[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mMovie Load (2.9ms)[0m  [1m[34mSELECT "movies"."id", "movies"."title", "actors"."name" FROM "movies" INNER JOIN "castings" ON "castings"."movie_id" = "movies"."id" INNER JOIN "actors" ON "actors"."id" = "castings"."actor_id" WHERE (movies.director_id = actors.id)[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mActiveRecord::InternalMetadata Pluck (0.4ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "schema_sha1"], ["LIMIT", 1]]
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mMovie Load (3.0ms)[0m  [1m[34mSELECT "movies"."id", "movies"."title", "actors"."name" FROM "movies" INNER JOIN "castings" ON "castings"."movie_id" = "movies"."id" INNER JOIN "actors" ON "actors"."id" = "castings"."actor_id" WHERE (movies.director_id = actors.id) AND (castings.ord = 1)[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mMovie Load (2.6ms)[0m  [1m[34mSELECT "movies"."id", "movies"."title", "actors"."name" FROM "movies" INNER JOIN "castings" ON "castings"."movie_id" = "movies"."id" INNER JOIN "actors" ON "actors"."id" = "castings"."actor_id" WHERE (movies.director_id = actors.id) AND (castings.ord = 1)[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mActiveRecord::InternalMetadata Pluck (0.3ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "schema_sha1"], ["LIMIT", 1]]
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mActiveRecord::InternalMetadata Pluck (0.4ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "schema_sha1"], ["LIMIT", 1]]
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActor Load (10.2ms)[0m  [1m[34mSELECT "actors"."id", "actors"."name", COUNT(*) FROM "actors" INNER JOIN "castings" ON "castings"."actor_id" = "actors"."id" WHERE (castings.ord > 1) GROUP BY "actors"."id" ORDER BY COUNT(*) DESC LIMIT $1[0m  [["LIMIT", 2]]
+  [1m[36mTRANSACTION (2.6ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActor Load (7.8ms)[0m  [1m[34mSELECT "actors"."id", "actors"."name", COUNT(*) FROM "actors" INNER JOIN "castings" ON "castings"."actor_id" = "actors"."id" WHERE (castings.ord > 1) GROUP BY "actors"."id" ORDER BY COUNT(*) DESC LIMIT $1[0m  [["LIMIT", 2]]
+  [1m[36mTRANSACTION (1.0ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mActiveRecord::InternalMetadata Pluck (0.4ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "schema_sha1"], ["LIMIT", 1]]
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActor Load (0.5ms)[0m  [1m[34mSELECT "actors"."id", "actors"."name", "roles" FROM "actors" INNER JOIN "castings" ON "castings"."actor_id" = "actors"."id" WHERE (castings.ord > 1) GROUP BY "actors"."id" ORDER BY COUNT(*) DESC LIMIT $1[0m  [["LIMIT", 2]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActor Load (1.3ms)[0m  [1m[34mSELECT "actors"."id", "actors"."name", "roles" FROM "actors" INNER JOIN "castings" ON "castings"."actor_id" = "actors"."id" WHERE (castings.ord > 1) GROUP BY "actors"."id" ORDER BY COUNT(*) DESC LIMIT $1[0m  [["LIMIT", 2]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mActiveRecord::InternalMetadata Pluck (0.3ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "schema_sha1"], ["LIMIT", 1]]
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mTRANSACTION (3.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActor Load (11.2ms)[0m  [1m[34mSELECT "actors"."id", "actors"."name", COUNT(*) as roles FROM "actors" INNER JOIN "castings" ON "castings"."actor_id" = "actors"."id" WHERE (castings.ord > 1) GROUP BY "actors"."id" ORDER BY COUNT(*) ASC LIMIT $1[0m  [["LIMIT", 2]]
+  [1m[36mTRANSACTION (1.0ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActor Load (19.5ms)[0m  [1m[34mSELECT "actors"."id", "actors"."name", COUNT(*) as roles FROM "actors" INNER JOIN "castings" ON "castings"."actor_id" = "actors"."id" WHERE (castings.ord > 1) GROUP BY "actors"."id" ORDER BY COUNT(*) ASC LIMIT $1[0m  [["LIMIT", 2]]
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mActiveRecord::InternalMetadata Pluck (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "schema_sha1"], ["LIMIT", 1]]
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActor Load (12.7ms)[0m  [1m[34mSELECT "actors"."id", "actors"."name", COUNT(*) as roles FROM "actors" INNER JOIN "castings" ON "castings"."actor_id" = "actors"."id" WHERE (castings.ord > 1) GROUP BY "actors"."id" ORDER BY COUNT(*) DESC LIMIT $1[0m  [["LIMIT", 2]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActor Load (9.7ms)[0m  [1m[34mSELECT "actors"."id", "actors"."name", COUNT(*) as roles FROM "actors" INNER JOIN "castings" ON "castings"."actor_id" = "actors"."id" WHERE (castings.ord > 1) GROUP BY "actors"."id" ORDER BY COUNT(*) DESC LIMIT $1[0m  [["LIMIT", 2]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mActiveRecord::InternalMetadata Pluck (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "schema_sha1"], ["LIMIT", 1]]
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActor Load (0.9ms)[0m  [1m[34mSELECT "actors"."id", "actors"."name", COUNT(*) as roles FROM "actors" INNER JOIN "castings" ON "castings"."actor_id" = "actors"."id" WHERE (castings.ord > 1) GROUP BY "actors"."id" ORDER BY "COUNT(castings"."id)" DESC LIMIT $1[0m  [["LIMIT", 2]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActor Load (0.5ms)[0m  [1m[34mSELECT "actors"."id", "actors"."name", COUNT(*) as roles FROM "actors" INNER JOIN "castings" ON "castings"."actor_id" = "actors"."id" WHERE (castings.ord > 1) GROUP BY "actors"."id" ORDER BY "COUNT(castings"."id)" DESC LIMIT $1[0m  [["LIMIT", 2]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mActiveRecord::InternalMetadata Pluck (0.4ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "schema_sha1"], ["LIMIT", 1]]
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActor Load (0.6ms)[0m  [1m[34mSELECT "actors"."id", "actors"."name", COUNT(*) as roles FROM "actors" INNER JOIN "castings" ON "castings"."actor_id" = "actors"."id" WHERE (castings.ord > 1) GROUP BY "actors"."id" ORDER BY "COUNT(castings"."actor_id)" DESC LIMIT $1[0m  [["LIMIT", 2]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActor Load (0.4ms)[0m  [1m[34mSELECT "actors"."id", "actors"."name", COUNT(*) as roles FROM "actors" INNER JOIN "castings" ON "castings"."actor_id" = "actors"."id" WHERE (castings.ord > 1) GROUP BY "actors"."id" ORDER BY "COUNT(castings"."actor_id)" DESC LIMIT $1[0m  [["LIMIT", 2]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mActiveRecord::InternalMetadata Pluck (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "schema_sha1"], ["LIMIT", 1]]
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActor Load (14.9ms)[0m  [1m[34mSELECT "actors"."id", "actors"."name", COUNT(*) as roles FROM "actors" INNER JOIN "castings" ON "castings"."actor_id" = "actors"."id" WHERE (castings.ord > 1) GROUP BY "actors"."id" ORDER BY "roles" DESC LIMIT $1[0m  [["LIMIT", 2]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActor Load (8.8ms)[0m  [1m[34mSELECT "actors"."id", "actors"."name", COUNT(*) as roles FROM "actors" INNER JOIN "castings" ON "castings"."actor_id" = "actors"."id" WHERE (castings.ord > 1) GROUP BY "actors"."id" ORDER BY "roles" DESC LIMIT $1[0m  [["LIMIT", 2]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mActiveRecord::InternalMetadata Pluck (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "schema_sha1"], ["LIMIT", 1]]
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[31mROLLBACK[0m
