@@ -919,3 +919,1369 @@ FOREIGN KEY ("movie_id")
   [1m[36mTRANSACTION (0.3ms)[0m  [1m[31mROLLBACK[0m
   [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
   [1m[36mTRANSACTION (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mActiveRecord::InternalMetadata Pluck (0.4ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "schema_sha1"], ["LIMIT", 1]]
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mMovie Load (2.2ms)[0m  [1m[34mSELECT "movies"."title", "movies"."id" FROM "movies" INNER JOIN "castings" ON "castings"."movie_id" = "movies"."id" INNER JOIN "actors" ON "actors"."id" = "castings"."actor_id" WHERE (actors.name IN ('Ben Affleck','Matt Damon'))[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mMovie Load (1.3ms)[0m  [1m[34mSELECT "movies"."title", "movies"."id" FROM "movies" INNER JOIN "castings" ON "castings"."movie_id" = "movies"."id" INNER JOIN "actors" ON "actors"."id" = "castings"."actor_id" WHERE (actors.name IN ('Ben Affleck','Matt Damon'))[0m
+  [1m[36mMovie Load (1.4ms)[0m  [1m[34mSELECT "movies"."title", "movies"."id" FROM "movies" INNER JOIN "castings" ON "castings"."movie_id" = "movies"."id" INNER JOIN "actors" ON "actors"."id" = "castings"."actor_id" WHERE (actors.name IN ('Geena Davis','Susan Sarandon'))[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActor Load (0.2ms)[0m  [1m[34mSELECT "actors".* FROM "actors" WHERE "actors"."name" = $1 LIMIT $2[0m  [["name", "Sylvester Stallone"], ["LIMIT", 1]]
+  [1m[36mMovie Load (0.6ms)[0m  [1m[34mSELECT "movies".* FROM "movies" INNER JOIN "castings" ON "movies"."id" = "castings"."movie_id" WHERE "castings"."actor_id" = $1[0m  [["actor_id", 5]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mMovie Load (2.5ms)[0m  [1m[34mSELECT "movies"."title", "movies"."id" FROM "movies" INNER JOIN "castings" ON "castings"."movie_id" = "movies"."id" INNER JOIN "actors" ON "actors"."id" = "castings"."actor_id" WHERE (actors.name IN ('Ben Affleck','Matt Damon'))[0m
+  [1m[36mMovie Load (0.8ms)[0m  [1m[34mSELECT "movies"."title", "movies"."id" FROM "movies" INNER JOIN "castings" ON "castings"."movie_id" = "movies"."id" INNER JOIN "actors" ON "actors"."id" = "castings"."actor_id" WHERE (actors.name IN ('Ben Affleck','Matt Damon')) /* loading for inspect */ LIMIT $1[0m  [["LIMIT", 11]]
+  [1m[36mMovie Load (3.2ms)[0m  [1m[34mSELECT "movies"."title", "movies"."id" FROM "movies" INNER JOIN "castings" ON "castings"."movie_id" = "movies"."id" INNER JOIN "actors" ON "actors"."id" = "castings"."actor_id" WHERE (actors.name IN ('Ben Affleck','Matt Damon'))[0m
+  [1m[36mMovie Load (1.5ms)[0m  [1m[34mSELECT "movies"."title", "movies"."id" FROM "movies" INNER JOIN "castings" ON "castings"."movie_id" = "movies"."id" INNER JOIN "actors" ON "actors"."id" = "castings"."actor_id" WHERE (actors.name IN ('Ben Affleck','Matt Damon')) /* loading for inspect */ LIMIT $1[0m  [["LIMIT", 11]]
+  [1m[36mMovie Load (2.1ms)[0m  [1m[34mSELECT "movies"."title", "movies"."id" FROM "movies" INNER JOIN "castings" ON "castings"."movie_id" = "movies"."id" INNER JOIN "actors" ON "actors"."id" = "castings"."actor_id" WHERE (actors.name IN ('Ben Affleck','Matt Damon')) /* loading for inspect */ LIMIT $1[0m  [["LIMIT", 11]]
+  [1m[36mMovie Load (2.3ms)[0m  [1m[34mSELECT "movies"."title", "movies"."id" FROM "movies" INNER JOIN "castings" ON "castings"."movie_id" = "movies"."id" INNER JOIN "actors" ON "actors"."id" = "castings"."actor_id" WHERE (actors.name IN ('Ben Affleck','Matt Damon')) /* loading for inspect */ LIMIT $1[0m  [["LIMIT", 11]]
+  [1m[36mMovie Load (2.1ms)[0m  [1m[34mSELECT "movies"."title", "movies"."id" FROM "movies" INNER JOIN "castings" ON "castings"."movie_id" = "movies"."id" INNER JOIN "actors" ON "actors"."id" = "castings"."actor_id" WHERE (actors.name IN ('Ben Affleck','Matt Damon')) /* loading for inspect */ LIMIT $1[0m  [["LIMIT", 11]]
+  [1m[36mMovie Load (1.4ms)[0m  [1m[34mSELECT "movies"."title", "movies"."id" FROM "movies" INNER JOIN "castings" ON "castings"."movie_id" = "movies"."id" INNER JOIN "actors" ON "actors"."id" = "castings"."actor_id" WHERE (actors.name IN ('Ben Affleck','Matt Damon'))[0m
+  [1m[36mMovie Load (0.6ms)[0m  [1m[34mSELECT "movies"."title", "movies"."id" FROM "movies" INNER JOIN "castings" ON "castings"."movie_id" = "movies"."id" INNER JOIN "actors" ON "actors"."id" = "castings"."actor_id" WHERE (actors.name IN ('Ben Affleck','Matt Damon')) /* loading for inspect */ LIMIT $1[0m  [["LIMIT", 11]]
+  [1m[35mSQL (1.4ms)[0m  [1m[34mSELECT "movies"."title", "movies"."id", "movies"."id" AS t0_r0, "actors"."id" AS t1_r0, "actors"."name" AS t1_r1, "actors"."created_at" AS t1_r2, "actors"."updated_at" AS t1_r3 FROM "movies" INNER JOIN "castings" ON "castings"."movie_id" = "movies"."id" INNER JOIN "actors" ON "actors"."id" = "castings"."actor_id" WHERE (actors.name IN ('Ben Affleck','Matt Damon'))[0m
+  [1m[35mSQL (2.4ms)[0m  [1m[34mSELECT "movies"."title", "movies"."id", "actors"."name", "movies"."id" AS t0_r0, "actors"."id" AS t1_r0, "actors"."name" AS t1_r1, "actors"."created_at" AS t1_r2, "actors"."updated_at" AS t1_r3 FROM "movies" INNER JOIN "castings" ON "castings"."movie_id" = "movies"."id" INNER JOIN "actors" ON "actors"."id" = "castings"."actor_id" WHERE (actors.name IN ('Ben Affleck','Matt Damon'))[0m
+  [1m[35mSQL (2.4ms)[0m  [1m[34mSELECT "movies"."title", "movies"."id", "actors"."name", "movies"."id" AS t0_r0, "actors"."id" AS t1_r0, "actors"."name" AS t1_r1, "actors"."created_at" AS t1_r2, "actors"."updated_at" AS t1_r3 FROM "movies" INNER JOIN "castings" ON "castings"."movie_id" = "movies"."id" INNER JOIN "actors" ON "actors"."id" = "castings"."actor_id" WHERE (actors.name IN ('Ben Affleck','Matt Damon'))[0m
+  [1m[35mSQL (2.0ms)[0m  [1m[34mSELECT "movies"."title", "movies"."id", "actors"."name", "movies"."id" AS t0_r0, "actors"."id" AS t1_r0, "actors"."name" AS t1_r1, "actors"."created_at" AS t1_r2, "actors"."updated_at" AS t1_r3 FROM "movies" INNER JOIN "castings" ON "castings"."movie_id" = "movies"."id" INNER JOIN "actors" ON "actors"."id" = "castings"."actor_id" WHERE (actors.name IN ('Ben Affleck','Matt Damon'))[0m
+  [1m[35mSQL (2.2ms)[0m  [1m[34mSELECT "movies"."title", "movies"."id", "actors"."name", "movies"."id" AS t0_r0, "actors"."id" AS t1_r0, "actors"."name" AS t1_r1, "actors"."created_at" AS t1_r2, "actors"."updated_at" AS t1_r3 FROM "movies" INNER JOIN "castings" ON "castings"."movie_id" = "movies"."id" INNER JOIN "actors" ON "actors"."id" = "castings"."actor_id" WHERE (actors.name IN ('Ben Affleck','Matt Damon'))[0m
+  [1m[35mSQL (3.0ms)[0m  [1m[34mSELECT "movies"."title", "movies"."id", "actors"."name", "movies"."id" AS t0_r0, "actors"."id" AS t1_r0, "actors"."name" AS t1_r1, "actors"."created_at" AS t1_r2, "actors"."updated_at" AS t1_r3 FROM "movies" INNER JOIN "castings" ON "castings"."movie_id" = "movies"."id" INNER JOIN "actors" ON "actors"."id" = "castings"."actor_id" WHERE (actors.name IN ('Ben Affleck','Matt Damon'))[0m
+  [1m[36mActiveRecord::InternalMetadata Pluck (0.5ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "schema_sha1"], ["LIMIT", 1]]
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (2.2ms)[0m  [1m[34mSELECT "movies"."title", "movies"."id", "actors"."name", "movies"."id" AS t0_r0, "actors"."id" AS t1_r0, "actors"."name" AS t1_r1, "actors"."created_at" AS t1_r2, "actors"."updated_at" AS t1_r3 FROM "movies" INNER JOIN "castings" ON "castings"."movie_id" = "movies"."id" INNER JOIN "actors" ON "actors"."id" = "castings"."actor_id" WHERE (actors.name IN ('Ben Affleck','Matt Damon'))[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (1.5ms)[0m  [1m[34mSELECT "movies"."title", "movies"."id", "actors"."name", "movies"."id" AS t0_r0, "actors"."id" AS t1_r0, "actors"."name" AS t1_r1, "actors"."created_at" AS t1_r2, "actors"."updated_at" AS t1_r3 FROM "movies" INNER JOIN "castings" ON "castings"."movie_id" = "movies"."id" INNER JOIN "actors" ON "actors"."id" = "castings"."actor_id" WHERE (actors.name IN ('Ben Affleck','Matt Damon'))[0m
+  [1m[35mSQL (0.7ms)[0m  [1m[34mSELECT "movies"."title", "movies"."id", "actors"."name", "movies"."id" AS t0_r0, "actors"."id" AS t1_r0, "actors"."name" AS t1_r1, "actors"."created_at" AS t1_r2, "actors"."updated_at" AS t1_r3 FROM "movies" INNER JOIN "castings" ON "castings"."movie_id" = "movies"."id" INNER JOIN "actors" ON "actors"."id" = "castings"."actor_id" WHERE (actors.name IN ('Ben Affleck','Matt Damon'))[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActor Load (0.3ms)[0m  [1m[34mSELECT "actors".* FROM "actors" WHERE "actors"."name" = $1 LIMIT $2[0m  [["name", "Sylvester Stallone"], ["LIMIT", 1]]
+  [1m[36mMovie Load (1.0ms)[0m  [1m[34mSELECT "movies".* FROM "movies" INNER JOIN "castings" ON "movies"."id" = "castings"."movie_id" WHERE "castings"."actor_id" = $1[0m  [["actor_id", 5]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mActiveRecord::InternalMetadata Pluck (0.4ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "schema_sha1"], ["LIMIT", 1]]
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (2.4ms)[0m  [1m[34mSELECT "movies"."title", "movies"."id", "movies"."id" AS t0_r0, "actors"."id" AS t1_r0, "actors"."name" AS t1_r1, "actors"."created_at" AS t1_r2, "actors"."updated_at" AS t1_r3 FROM "movies" INNER JOIN "castings" ON "castings"."movie_id" = "movies"."id" INNER JOIN "actors" ON "actors"."id" = "castings"."actor_id" WHERE (actors.name IN ('Ben Affleck','Matt Damon'))[0m
+  [1m[35mSQL (1.1ms)[0m  [1m[34mSELECT "movies"."title", "movies"."id", "movies"."id" AS t0_r0, "actors"."id" AS t1_r0, "actors"."name" AS t1_r1, "actors"."created_at" AS t1_r2, "actors"."updated_at" AS t1_r3 FROM "movies" INNER JOIN "castings" ON "castings"."movie_id" = "movies"."id" INNER JOIN "actors" ON "actors"."id" = "castings"."actor_id" WHERE (actors.name IN ('Ben Affleck','Matt Damon'))[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (1.0ms)[0m  [1m[34mSELECT "movies"."title", "movies"."id", "movies"."id" AS t0_r0, "actors"."id" AS t1_r0, "actors"."name" AS t1_r1, "actors"."created_at" AS t1_r2, "actors"."updated_at" AS t1_r3 FROM "movies" INNER JOIN "castings" ON "castings"."movie_id" = "movies"."id" INNER JOIN "actors" ON "actors"."id" = "castings"."actor_id" WHERE (actors.name IN ('Ben Affleck','Matt Damon'))[0m
+  [1m[35mSQL (0.9ms)[0m  [1m[34mSELECT "movies"."title", "movies"."id", "movies"."id" AS t0_r0, "actors"."id" AS t1_r0, "actors"."name" AS t1_r1, "actors"."created_at" AS t1_r2, "actors"."updated_at" AS t1_r3 FROM "movies" INNER JOIN "castings" ON "castings"."movie_id" = "movies"."id" INNER JOIN "actors" ON "actors"."id" = "castings"."actor_id" WHERE (actors.name IN ('Ben Affleck','Matt Damon'))[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActor Load (0.3ms)[0m  [1m[34mSELECT "actors".* FROM "actors" WHERE "actors"."name" = $1 LIMIT $2[0m  [["name", "Sylvester Stallone"], ["LIMIT", 1]]
+  [1m[36mMovie Load (0.9ms)[0m  [1m[34mSELECT "movies".* FROM "movies" INNER JOIN "castings" ON "movies"."id" = "castings"."movie_id" WHERE "castings"."actor_id" = $1[0m  [["actor_id", 5]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mActiveRecord::InternalMetadata Pluck (0.5ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "schema_sha1"], ["LIMIT", 1]]
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (3.1ms)[0m  [1m[34mSELECT "movies"."title", "movies"."id", "movies"."id" AS t0_r0, "actors"."id" AS t1_r0, "actors"."name" AS t1_r1, "actors"."created_at" AS t1_r2, "actors"."updated_at" AS t1_r3 FROM "movies" INNER JOIN "castings" ON "castings"."movie_id" = "movies"."id" INNER JOIN "actors" ON "actors"."id" = "castings"."actor_id" WHERE (actors.name IN ('Ben Affleck','Matt Damon'))[0m
+  [1m[35mSQL (1.7ms)[0m  [1m[34mSELECT "movies"."title", "movies"."id", "movies"."id" AS t0_r0, "actors"."id" AS t1_r0, "actors"."name" AS t1_r1, "actors"."created_at" AS t1_r2, "actors"."updated_at" AS t1_r3 FROM "movies" INNER JOIN "castings" ON "castings"."movie_id" = "movies"."id" INNER JOIN "actors" ON "actors"."id" = "castings"."actor_id" WHERE (actors.name IN ('Geena Davis','Susan Sarandon'))[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (1.6ms)[0m  [1m[34mSELECT "movies"."title", "movies"."id", "movies"."id" AS t0_r0, "actors"."id" AS t1_r0, "actors"."name" AS t1_r1, "actors"."created_at" AS t1_r2, "actors"."updated_at" AS t1_r3 FROM "movies" INNER JOIN "castings" ON "castings"."movie_id" = "movies"."id" INNER JOIN "actors" ON "actors"."id" = "castings"."actor_id" WHERE (actors.name IN ('Ben Affleck','Matt Damon'))[0m
+  [1m[35mSQL (1.0ms)[0m  [1m[34mSELECT "movies"."title", "movies"."id", "movies"."id" AS t0_r0, "actors"."id" AS t1_r0, "actors"."name" AS t1_r1, "actors"."created_at" AS t1_r2, "actors"."updated_at" AS t1_r3 FROM "movies" INNER JOIN "castings" ON "castings"."movie_id" = "movies"."id" INNER JOIN "actors" ON "actors"."id" = "castings"."actor_id" WHERE (actors.name IN ('Geena Davis','Susan Sarandon'))[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActor Load (0.3ms)[0m  [1m[34mSELECT "actors".* FROM "actors" WHERE "actors"."name" = $1 LIMIT $2[0m  [["name", "Sylvester Stallone"], ["LIMIT", 1]]
+  [1m[36mMovie Load (0.6ms)[0m  [1m[34mSELECT "movies".* FROM "movies" INNER JOIN "castings" ON "movies"."id" = "castings"."movie_id" WHERE "castings"."actor_id" = $1[0m  [["actor_id", 5]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mActiveRecord::InternalMetadata Pluck (0.4ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "schema_sha1"], ["LIMIT", 1]]
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mMovie Load (3.9ms)[0m  [1m[34mSELECT "movies"."title", "movies"."id" FROM "movies" INNER JOIN "castings" ON "castings"."movie_id" = "movies"."id" INNER JOIN "actors" ON "actors"."id" = "castings"."actor_id" WHERE (actors.name IN ('Ben Affleck','Matt Damon'))[0m
+  [1m[36mActor Load (0.5ms)[0m  [1m[34mSELECT "actors".* FROM "actors" INNER JOIN "castings" ON "actors"."id" = "castings"."actor_id" WHERE "castings"."movie_id" = $1[0m  [["movie_id", 29]]
+  [1m[36mActor Load (0.5ms)[0m  [1m[34mSELECT "actors".* FROM "actors" INNER JOIN "castings" ON "actors"."id" = "castings"."actor_id" WHERE "castings"."movie_id" = $1[0m  [["movie_id", 58]]
+  [1m[36mActor Load (0.6ms)[0m  [1m[34mSELECT "actors".* FROM "actors" INNER JOIN "castings" ON "actors"."id" = "castings"."actor_id" WHERE "castings"."movie_id" = $1[0m  [["movie_id", 95]]
+  [1m[36mActor Load (0.8ms)[0m  [1m[34mSELECT "actors".* FROM "actors" INNER JOIN "castings" ON "actors"."id" = "castings"."actor_id" WHERE "castings"."movie_id" = $1[0m  [["movie_id", 98]]
+  [1m[36mActor Load (0.3ms)[0m  [1m[34mSELECT "actors".* FROM "actors" INNER JOIN "castings" ON "actors"."id" = "castings"."actor_id" WHERE "castings"."movie_id" = $1[0m  [["movie_id", 816]]
+  [1m[36mActor Load (0.4ms)[0m  [1m[34mSELECT "actors".* FROM "actors" INNER JOIN "castings" ON "actors"."id" = "castings"."actor_id" WHERE "castings"."movie_id" = $1[0m  [["movie_id", 940]]
+  [1m[36mActor Load (0.2ms)[0m  [1m[34mSELECT "actors".* FROM "actors" INNER JOIN "castings" ON "actors"."id" = "castings"."actor_id" WHERE "castings"."movie_id" = $1[0m  [["movie_id", 1057]]
+  [1m[36mActor Load (0.2ms)[0m  [1m[34mSELECT "actors".* FROM "actors" INNER JOIN "castings" ON "actors"."id" = "castings"."actor_id" WHERE "castings"."movie_id" = $1[0m  [["movie_id", 1153]]
+  [1m[36mActor Load (0.2ms)[0m  [1m[34mSELECT "actors".* FROM "actors" INNER JOIN "castings" ON "actors"."id" = "castings"."actor_id" WHERE "castings"."movie_id" = $1[0m  [["movie_id", 1361]]
+  [1m[36mActor Load (0.2ms)[0m  [1m[34mSELECT "actors".* FROM "actors" INNER JOIN "castings" ON "actors"."id" = "castings"."actor_id" WHERE "castings"."movie_id" = $1[0m  [["movie_id", 1449]]
+  [1m[36mActor Load (0.2ms)[0m  [1m[34mSELECT "actors".* FROM "actors" INNER JOIN "castings" ON "actors"."id" = "castings"."actor_id" WHERE "castings"."movie_id" = $1[0m  [["movie_id", 8]]
+  [1m[36mActor Load (0.1ms)[0m  [1m[34mSELECT "actors".* FROM "actors" INNER JOIN "castings" ON "actors"."id" = "castings"."actor_id" WHERE "castings"."movie_id" = $1[0m  [["movie_id", 29]]
+  [1m[36mActor Load (0.1ms)[0m  [1m[34mSELECT "actors".* FROM "actors" INNER JOIN "castings" ON "actors"."id" = "castings"."actor_id" WHERE "castings"."movie_id" = $1[0m  [["movie_id", 95]]
+  [1m[36mActor Load (0.2ms)[0m  [1m[34mSELECT "actors".* FROM "actors" INNER JOIN "castings" ON "actors"."id" = "castings"."actor_id" WHERE "castings"."movie_id" = $1[0m  [["movie_id", 98]]
+  [1m[36mActor Load (0.2ms)[0m  [1m[34mSELECT "actors".* FROM "actors" INNER JOIN "castings" ON "actors"."id" = "castings"."actor_id" WHERE "castings"."movie_id" = $1[0m  [["movie_id", 176]]
+  [1m[36mActor Load (0.2ms)[0m  [1m[34mSELECT "actors".* FROM "actors" INNER JOIN "castings" ON "actors"."id" = "castings"."actor_id" WHERE "castings"."movie_id" = $1[0m  [["movie_id", 452]]
+  [1m[36mActor Load (0.6ms)[0m  [1m[34mSELECT "actors".* FROM "actors" INNER JOIN "castings" ON "actors"."id" = "castings"."actor_id" WHERE "castings"."movie_id" = $1[0m  [["movie_id", 524]]
+  [1m[36mActor Load (0.2ms)[0m  [1m[34mSELECT "actors".* FROM "actors" INNER JOIN "castings" ON "actors"."id" = "castings"."actor_id" WHERE "castings"."movie_id" = $1[0m  [["movie_id", 576]]
+  [1m[36mActor Load (0.2ms)[0m  [1m[34mSELECT "actors".* FROM "actors" INNER JOIN "castings" ON "actors"."id" = "castings"."actor_id" WHERE "castings"."movie_id" = $1[0m  [["movie_id", 809]]
+  [1m[36mActor Load (0.2ms)[0m  [1m[34mSELECT "actors".* FROM "actors" INNER JOIN "castings" ON "actors"."id" = "castings"."actor_id" WHERE "castings"."movie_id" = $1[0m  [["movie_id", 1449]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mMovie Load (1.1ms)[0m  [1m[34mSELECT "movies"."title", "movies"."id" FROM "movies" INNER JOIN "castings" ON "castings"."movie_id" = "movies"."id" INNER JOIN "actors" ON "actors"."id" = "castings"."actor_id" WHERE (actors.name IN ('Ben Affleck','Matt Damon'))[0m
+  [1m[36mActor Load (0.2ms)[0m  [1m[34mSELECT "actors".* FROM "actors" INNER JOIN "castings" ON "actors"."id" = "castings"."actor_id" WHERE "castings"."movie_id" = $1[0m  [["movie_id", 29]]
+  [1m[36mActor Load (0.2ms)[0m  [1m[34mSELECT "actors".* FROM "actors" INNER JOIN "castings" ON "actors"."id" = "castings"."actor_id" WHERE "castings"."movie_id" = $1[0m  [["movie_id", 58]]
+  [1m[36mActor Load (0.2ms)[0m  [1m[34mSELECT "actors".* FROM "actors" INNER JOIN "castings" ON "actors"."id" = "castings"."actor_id" WHERE "castings"."movie_id" = $1[0m  [["movie_id", 95]]
+  [1m[36mActor Load (0.1ms)[0m  [1m[34mSELECT "actors".* FROM "actors" INNER JOIN "castings" ON "actors"."id" = "castings"."actor_id" WHERE "castings"."movie_id" = $1[0m  [["movie_id", 98]]
+  [1m[36mActor Load (0.1ms)[0m  [1m[34mSELECT "actors".* FROM "actors" INNER JOIN "castings" ON "actors"."id" = "castings"."actor_id" WHERE "castings"."movie_id" = $1[0m  [["movie_id", 816]]
+  [1m[36mActor Load (0.4ms)[0m  [1m[34mSELECT "actors".* FROM "actors" INNER JOIN "castings" ON "actors"."id" = "castings"."actor_id" WHERE "castings"."movie_id" = $1[0m  [["movie_id", 940]]
+  [1m[36mActor Load (0.3ms)[0m  [1m[34mSELECT "actors".* FROM "actors" INNER JOIN "castings" ON "actors"."id" = "castings"."actor_id" WHERE "castings"."movie_id" = $1[0m  [["movie_id", 1057]]
+  [1m[36mActor Load (0.3ms)[0m  [1m[34mSELECT "actors".* FROM "actors" INNER JOIN "castings" ON "actors"."id" = "castings"."actor_id" WHERE "castings"."movie_id" = $1[0m  [["movie_id", 1153]]
+  [1m[36mActor Load (0.1ms)[0m  [1m[34mSELECT "actors".* FROM "actors" INNER JOIN "castings" ON "actors"."id" = "castings"."actor_id" WHERE "castings"."movie_id" = $1[0m  [["movie_id", 1361]]
+  [1m[36mActor Load (0.2ms)[0m  [1m[34mSELECT "actors".* FROM "actors" INNER JOIN "castings" ON "actors"."id" = "castings"."actor_id" WHERE "castings"."movie_id" = $1[0m  [["movie_id", 1449]]
+  [1m[36mActor Load (0.1ms)[0m  [1m[34mSELECT "actors".* FROM "actors" INNER JOIN "castings" ON "actors"."id" = "castings"."actor_id" WHERE "castings"."movie_id" = $1[0m  [["movie_id", 8]]
+  [1m[36mActor Load (0.1ms)[0m  [1m[34mSELECT "actors".* FROM "actors" INNER JOIN "castings" ON "actors"."id" = "castings"."actor_id" WHERE "castings"."movie_id" = $1[0m  [["movie_id", 29]]
+  [1m[36mActor Load (0.1ms)[0m  [1m[34mSELECT "actors".* FROM "actors" INNER JOIN "castings" ON "actors"."id" = "castings"."actor_id" WHERE "castings"."movie_id" = $1[0m  [["movie_id", 95]]
+  [1m[36mActor Load (0.2ms)[0m  [1m[34mSELECT "actors".* FROM "actors" INNER JOIN "castings" ON "actors"."id" = "castings"."actor_id" WHERE "castings"."movie_id" = $1[0m  [["movie_id", 98]]
+  [1m[36mActor Load (0.4ms)[0m  [1m[34mSELECT "actors".* FROM "actors" INNER JOIN "castings" ON "actors"."id" = "castings"."actor_id" WHERE "castings"."movie_id" = $1[0m  [["movie_id", 176]]
+  [1m[36mActor Load (0.2ms)[0m  [1m[34mSELECT "actors".* FROM "actors" INNER JOIN "castings" ON "actors"."id" = "castings"."actor_id" WHERE "castings"."movie_id" = $1[0m  [["movie_id", 452]]
+  [1m[36mActor Load (0.2ms)[0m  [1m[34mSELECT "actors".* FROM "actors" INNER JOIN "castings" ON "actors"."id" = "castings"."actor_id" WHERE "castings"."movie_id" = $1[0m  [["movie_id", 524]]
+  [1m[36mActor Load (0.2ms)[0m  [1m[34mSELECT "actors".* FROM "actors" INNER JOIN "castings" ON "actors"."id" = "castings"."actor_id" WHERE "castings"."movie_id" = $1[0m  [["movie_id", 576]]
+  [1m[36mActor Load (0.2ms)[0m  [1m[34mSELECT "actors".* FROM "actors" INNER JOIN "castings" ON "actors"."id" = "castings"."actor_id" WHERE "castings"."movie_id" = $1[0m  [["movie_id", 809]]
+  [1m[36mActor Load (0.2ms)[0m  [1m[34mSELECT "actors".* FROM "actors" INNER JOIN "castings" ON "actors"."id" = "castings"."actor_id" WHERE "castings"."movie_id" = $1[0m  [["movie_id", 1449]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActor Load (0.3ms)[0m  [1m[34mSELECT "actors".* FROM "actors" WHERE "actors"."name" = $1 LIMIT $2[0m  [["name", "Sylvester Stallone"], ["LIMIT", 1]]
+  [1m[36mMovie Load (2.1ms)[0m  [1m[34mSELECT "movies".* FROM "movies" INNER JOIN "castings" ON "movies"."id" = "castings"."movie_id" WHERE "castings"."actor_id" = $1[0m  [["actor_id", 5]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mActiveRecord::InternalMetadata Pluck (0.5ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "schema_sha1"], ["LIMIT", 1]]
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mMovie Load (3.9ms)[0m  [1m[34mSELECT "movies"."title", "movies"."id" FROM "movies" INNER JOIN "castings" ON "castings"."movie_id" = "movies"."id" INNER JOIN "actors" ON "actors"."id" = "castings"."actor_id" WHERE (actors.name IN ('Ben Affleck','Matt Damon'))[0m
+  [1m[36mActor Load (0.6ms)[0m  [1m[34mSELECT "actors".* FROM "actors" INNER JOIN "castings" ON "actors"."id" = "castings"."actor_id" WHERE "castings"."movie_id" = $1[0m  [["movie_id", 29]]
+  [1m[36mActor Load (0.4ms)[0m  [1m[34mSELECT "actors".* FROM "actors" INNER JOIN "castings" ON "actors"."id" = "castings"."actor_id" WHERE "castings"."movie_id" = $1[0m  [["movie_id", 58]]
+  [1m[36mActor Load (0.6ms)[0m  [1m[34mSELECT "actors".* FROM "actors" INNER JOIN "castings" ON "actors"."id" = "castings"."actor_id" WHERE "castings"."movie_id" = $1[0m  [["movie_id", 95]]
+  [1m[36mActor Load (0.3ms)[0m  [1m[34mSELECT "actors".* FROM "actors" INNER JOIN "castings" ON "actors"."id" = "castings"."actor_id" WHERE "castings"."movie_id" = $1[0m  [["movie_id", 98]]
+  [1m[36mActor Load (0.4ms)[0m  [1m[34mSELECT "actors".* FROM "actors" INNER JOIN "castings" ON "actors"."id" = "castings"."actor_id" WHERE "castings"."movie_id" = $1[0m  [["movie_id", 816]]
+  [1m[36mActor Load (0.4ms)[0m  [1m[34mSELECT "actors".* FROM "actors" INNER JOIN "castings" ON "actors"."id" = "castings"."actor_id" WHERE "castings"."movie_id" = $1[0m  [["movie_id", 940]]
+  [1m[36mActor Load (0.2ms)[0m  [1m[34mSELECT "actors".* FROM "actors" INNER JOIN "castings" ON "actors"."id" = "castings"."actor_id" WHERE "castings"."movie_id" = $1[0m  [["movie_id", 1057]]
+  [1m[36mActor Load (0.2ms)[0m  [1m[34mSELECT "actors".* FROM "actors" INNER JOIN "castings" ON "actors"."id" = "castings"."actor_id" WHERE "castings"."movie_id" = $1[0m  [["movie_id", 1153]]
+  [1m[36mActor Load (0.2ms)[0m  [1m[34mSELECT "actors".* FROM "actors" INNER JOIN "castings" ON "actors"."id" = "castings"."actor_id" WHERE "castings"."movie_id" = $1[0m  [["movie_id", 1361]]
+  [1m[36mActor Load (0.3ms)[0m  [1m[34mSELECT "actors".* FROM "actors" INNER JOIN "castings" ON "actors"."id" = "castings"."actor_id" WHERE "castings"."movie_id" = $1[0m  [["movie_id", 1449]]
+  [1m[36mActor Load (0.2ms)[0m  [1m[34mSELECT "actors".* FROM "actors" INNER JOIN "castings" ON "actors"."id" = "castings"."actor_id" WHERE "castings"."movie_id" = $1[0m  [["movie_id", 8]]
+  [1m[36mActor Load (0.2ms)[0m  [1m[34mSELECT "actors".* FROM "actors" INNER JOIN "castings" ON "actors"."id" = "castings"."actor_id" WHERE "castings"."movie_id" = $1[0m  [["movie_id", 29]]
+  [1m[36mActor Load (0.1ms)[0m  [1m[34mSELECT "actors".* FROM "actors" INNER JOIN "castings" ON "actors"."id" = "castings"."actor_id" WHERE "castings"."movie_id" = $1[0m  [["movie_id", 95]]
+  [1m[36mActor Load (0.1ms)[0m  [1m[34mSELECT "actors".* FROM "actors" INNER JOIN "castings" ON "actors"."id" = "castings"."actor_id" WHERE "castings"."movie_id" = $1[0m  [["movie_id", 98]]
+  [1m[36mActor Load (0.1ms)[0m  [1m[34mSELECT "actors".* FROM "actors" INNER JOIN "castings" ON "actors"."id" = "castings"."actor_id" WHERE "castings"."movie_id" = $1[0m  [["movie_id", 176]]
+  [1m[36mActor Load (0.2ms)[0m  [1m[34mSELECT "actors".* FROM "actors" INNER JOIN "castings" ON "actors"."id" = "castings"."actor_id" WHERE "castings"."movie_id" = $1[0m  [["movie_id", 452]]
+  [1m[36mActor Load (0.2ms)[0m  [1m[34mSELECT "actors".* FROM "actors" INNER JOIN "castings" ON "actors"."id" = "castings"."actor_id" WHERE "castings"."movie_id" = $1[0m  [["movie_id", 524]]
+  [1m[36mActor Load (0.2ms)[0m  [1m[34mSELECT "actors".* FROM "actors" INNER JOIN "castings" ON "actors"."id" = "castings"."actor_id" WHERE "castings"."movie_id" = $1[0m  [["movie_id", 576]]
+  [1m[36mActor Load (0.2ms)[0m  [1m[34mSELECT "actors".* FROM "actors" INNER JOIN "castings" ON "actors"."id" = "castings"."actor_id" WHERE "castings"."movie_id" = $1[0m  [["movie_id", 809]]
+  [1m[36mActor Load (0.2ms)[0m  [1m[34mSELECT "actors".* FROM "actors" INNER JOIN "castings" ON "actors"."id" = "castings"."actor_id" WHERE "castings"."movie_id" = $1[0m  [["movie_id", 1449]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mMovie Load (1.2ms)[0m  [1m[34mSELECT "movies"."title", "movies"."id" FROM "movies" INNER JOIN "castings" ON "castings"."movie_id" = "movies"."id" INNER JOIN "actors" ON "actors"."id" = "castings"."actor_id" WHERE (actors.name IN ('Ben Affleck','Matt Damon'))[0m
+  [1m[36mActor Load (0.2ms)[0m  [1m[34mSELECT "actors".* FROM "actors" INNER JOIN "castings" ON "actors"."id" = "castings"."actor_id" WHERE "castings"."movie_id" = $1[0m  [["movie_id", 29]]
+  [1m[36mActor Load (0.2ms)[0m  [1m[34mSELECT "actors".* FROM "actors" INNER JOIN "castings" ON "actors"."id" = "castings"."actor_id" WHERE "castings"."movie_id" = $1[0m  [["movie_id", 58]]
+  [1m[36mActor Load (0.2ms)[0m  [1m[34mSELECT "actors".* FROM "actors" INNER JOIN "castings" ON "actors"."id" = "castings"."actor_id" WHERE "castings"."movie_id" = $1[0m  [["movie_id", 95]]
+  [1m[36mActor Load (0.2ms)[0m  [1m[34mSELECT "actors".* FROM "actors" INNER JOIN "castings" ON "actors"."id" = "castings"."actor_id" WHERE "castings"."movie_id" = $1[0m  [["movie_id", 98]]
+  [1m[36mActor Load (0.1ms)[0m  [1m[34mSELECT "actors".* FROM "actors" INNER JOIN "castings" ON "actors"."id" = "castings"."actor_id" WHERE "castings"."movie_id" = $1[0m  [["movie_id", 816]]
+  [1m[36mActor Load (0.2ms)[0m  [1m[34mSELECT "actors".* FROM "actors" INNER JOIN "castings" ON "actors"."id" = "castings"."actor_id" WHERE "castings"."movie_id" = $1[0m  [["movie_id", 940]]
+  [1m[36mActor Load (0.4ms)[0m  [1m[34mSELECT "actors".* FROM "actors" INNER JOIN "castings" ON "actors"."id" = "castings"."actor_id" WHERE "castings"."movie_id" = $1[0m  [["movie_id", 1057]]
+  [1m[36mActor Load (0.2ms)[0m  [1m[34mSELECT "actors".* FROM "actors" INNER JOIN "castings" ON "actors"."id" = "castings"."actor_id" WHERE "castings"."movie_id" = $1[0m  [["movie_id", 1153]]
+  [1m[36mActor Load (0.1ms)[0m  [1m[34mSELECT "actors".* FROM "actors" INNER JOIN "castings" ON "actors"."id" = "castings"."actor_id" WHERE "castings"."movie_id" = $1[0m  [["movie_id", 1361]]
+  [1m[36mActor Load (0.2ms)[0m  [1m[34mSELECT "actors".* FROM "actors" INNER JOIN "castings" ON "actors"."id" = "castings"."actor_id" WHERE "castings"."movie_id" = $1[0m  [["movie_id", 1449]]
+  [1m[36mActor Load (0.1ms)[0m  [1m[34mSELECT "actors".* FROM "actors" INNER JOIN "castings" ON "actors"."id" = "castings"."actor_id" WHERE "castings"."movie_id" = $1[0m  [["movie_id", 8]]
+  [1m[36mActor Load (0.1ms)[0m  [1m[34mSELECT "actors".* FROM "actors" INNER JOIN "castings" ON "actors"."id" = "castings"."actor_id" WHERE "castings"."movie_id" = $1[0m  [["movie_id", 29]]
+  [1m[36mActor Load (0.1ms)[0m  [1m[34mSELECT "actors".* FROM "actors" INNER JOIN "castings" ON "actors"."id" = "castings"."actor_id" WHERE "castings"."movie_id" = $1[0m  [["movie_id", 95]]
+  [1m[36mActor Load (0.1ms)[0m  [1m[34mSELECT "actors".* FROM "actors" INNER JOIN "castings" ON "actors"."id" = "castings"."actor_id" WHERE "castings"."movie_id" = $1[0m  [["movie_id", 98]]
+  [1m[36mActor Load (0.4ms)[0m  [1m[34mSELECT "actors".* FROM "actors" INNER JOIN "castings" ON "actors"."id" = "castings"."actor_id" WHERE "castings"."movie_id" = $1[0m  [["movie_id", 176]]
+  [1m[36mActor Load (0.1ms)[0m  [1m[34mSELECT "actors".* FROM "actors" INNER JOIN "castings" ON "actors"."id" = "castings"."actor_id" WHERE "castings"."movie_id" = $1[0m  [["movie_id", 452]]
+  [1m[36mActor Load (0.1ms)[0m  [1m[34mSELECT "actors".* FROM "actors" INNER JOIN "castings" ON "actors"."id" = "castings"."actor_id" WHERE "castings"."movie_id" = $1[0m  [["movie_id", 524]]
+  [1m[36mActor Load (0.3ms)[0m  [1m[34mSELECT "actors".* FROM "actors" INNER JOIN "castings" ON "actors"."id" = "castings"."actor_id" WHERE "castings"."movie_id" = $1[0m  [["movie_id", 576]]
+  [1m[36mActor Load (0.2ms)[0m  [1m[34mSELECT "actors".* FROM "actors" INNER JOIN "castings" ON "actors"."id" = "castings"."actor_id" WHERE "castings"."movie_id" = $1[0m  [["movie_id", 809]]
+  [1m[36mActor Load (0.1ms)[0m  [1m[34mSELECT "actors".* FROM "actors" INNER JOIN "castings" ON "actors"."id" = "castings"."actor_id" WHERE "castings"."movie_id" = $1[0m  [["movie_id", 1449]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActor Load (0.2ms)[0m  [1m[34mSELECT "actors".* FROM "actors" WHERE "actors"."name" = $1 LIMIT $2[0m  [["name", "Sylvester Stallone"], ["LIMIT", 1]]
+  [1m[36mMovie Load (0.6ms)[0m  [1m[34mSELECT "movies".* FROM "movies" INNER JOIN "castings" ON "movies"."id" = "castings"."movie_id" WHERE "castings"."actor_id" = $1[0m  [["actor_id", 5]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mMovie Load (2.0ms)[0m  [1m[34mSELECT "movies"."title", "movies"."id", "actors"."name" FROM "movies" INNER JOIN "castings" ON "castings"."movie_id" = "movies"."id" INNER JOIN "actors" ON "actors"."id" = "castings"."actor_id" WHERE (actors.name IN ('Ben Affleck','Matt Damon'))[0m
+  [1m[36mActor Load (0.7ms)[0m  [1m[34mSELECT "actors".* FROM "actors" INNER JOIN "castings" ON "actors"."id" = "castings"."actor_id" WHERE "castings"."movie_id" = $1[0m  [["movie_id", 29]]
+  [1m[36mActor Load (2.1ms)[0m  [1m[34mSELECT "actors".* FROM "actors" INNER JOIN "castings" ON "actors"."id" = "castings"."actor_id" WHERE "castings"."movie_id" = $1[0m  [["movie_id", 58]]
+  [1m[36mActor Load (0.8ms)[0m  [1m[34mSELECT "actors".* FROM "actors" INNER JOIN "castings" ON "actors"."id" = "castings"."actor_id" WHERE "castings"."movie_id" = $1[0m  [["movie_id", 95]]
+  [1m[36mActor Load (0.6ms)[0m  [1m[34mSELECT "actors".* FROM "actors" INNER JOIN "castings" ON "actors"."id" = "castings"."actor_id" WHERE "castings"."movie_id" = $1[0m  [["movie_id", 98]]
+  [1m[36mActor Load (0.6ms)[0m  [1m[34mSELECT "actors".* FROM "actors" INNER JOIN "castings" ON "actors"."id" = "castings"."actor_id" WHERE "castings"."movie_id" = $1[0m  [["movie_id", 816]]
+  [1m[36mActor Load (0.6ms)[0m  [1m[34mSELECT "actors".* FROM "actors" INNER JOIN "castings" ON "actors"."id" = "castings"."actor_id" WHERE "castings"."movie_id" = $1[0m  [["movie_id", 940]]
+  [1m[36mActor Load (0.3ms)[0m  [1m[34mSELECT "actors".* FROM "actors" INNER JOIN "castings" ON "actors"."id" = "castings"."actor_id" WHERE "castings"."movie_id" = $1[0m  [["movie_id", 1057]]
+  [1m[36mActor Load (0.2ms)[0m  [1m[34mSELECT "actors".* FROM "actors" INNER JOIN "castings" ON "actors"."id" = "castings"."actor_id" WHERE "castings"."movie_id" = $1[0m  [["movie_id", 1153]]
+  [1m[36mActor Load (0.1ms)[0m  [1m[34mSELECT "actors".* FROM "actors" INNER JOIN "castings" ON "actors"."id" = "castings"."actor_id" WHERE "castings"."movie_id" = $1[0m  [["movie_id", 1361]]
+  [1m[36mActor Load (0.2ms)[0m  [1m[34mSELECT "actors".* FROM "actors" INNER JOIN "castings" ON "actors"."id" = "castings"."actor_id" WHERE "castings"."movie_id" = $1[0m  [["movie_id", 1449]]
+  [1m[36mActor Load (0.1ms)[0m  [1m[34mSELECT "actors".* FROM "actors" INNER JOIN "castings" ON "actors"."id" = "castings"."actor_id" WHERE "castings"."movie_id" = $1[0m  [["movie_id", 8]]
+  [1m[36mActor Load (0.1ms)[0m  [1m[34mSELECT "actors".* FROM "actors" INNER JOIN "castings" ON "actors"."id" = "castings"."actor_id" WHERE "castings"."movie_id" = $1[0m  [["movie_id", 29]]
+  [1m[36mActor Load (0.1ms)[0m  [1m[34mSELECT "actors".* FROM "actors" INNER JOIN "castings" ON "actors"."id" = "castings"."actor_id" WHERE "castings"."movie_id" = $1[0m  [["movie_id", 95]]
+  [1m[36mActor Load (0.2ms)[0m  [1m[34mSELECT "actors".* FROM "actors" INNER JOIN "castings" ON "actors"."id" = "castings"."actor_id" WHERE "castings"."movie_id" = $1[0m  [["movie_id", 98]]
+  [1m[36mActor Load (0.2ms)[0m  [1m[34mSELECT "actors".* FROM "actors" INNER JOIN "castings" ON "actors"."id" = "castings"."actor_id" WHERE "castings"."movie_id" = $1[0m  [["movie_id", 176]]
+  [1m[36mActor Load (0.8ms)[0m  [1m[34mSELECT "actors".* FROM "actors" INNER JOIN "castings" ON "actors"."id" = "castings"."actor_id" WHERE "castings"."movie_id" = $1[0m  [["movie_id", 452]]
+  [1m[36mActor Load (0.2ms)[0m  [1m[34mSELECT "actors".* FROM "actors" INNER JOIN "castings" ON "actors"."id" = "castings"."actor_id" WHERE "castings"."movie_id" = $1[0m  [["movie_id", 524]]
+  [1m[36mActor Load (0.1ms)[0m  [1m[34mSELECT "actors".* FROM "actors" INNER JOIN "castings" ON "actors"."id" = "castings"."actor_id" WHERE "castings"."movie_id" = $1[0m  [["movie_id", 576]]
+  [1m[36mActor Load (0.1ms)[0m  [1m[34mSELECT "actors".* FROM "actors" INNER JOIN "castings" ON "actors"."id" = "castings"."actor_id" WHERE "castings"."movie_id" = $1[0m  [["movie_id", 809]]
+  [1m[36mActor Load (0.1ms)[0m  [1m[34mSELECT "actors".* FROM "actors" INNER JOIN "castings" ON "actors"."id" = "castings"."actor_id" WHERE "castings"."movie_id" = $1[0m  [["movie_id", 1449]]
+  [1m[36mActiveRecord::InternalMetadata Pluck (0.5ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "schema_sha1"], ["LIMIT", 1]]
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mMovie Load (2.0ms)[0m  [1m[34mSELECT "movies"."title", "movies"."id" FROM "movies" INNER JOIN "castings" ON "castings"."movie_id" = "movies"."id" INNER JOIN "actors" ON "actors"."id" = "castings"."actor_id" WHERE (actors.name IN ('Ben Affleck','Matt Damon'))[0m
+  [1m[36mActor Load (0.5ms)[0m  [1m[34mSELECT "actors".* FROM "actors" INNER JOIN "castings" ON "actors"."id" = "castings"."actor_id" WHERE "castings"."movie_id" = $1 AND (actors.name IN ('Ben Affleck','Matt Damon'))[0m  [["movie_id", 29]]
+  [1m[36mActor Load (0.5ms)[0m  [1m[34mSELECT "actors".* FROM "actors" INNER JOIN "castings" ON "actors"."id" = "castings"."actor_id" WHERE "castings"."movie_id" = $1 AND (actors.name IN ('Ben Affleck','Matt Damon'))[0m  [["movie_id", 58]]
+  [1m[36mActor Load (0.4ms)[0m  [1m[34mSELECT "actors".* FROM "actors" INNER JOIN "castings" ON "actors"."id" = "castings"."actor_id" WHERE "castings"."movie_id" = $1 AND (actors.name IN ('Ben Affleck','Matt Damon'))[0m  [["movie_id", 95]]
+  [1m[36mActor Load (0.6ms)[0m  [1m[34mSELECT "actors".* FROM "actors" INNER JOIN "castings" ON "actors"."id" = "castings"."actor_id" WHERE "castings"."movie_id" = $1 AND (actors.name IN ('Ben Affleck','Matt Damon'))[0m  [["movie_id", 98]]
+  [1m[36mActor Load (0.4ms)[0m  [1m[34mSELECT "actors".* FROM "actors" INNER JOIN "castings" ON "actors"."id" = "castings"."actor_id" WHERE "castings"."movie_id" = $1 AND (actors.name IN ('Ben Affleck','Matt Damon'))[0m  [["movie_id", 816]]
+  [1m[36mActor Load (0.8ms)[0m  [1m[34mSELECT "actors".* FROM "actors" INNER JOIN "castings" ON "actors"."id" = "castings"."actor_id" WHERE "castings"."movie_id" = $1 AND (actors.name IN ('Ben Affleck','Matt Damon'))[0m  [["movie_id", 940]]
+  [1m[36mActor Load (0.5ms)[0m  [1m[34mSELECT "actors".* FROM "actors" INNER JOIN "castings" ON "actors"."id" = "castings"."actor_id" WHERE "castings"."movie_id" = $1 AND (actors.name IN ('Ben Affleck','Matt Damon'))[0m  [["movie_id", 1057]]
+  [1m[36mActor Load (0.3ms)[0m  [1m[34mSELECT "actors".* FROM "actors" INNER JOIN "castings" ON "actors"."id" = "castings"."actor_id" WHERE "castings"."movie_id" = $1 AND (actors.name IN ('Ben Affleck','Matt Damon'))[0m  [["movie_id", 1153]]
+  [1m[36mActor Load (0.3ms)[0m  [1m[34mSELECT "actors".* FROM "actors" INNER JOIN "castings" ON "actors"."id" = "castings"."actor_id" WHERE "castings"."movie_id" = $1 AND (actors.name IN ('Ben Affleck','Matt Damon'))[0m  [["movie_id", 1361]]
+  [1m[36mActor Load (0.3ms)[0m  [1m[34mSELECT "actors".* FROM "actors" INNER JOIN "castings" ON "actors"."id" = "castings"."actor_id" WHERE "castings"."movie_id" = $1 AND (actors.name IN ('Ben Affleck','Matt Damon'))[0m  [["movie_id", 1449]]
+  [1m[36mActor Load (0.3ms)[0m  [1m[34mSELECT "actors".* FROM "actors" INNER JOIN "castings" ON "actors"."id" = "castings"."actor_id" WHERE "castings"."movie_id" = $1 AND (actors.name IN ('Ben Affleck','Matt Damon'))[0m  [["movie_id", 8]]
+  [1m[36mActor Load (0.3ms)[0m  [1m[34mSELECT "actors".* FROM "actors" INNER JOIN "castings" ON "actors"."id" = "castings"."actor_id" WHERE "castings"."movie_id" = $1 AND (actors.name IN ('Ben Affleck','Matt Damon'))[0m  [["movie_id", 29]]
+  [1m[36mActor Load (0.3ms)[0m  [1m[34mSELECT "actors".* FROM "actors" INNER JOIN "castings" ON "actors"."id" = "castings"."actor_id" WHERE "castings"."movie_id" = $1 AND (actors.name IN ('Ben Affleck','Matt Damon'))[0m  [["movie_id", 95]]
+  [1m[36mActor Load (0.3ms)[0m  [1m[34mSELECT "actors".* FROM "actors" INNER JOIN "castings" ON "actors"."id" = "castings"."actor_id" WHERE "castings"."movie_id" = $1 AND (actors.name IN ('Ben Affleck','Matt Damon'))[0m  [["movie_id", 98]]
+  [1m[36mActor Load (0.4ms)[0m  [1m[34mSELECT "actors".* FROM "actors" INNER JOIN "castings" ON "actors"."id" = "castings"."actor_id" WHERE "castings"."movie_id" = $1 AND (actors.name IN ('Ben Affleck','Matt Damon'))[0m  [["movie_id", 176]]
+  [1m[36mActor Load (0.4ms)[0m  [1m[34mSELECT "actors".* FROM "actors" INNER JOIN "castings" ON "actors"."id" = "castings"."actor_id" WHERE "castings"."movie_id" = $1 AND (actors.name IN ('Ben Affleck','Matt Damon'))[0m  [["movie_id", 452]]
+  [1m[36mActor Load (0.4ms)[0m  [1m[34mSELECT "actors".* FROM "actors" INNER JOIN "castings" ON "actors"."id" = "castings"."actor_id" WHERE "castings"."movie_id" = $1 AND (actors.name IN ('Ben Affleck','Matt Damon'))[0m  [["movie_id", 524]]
+  [1m[36mActor Load (0.3ms)[0m  [1m[34mSELECT "actors".* FROM "actors" INNER JOIN "castings" ON "actors"."id" = "castings"."actor_id" WHERE "castings"."movie_id" = $1 AND (actors.name IN ('Ben Affleck','Matt Damon'))[0m  [["movie_id", 576]]
+  [1m[36mActor Load (0.3ms)[0m  [1m[34mSELECT "actors".* FROM "actors" INNER JOIN "castings" ON "actors"."id" = "castings"."actor_id" WHERE "castings"."movie_id" = $1 AND (actors.name IN ('Ben Affleck','Matt Damon'))[0m  [["movie_id", 809]]
+  [1m[36mActor Load (0.3ms)[0m  [1m[34mSELECT "actors".* FROM "actors" INNER JOIN "castings" ON "actors"."id" = "castings"."actor_id" WHERE "castings"."movie_id" = $1 AND (actors.name IN ('Ben Affleck','Matt Damon'))[0m  [["movie_id", 1449]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mMovie Load (0.8ms)[0m  [1m[34mSELECT "movies"."title", "movies"."id" FROM "movies" INNER JOIN "castings" ON "castings"."movie_id" = "movies"."id" INNER JOIN "actors" ON "actors"."id" = "castings"."actor_id" WHERE (actors.name IN ('Ben Affleck','Matt Damon'))[0m
+  [1m[36mActor Load (0.4ms)[0m  [1m[34mSELECT "actors".* FROM "actors" INNER JOIN "castings" ON "actors"."id" = "castings"."actor_id" WHERE "castings"."movie_id" = $1 AND (actors.name IN ('Ben Affleck','Matt Damon'))[0m  [["movie_id", 29]]
+  [1m[36mActor Load (0.4ms)[0m  [1m[34mSELECT "actors".* FROM "actors" INNER JOIN "castings" ON "actors"."id" = "castings"."actor_id" WHERE "castings"."movie_id" = $1 AND (actors.name IN ('Ben Affleck','Matt Damon'))[0m  [["movie_id", 58]]
+  [1m[36mActor Load (0.4ms)[0m  [1m[34mSELECT "actors".* FROM "actors" INNER JOIN "castings" ON "actors"."id" = "castings"."actor_id" WHERE "castings"."movie_id" = $1 AND (actors.name IN ('Ben Affleck','Matt Damon'))[0m  [["movie_id", 95]]
+  [1m[36mActor Load (0.7ms)[0m  [1m[34mSELECT "actors".* FROM "actors" INNER JOIN "castings" ON "actors"."id" = "castings"."actor_id" WHERE "castings"."movie_id" = $1 AND (actors.name IN ('Ben Affleck','Matt Damon'))[0m  [["movie_id", 98]]
+  [1m[36mActor Load (0.4ms)[0m  [1m[34mSELECT "actors".* FROM "actors" INNER JOIN "castings" ON "actors"."id" = "castings"."actor_id" WHERE "castings"."movie_id" = $1 AND (actors.name IN ('Ben Affleck','Matt Damon'))[0m  [["movie_id", 816]]
+  [1m[36mActor Load (0.3ms)[0m  [1m[34mSELECT "actors".* FROM "actors" INNER JOIN "castings" ON "actors"."id" = "castings"."actor_id" WHERE "castings"."movie_id" = $1 AND (actors.name IN ('Ben Affleck','Matt Damon'))[0m  [["movie_id", 940]]
+  [1m[36mActor Load (0.8ms)[0m  [1m[34mSELECT "actors".* FROM "actors" INNER JOIN "castings" ON "actors"."id" = "castings"."actor_id" WHERE "castings"."movie_id" = $1 AND (actors.name IN ('Ben Affleck','Matt Damon'))[0m  [["movie_id", 1057]]
+  [1m[36mActor Load (0.7ms)[0m  [1m[34mSELECT "actors".* FROM "actors" INNER JOIN "castings" ON "actors"."id" = "castings"."actor_id" WHERE "castings"."movie_id" = $1 AND (actors.name IN ('Ben Affleck','Matt Damon'))[0m  [["movie_id", 1153]]
+  [1m[36mActor Load (0.3ms)[0m  [1m[34mSELECT "actors".* FROM "actors" INNER JOIN "castings" ON "actors"."id" = "castings"."actor_id" WHERE "castings"."movie_id" = $1 AND (actors.name IN ('Ben Affleck','Matt Damon'))[0m  [["movie_id", 1361]]
+  [1m[36mActor Load (0.4ms)[0m  [1m[34mSELECT "actors".* FROM "actors" INNER JOIN "castings" ON "actors"."id" = "castings"."actor_id" WHERE "castings"."movie_id" = $1 AND (actors.name IN ('Ben Affleck','Matt Damon'))[0m  [["movie_id", 1449]]
+  [1m[36mActor Load (0.4ms)[0m  [1m[34mSELECT "actors".* FROM "actors" INNER JOIN "castings" ON "actors"."id" = "castings"."actor_id" WHERE "castings"."movie_id" = $1 AND (actors.name IN ('Ben Affleck','Matt Damon'))[0m  [["movie_id", 8]]
+  [1m[36mActor Load (0.4ms)[0m  [1m[34mSELECT "actors".* FROM "actors" INNER JOIN "castings" ON "actors"."id" = "castings"."actor_id" WHERE "castings"."movie_id" = $1 AND (actors.name IN ('Ben Affleck','Matt Damon'))[0m  [["movie_id", 29]]
+  [1m[36mActor Load (0.4ms)[0m  [1m[34mSELECT "actors".* FROM "actors" INNER JOIN "castings" ON "actors"."id" = "castings"."actor_id" WHERE "castings"."movie_id" = $1 AND (actors.name IN ('Ben Affleck','Matt Damon'))[0m  [["movie_id", 95]]
+  [1m[36mActor Load (0.7ms)[0m  [1m[34mSELECT "actors".* FROM "actors" INNER JOIN "castings" ON "actors"."id" = "castings"."actor_id" WHERE "castings"."movie_id" = $1 AND (actors.name IN ('Ben Affleck','Matt Damon'))[0m  [["movie_id", 98]]
+  [1m[36mActor Load (0.6ms)[0m  [1m[34mSELECT "actors".* FROM "actors" INNER JOIN "castings" ON "actors"."id" = "castings"."actor_id" WHERE "castings"."movie_id" = $1 AND (actors.name IN ('Ben Affleck','Matt Damon'))[0m  [["movie_id", 176]]
+  [1m[36mActor Load (1.1ms)[0m  [1m[34mSELECT "actors".* FROM "actors" INNER JOIN "castings" ON "actors"."id" = "castings"."actor_id" WHERE "castings"."movie_id" = $1 AND (actors.name IN ('Ben Affleck','Matt Damon'))[0m  [["movie_id", 452]]
+  [1m[36mActor Load (0.5ms)[0m  [1m[34mSELECT "actors".* FROM "actors" INNER JOIN "castings" ON "actors"."id" = "castings"."actor_id" WHERE "castings"."movie_id" = $1 AND (actors.name IN ('Ben Affleck','Matt Damon'))[0m  [["movie_id", 524]]
+  [1m[36mActor Load (0.5ms)[0m  [1m[34mSELECT "actors".* FROM "actors" INNER JOIN "castings" ON "actors"."id" = "castings"."actor_id" WHERE "castings"."movie_id" = $1 AND (actors.name IN ('Ben Affleck','Matt Damon'))[0m  [["movie_id", 576]]
+  [1m[36mActor Load (0.4ms)[0m  [1m[34mSELECT "actors".* FROM "actors" INNER JOIN "castings" ON "actors"."id" = "castings"."actor_id" WHERE "castings"."movie_id" = $1 AND (actors.name IN ('Ben Affleck','Matt Damon'))[0m  [["movie_id", 809]]
+  [1m[36mActor Load (0.6ms)[0m  [1m[34mSELECT "actors".* FROM "actors" INNER JOIN "castings" ON "actors"."id" = "castings"."actor_id" WHERE "castings"."movie_id" = $1 AND (actors.name IN ('Ben Affleck','Matt Damon'))[0m  [["movie_id", 1449]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActor Load (0.2ms)[0m  [1m[34mSELECT "actors".* FROM "actors" WHERE "actors"."name" = $1 LIMIT $2[0m  [["name", "Sylvester Stallone"], ["LIMIT", 1]]
+  [1m[36mMovie Load (1.4ms)[0m  [1m[34mSELECT "movies".* FROM "movies" INNER JOIN "castings" ON "movies"."id" = "castings"."movie_id" WHERE "castings"."actor_id" = $1[0m  [["actor_id", 5]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mActiveRecord::InternalMetadata Pluck (0.5ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "schema_sha1"], ["LIMIT", 1]]
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mMovie Load (3.9ms)[0m  [1m[34mSELECT "movies"."title", "movies"."id" FROM "movies" INNER JOIN "castings" ON "castings"."movie_id" = "movies"."id" INNER JOIN "actors" ON "actors"."id" = "castings"."actor_id" WHERE (actors.name IN ('Ben Affleck','Matt Damon'))[0m
+  [1m[36mActor Load (0.7ms)[0m  [1m[34mSELECT "actors".* FROM "actors" INNER JOIN "castings" ON "actors"."id" = "castings"."actor_id" WHERE "castings"."movie_id" = $1 AND (actors.name IN ('Ben Affleck','Matt Damon'))[0m  [["movie_id", 29]]
+  [1m[36mActor Load (0.7ms)[0m  [1m[34mSELECT "actors".* FROM "actors" INNER JOIN "castings" ON "actors"."id" = "castings"."actor_id" WHERE "castings"."movie_id" = $1 AND (actors.name IN ('Ben Affleck','Matt Damon'))[0m  [["movie_id", 58]]
+  [1m[36mActor Load (0.5ms)[0m  [1m[34mSELECT "actors".* FROM "actors" INNER JOIN "castings" ON "actors"."id" = "castings"."actor_id" WHERE "castings"."movie_id" = $1 AND (actors.name IN ('Ben Affleck','Matt Damon'))[0m  [["movie_id", 95]]
+  [1m[36mActor Load (0.4ms)[0m  [1m[34mSELECT "actors".* FROM "actors" INNER JOIN "castings" ON "actors"."id" = "castings"."actor_id" WHERE "castings"."movie_id" = $1 AND (actors.name IN ('Ben Affleck','Matt Damon'))[0m  [["movie_id", 98]]
+  [1m[36mActor Load (0.4ms)[0m  [1m[34mSELECT "actors".* FROM "actors" INNER JOIN "castings" ON "actors"."id" = "castings"."actor_id" WHERE "castings"."movie_id" = $1 AND (actors.name IN ('Ben Affleck','Matt Damon'))[0m  [["movie_id", 816]]
+  [1m[36mActor Load (0.5ms)[0m  [1m[34mSELECT "actors".* FROM "actors" INNER JOIN "castings" ON "actors"."id" = "castings"."actor_id" WHERE "castings"."movie_id" = $1 AND (actors.name IN ('Ben Affleck','Matt Damon'))[0m  [["movie_id", 940]]
+  [1m[36mActor Load (0.5ms)[0m  [1m[34mSELECT "actors".* FROM "actors" INNER JOIN "castings" ON "actors"."id" = "castings"."actor_id" WHERE "castings"."movie_id" = $1 AND (actors.name IN ('Ben Affleck','Matt Damon'))[0m  [["movie_id", 1057]]
+  [1m[36mActor Load (0.4ms)[0m  [1m[34mSELECT "actors".* FROM "actors" INNER JOIN "castings" ON "actors"."id" = "castings"."actor_id" WHERE "castings"."movie_id" = $1 AND (actors.name IN ('Ben Affleck','Matt Damon'))[0m  [["movie_id", 1153]]
+  [1m[36mActor Load (0.4ms)[0m  [1m[34mSELECT "actors".* FROM "actors" INNER JOIN "castings" ON "actors"."id" = "castings"."actor_id" WHERE "castings"."movie_id" = $1 AND (actors.name IN ('Ben Affleck','Matt Damon'))[0m  [["movie_id", 1361]]
+  [1m[36mActor Load (0.6ms)[0m  [1m[34mSELECT "actors".* FROM "actors" INNER JOIN "castings" ON "actors"."id" = "castings"."actor_id" WHERE "castings"."movie_id" = $1 AND (actors.name IN ('Ben Affleck','Matt Damon'))[0m  [["movie_id", 1449]]
+  [1m[36mActor Load (0.5ms)[0m  [1m[34mSELECT "actors".* FROM "actors" INNER JOIN "castings" ON "actors"."id" = "castings"."actor_id" WHERE "castings"."movie_id" = $1 AND (actors.name IN ('Ben Affleck','Matt Damon'))[0m  [["movie_id", 8]]
+  [1m[36mActor Load (0.3ms)[0m  [1m[34mSELECT "actors".* FROM "actors" INNER JOIN "castings" ON "actors"."id" = "castings"."actor_id" WHERE "castings"."movie_id" = $1 AND (actors.name IN ('Ben Affleck','Matt Damon'))[0m  [["movie_id", 29]]
+  [1m[36mActor Load (0.3ms)[0m  [1m[34mSELECT "actors".* FROM "actors" INNER JOIN "castings" ON "actors"."id" = "castings"."actor_id" WHERE "castings"."movie_id" = $1 AND (actors.name IN ('Ben Affleck','Matt Damon'))[0m  [["movie_id", 95]]
+  [1m[36mActor Load (0.6ms)[0m  [1m[34mSELECT "actors".* FROM "actors" INNER JOIN "castings" ON "actors"."id" = "castings"."actor_id" WHERE "castings"."movie_id" = $1 AND (actors.name IN ('Ben Affleck','Matt Damon'))[0m  [["movie_id", 98]]
+  [1m[36mActor Load (0.6ms)[0m  [1m[34mSELECT "actors".* FROM "actors" INNER JOIN "castings" ON "actors"."id" = "castings"."actor_id" WHERE "castings"."movie_id" = $1 AND (actors.name IN ('Ben Affleck','Matt Damon'))[0m  [["movie_id", 176]]
+  [1m[36mActor Load (0.6ms)[0m  [1m[34mSELECT "actors".* FROM "actors" INNER JOIN "castings" ON "actors"."id" = "castings"."actor_id" WHERE "castings"."movie_id" = $1 AND (actors.name IN ('Ben Affleck','Matt Damon'))[0m  [["movie_id", 452]]
+  [1m[36mActor Load (0.6ms)[0m  [1m[34mSELECT "actors".* FROM "actors" INNER JOIN "castings" ON "actors"."id" = "castings"."actor_id" WHERE "castings"."movie_id" = $1 AND (actors.name IN ('Ben Affleck','Matt Damon'))[0m  [["movie_id", 524]]
+  [1m[36mActor Load (0.6ms)[0m  [1m[34mSELECT "actors".* FROM "actors" INNER JOIN "castings" ON "actors"."id" = "castings"."actor_id" WHERE "castings"."movie_id" = $1 AND (actors.name IN ('Ben Affleck','Matt Damon'))[0m  [["movie_id", 576]]
+  [1m[36mActor Load (0.6ms)[0m  [1m[34mSELECT "actors".* FROM "actors" INNER JOIN "castings" ON "actors"."id" = "castings"."actor_id" WHERE "castings"."movie_id" = $1 AND (actors.name IN ('Ben Affleck','Matt Damon'))[0m  [["movie_id", 809]]
+  [1m[36mActor Load (0.4ms)[0m  [1m[34mSELECT "actors".* FROM "actors" INNER JOIN "castings" ON "actors"."id" = "castings"."actor_id" WHERE "castings"."movie_id" = $1 AND (actors.name IN ('Ben Affleck','Matt Damon'))[0m  [["movie_id", 1449]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mMovie Load (0.9ms)[0m  [1m[34mSELECT "movies"."title", "movies"."id" FROM "movies" INNER JOIN "castings" ON "castings"."movie_id" = "movies"."id" INNER JOIN "actors" ON "actors"."id" = "castings"."actor_id" WHERE (actors.name IN ('Ben Affleck','Matt Damon'))[0m
+  [1m[36mActor Load (0.6ms)[0m  [1m[34mSELECT "actors".* FROM "actors" INNER JOIN "castings" ON "actors"."id" = "castings"."actor_id" WHERE "castings"."movie_id" = $1 AND (actors.name IN ('Ben Affleck','Matt Damon'))[0m  [["movie_id", 29]]
+  [1m[36mActor Load (0.6ms)[0m  [1m[34mSELECT "actors".* FROM "actors" INNER JOIN "castings" ON "actors"."id" = "castings"."actor_id" WHERE "castings"."movie_id" = $1 AND (actors.name IN ('Ben Affleck','Matt Damon'))[0m  [["movie_id", 58]]
+  [1m[36mActor Load (0.3ms)[0m  [1m[34mSELECT "actors".* FROM "actors" INNER JOIN "castings" ON "actors"."id" = "castings"."actor_id" WHERE "castings"."movie_id" = $1 AND (actors.name IN ('Ben Affleck','Matt Damon'))[0m  [["movie_id", 95]]
+  [1m[36mActor Load (0.3ms)[0m  [1m[34mSELECT "actors".* FROM "actors" INNER JOIN "castings" ON "actors"."id" = "castings"."actor_id" WHERE "castings"."movie_id" = $1 AND (actors.name IN ('Ben Affleck','Matt Damon'))[0m  [["movie_id", 98]]
+  [1m[36mActor Load (0.3ms)[0m  [1m[34mSELECT "actors".* FROM "actors" INNER JOIN "castings" ON "actors"."id" = "castings"."actor_id" WHERE "castings"."movie_id" = $1 AND (actors.name IN ('Ben Affleck','Matt Damon'))[0m  [["movie_id", 816]]
+  [1m[36mActor Load (0.3ms)[0m  [1m[34mSELECT "actors".* FROM "actors" INNER JOIN "castings" ON "actors"."id" = "castings"."actor_id" WHERE "castings"."movie_id" = $1 AND (actors.name IN ('Ben Affleck','Matt Damon'))[0m  [["movie_id", 940]]
+  [1m[36mActor Load (1.1ms)[0m  [1m[34mSELECT "actors".* FROM "actors" INNER JOIN "castings" ON "actors"."id" = "castings"."actor_id" WHERE "castings"."movie_id" = $1 AND (actors.name IN ('Ben Affleck','Matt Damon'))[0m  [["movie_id", 1057]]
+  [1m[36mActor Load (0.8ms)[0m  [1m[34mSELECT "actors".* FROM "actors" INNER JOIN "castings" ON "actors"."id" = "castings"."actor_id" WHERE "castings"."movie_id" = $1 AND (actors.name IN ('Ben Affleck','Matt Damon'))[0m  [["movie_id", 1153]]
+  [1m[36mActor Load (0.8ms)[0m  [1m[34mSELECT "actors".* FROM "actors" INNER JOIN "castings" ON "actors"."id" = "castings"."actor_id" WHERE "castings"."movie_id" = $1 AND (actors.name IN ('Ben Affleck','Matt Damon'))[0m  [["movie_id", 1361]]
+  [1m[36mActor Load (0.5ms)[0m  [1m[34mSELECT "actors".* FROM "actors" INNER JOIN "castings" ON "actors"."id" = "castings"."actor_id" WHERE "castings"."movie_id" = $1 AND (actors.name IN ('Ben Affleck','Matt Damon'))[0m  [["movie_id", 1449]]
+  [1m[36mActor Load (0.4ms)[0m  [1m[34mSELECT "actors".* FROM "actors" INNER JOIN "castings" ON "actors"."id" = "castings"."actor_id" WHERE "castings"."movie_id" = $1 AND (actors.name IN ('Ben Affleck','Matt Damon'))[0m  [["movie_id", 8]]
+  [1m[36mActor Load (0.4ms)[0m  [1m[34mSELECT "actors".* FROM "actors" INNER JOIN "castings" ON "actors"."id" = "castings"."actor_id" WHERE "castings"."movie_id" = $1 AND (actors.name IN ('Ben Affleck','Matt Damon'))[0m  [["movie_id", 29]]
+  [1m[36mActor Load (0.6ms)[0m  [1m[34mSELECT "actors".* FROM "actors" INNER JOIN "castings" ON "actors"."id" = "castings"."actor_id" WHERE "castings"."movie_id" = $1 AND (actors.name IN ('Ben Affleck','Matt Damon'))[0m  [["movie_id", 95]]
+  [1m[36mActor Load (0.4ms)[0m  [1m[34mSELECT "actors".* FROM "actors" INNER JOIN "castings" ON "actors"."id" = "castings"."actor_id" WHERE "castings"."movie_id" = $1 AND (actors.name IN ('Ben Affleck','Matt Damon'))[0m  [["movie_id", 98]]
+  [1m[36mActor Load (0.4ms)[0m  [1m[34mSELECT "actors".* FROM "actors" INNER JOIN "castings" ON "actors"."id" = "castings"."actor_id" WHERE "castings"."movie_id" = $1 AND (actors.name IN ('Ben Affleck','Matt Damon'))[0m  [["movie_id", 176]]
+  [1m[36mActor Load (0.4ms)[0m  [1m[34mSELECT "actors".* FROM "actors" INNER JOIN "castings" ON "actors"."id" = "castings"."actor_id" WHERE "castings"."movie_id" = $1 AND (actors.name IN ('Ben Affleck','Matt Damon'))[0m  [["movie_id", 452]]
+  [1m[36mActor Load (0.5ms)[0m  [1m[34mSELECT "actors".* FROM "actors" INNER JOIN "castings" ON "actors"."id" = "castings"."actor_id" WHERE "castings"."movie_id" = $1 AND (actors.name IN ('Ben Affleck','Matt Damon'))[0m  [["movie_id", 524]]
+  [1m[36mActor Load (0.5ms)[0m  [1m[34mSELECT "actors".* FROM "actors" INNER JOIN "castings" ON "actors"."id" = "castings"."actor_id" WHERE "castings"."movie_id" = $1 AND (actors.name IN ('Ben Affleck','Matt Damon'))[0m  [["movie_id", 576]]
+  [1m[36mActor Load (0.4ms)[0m  [1m[34mSELECT "actors".* FROM "actors" INNER JOIN "castings" ON "actors"."id" = "castings"."actor_id" WHERE "castings"."movie_id" = $1 AND (actors.name IN ('Ben Affleck','Matt Damon'))[0m  [["movie_id", 809]]
+  [1m[36mActor Load (0.4ms)[0m  [1m[34mSELECT "actors".* FROM "actors" INNER JOIN "castings" ON "actors"."id" = "castings"."actor_id" WHERE "castings"."movie_id" = $1 AND (actors.name IN ('Ben Affleck','Matt Damon'))[0m  [["movie_id", 1449]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActor Load (0.3ms)[0m  [1m[34mSELECT "actors".* FROM "actors" WHERE "actors"."name" = $1 LIMIT $2[0m  [["name", "Sylvester Stallone"], ["LIMIT", 1]]
+  [1m[36mMovie Load (0.9ms)[0m  [1m[34mSELECT "movies".* FROM "movies" INNER JOIN "castings" ON "movies"."id" = "castings"."movie_id" WHERE "castings"."actor_id" = $1[0m  [["actor_id", 5]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mActor Load (2.0ms)[0m  [1m[34mSELECT "actors".* FROM "actors" INNER JOIN "castings" ON "actors"."id" = "castings"."actor_id" WHERE "castings"."movie_id" = $1 AND (actors.name IN ('Ben Affleck','Matt Damon'))[0m  [["movie_id", 29]]
+  [1m[36mActor Load (0.7ms)[0m  [1m[34mSELECT "actors".* FROM "actors" INNER JOIN "castings" ON "actors"."id" = "castings"."actor_id" WHERE "castings"."movie_id" = $1 AND (actors.name IN ('Ben Affleck','Matt Damon'))[0m  [["movie_id", 58]]
+  [1m[36mActor Load (0.7ms)[0m  [1m[34mSELECT "actors".* FROM "actors" INNER JOIN "castings" ON "actors"."id" = "castings"."actor_id" WHERE "castings"."movie_id" = $1 AND (actors.name IN ('Ben Affleck','Matt Damon'))[0m  [["movie_id", 95]]
+  [1m[36mActor Load (0.6ms)[0m  [1m[34mSELECT "actors".* FROM "actors" INNER JOIN "castings" ON "actors"."id" = "castings"."actor_id" WHERE "castings"."movie_id" = $1 AND (actors.name IN ('Ben Affleck','Matt Damon'))[0m  [["movie_id", 98]]
+  [1m[36mActor Load (0.6ms)[0m  [1m[34mSELECT "actors".* FROM "actors" INNER JOIN "castings" ON "actors"."id" = "castings"."actor_id" WHERE "castings"."movie_id" = $1 AND (actors.name IN ('Ben Affleck','Matt Damon'))[0m  [["movie_id", 816]]
+  [1m[36mActor Load (0.8ms)[0m  [1m[34mSELECT "actors".* FROM "actors" INNER JOIN "castings" ON "actors"."id" = "castings"."actor_id" WHERE "castings"."movie_id" = $1 AND (actors.name IN ('Ben Affleck','Matt Damon'))[0m  [["movie_id", 940]]
+  [1m[36mActor Load (0.5ms)[0m  [1m[34mSELECT "actors".* FROM "actors" INNER JOIN "castings" ON "actors"."id" = "castings"."actor_id" WHERE "castings"."movie_id" = $1 AND (actors.name IN ('Ben Affleck','Matt Damon'))[0m  [["movie_id", 1057]]
+  [1m[36mActor Load (0.6ms)[0m  [1m[34mSELECT "actors".* FROM "actors" INNER JOIN "castings" ON "actors"."id" = "castings"."actor_id" WHERE "castings"."movie_id" = $1 AND (actors.name IN ('Ben Affleck','Matt Damon'))[0m  [["movie_id", 1153]]
+  [1m[36mActor Load (0.4ms)[0m  [1m[34mSELECT "actors".* FROM "actors" INNER JOIN "castings" ON "actors"."id" = "castings"."actor_id" WHERE "castings"."movie_id" = $1 AND (actors.name IN ('Ben Affleck','Matt Damon'))[0m  [["movie_id", 1361]]
+  [1m[36mActor Load (0.5ms)[0m  [1m[34mSELECT "actors".* FROM "actors" INNER JOIN "castings" ON "actors"."id" = "castings"."actor_id" WHERE "castings"."movie_id" = $1 AND (actors.name IN ('Ben Affleck','Matt Damon'))[0m  [["movie_id", 1449]]
+  [1m[36mActor Load (0.3ms)[0m  [1m[34mSELECT "actors".* FROM "actors" INNER JOIN "castings" ON "actors"."id" = "castings"."actor_id" WHERE "castings"."movie_id" = $1 AND (actors.name IN ('Ben Affleck','Matt Damon'))[0m  [["movie_id", 8]]
+  [1m[36mActor Load (0.3ms)[0m  [1m[34mSELECT "actors".* FROM "actors" INNER JOIN "castings" ON "actors"."id" = "castings"."actor_id" WHERE "castings"."movie_id" = $1 AND (actors.name IN ('Ben Affleck','Matt Damon'))[0m  [["movie_id", 29]]
+  [1m[36mActor Load (0.4ms)[0m  [1m[34mSELECT "actors".* FROM "actors" INNER JOIN "castings" ON "actors"."id" = "castings"."actor_id" WHERE "castings"."movie_id" = $1 AND (actors.name IN ('Ben Affleck','Matt Damon'))[0m  [["movie_id", 95]]
+  [1m[36mActor Load (0.3ms)[0m  [1m[34mSELECT "actors".* FROM "actors" INNER JOIN "castings" ON "actors"."id" = "castings"."actor_id" WHERE "castings"."movie_id" = $1 AND (actors.name IN ('Ben Affleck','Matt Damon'))[0m  [["movie_id", 98]]
+  [1m[36mActor Load (0.3ms)[0m  [1m[34mSELECT "actors".* FROM "actors" INNER JOIN "castings" ON "actors"."id" = "castings"."actor_id" WHERE "castings"."movie_id" = $1 AND (actors.name IN ('Ben Affleck','Matt Damon'))[0m  [["movie_id", 176]]
+  [1m[36mActor Load (0.3ms)[0m  [1m[34mSELECT "actors".* FROM "actors" INNER JOIN "castings" ON "actors"."id" = "castings"."actor_id" WHERE "castings"."movie_id" = $1 AND (actors.name IN ('Ben Affleck','Matt Damon'))[0m  [["movie_id", 452]]
+  [1m[36mActor Load (0.3ms)[0m  [1m[34mSELECT "actors".* FROM "actors" INNER JOIN "castings" ON "actors"."id" = "castings"."actor_id" WHERE "castings"."movie_id" = $1 AND (actors.name IN ('Ben Affleck','Matt Damon'))[0m  [["movie_id", 524]]
+  [1m[36mActor Load (0.3ms)[0m  [1m[34mSELECT "actors".* FROM "actors" INNER JOIN "castings" ON "actors"."id" = "castings"."actor_id" WHERE "castings"."movie_id" = $1 AND (actors.name IN ('Ben Affleck','Matt Damon'))[0m  [["movie_id", 576]]
+  [1m[36mActor Load (0.3ms)[0m  [1m[34mSELECT "actors".* FROM "actors" INNER JOIN "castings" ON "actors"."id" = "castings"."actor_id" WHERE "castings"."movie_id" = $1 AND (actors.name IN ('Ben Affleck','Matt Damon'))[0m  [["movie_id", 809]]
+  [1m[36mActor Load (0.8ms)[0m  [1m[34mSELECT "actors".* FROM "actors" INNER JOIN "castings" ON "actors"."id" = "castings"."actor_id" WHERE "castings"."movie_id" = $1 AND (actors.name IN ('Ben Affleck','Matt Damon'))[0m  [["movie_id", 1449]]
+  [1m[36mMovie Load (2.1ms)[0m  [1m[34mSELECT "movies"."title", "movies"."id" FROM "movies" INNER JOIN "castings" ON "castings"."movie_id" = "movies"."id" INNER JOIN "actors" ON "actors"."id" = "castings"."actor_id" WHERE (actors.name IN ('Ben Affleck','Matt Damon'))[0m
+  [1m[36mMovie Load (1.8ms)[0m  [1m[34mSELECT "movies"."title", "movies"."id" FROM "movies" INNER JOIN "castings" ON "castings"."movie_id" = "movies"."id" INNER JOIN "actors" ON "actors"."id" = "castings"."actor_id" WHERE (actors.name IN ('Ben Affleck','Matt Damon'))[0m
+  [1m[36mActor Load (1.6ms)[0m  [1m[34mSELECT "actors".* FROM "actors" INNER JOIN "castings" ON "actors"."id" = "castings"."actor_id" WHERE "castings"."movie_id" = $1 AND (actors.name IN ('Ben Affleck','Matt Damon'))[0m  [["movie_id", 29]]
+  [1m[36mActor Load (0.7ms)[0m  [1m[34mSELECT "actors".* FROM "actors" INNER JOIN "castings" ON "actors"."id" = "castings"."actor_id" WHERE "castings"."movie_id" = $1 AND (actors.name IN ('Ben Affleck','Matt Damon'))[0m  [["movie_id", 58]]
+  [1m[36mActor Load (0.4ms)[0m  [1m[34mSELECT "actors".* FROM "actors" INNER JOIN "castings" ON "actors"."id" = "castings"."actor_id" WHERE "castings"."movie_id" = $1 AND (actors.name IN ('Ben Affleck','Matt Damon'))[0m  [["movie_id", 95]]
+  [1m[36mActor Load (0.4ms)[0m  [1m[34mSELECT "actors".* FROM "actors" INNER JOIN "castings" ON "actors"."id" = "castings"."actor_id" WHERE "castings"."movie_id" = $1 AND (actors.name IN ('Ben Affleck','Matt Damon'))[0m  [["movie_id", 98]]
+  [1m[36mActor Load (0.5ms)[0m  [1m[34mSELECT "actors".* FROM "actors" INNER JOIN "castings" ON "actors"."id" = "castings"."actor_id" WHERE "castings"."movie_id" = $1 AND (actors.name IN ('Ben Affleck','Matt Damon'))[0m  [["movie_id", 816]]
+  [1m[36mActor Load (0.7ms)[0m  [1m[34mSELECT "actors".* FROM "actors" INNER JOIN "castings" ON "actors"."id" = "castings"."actor_id" WHERE "castings"."movie_id" = $1 AND (actors.name IN ('Ben Affleck','Matt Damon'))[0m  [["movie_id", 940]]
+  [1m[36mActor Load (0.7ms)[0m  [1m[34mSELECT "actors".* FROM "actors" INNER JOIN "castings" ON "actors"."id" = "castings"."actor_id" WHERE "castings"."movie_id" = $1 AND (actors.name IN ('Ben Affleck','Matt Damon'))[0m  [["movie_id", 1057]]
+  [1m[36mActor Load (0.7ms)[0m  [1m[34mSELECT "actors".* FROM "actors" INNER JOIN "castings" ON "actors"."id" = "castings"."actor_id" WHERE "castings"."movie_id" = $1 AND (actors.name IN ('Ben Affleck','Matt Damon'))[0m  [["movie_id", 1153]]
+  [1m[36mActor Load (2.8ms)[0m  [1m[34mSELECT "actors".* FROM "actors" INNER JOIN "castings" ON "actors"."id" = "castings"."actor_id" WHERE "castings"."movie_id" = $1 AND (actors.name IN ('Ben Affleck','Matt Damon'))[0m  [["movie_id", 1361]]
+  [1m[36mActor Load (0.9ms)[0m  [1m[34mSELECT "actors".* FROM "actors" INNER JOIN "castings" ON "actors"."id" = "castings"."actor_id" WHERE "castings"."movie_id" = $1 AND (actors.name IN ('Ben Affleck','Matt Damon'))[0m  [["movie_id", 1449]]
+  [1m[36mActor Load (0.3ms)[0m  [1m[34mSELECT "actors".* FROM "actors" INNER JOIN "castings" ON "actors"."id" = "castings"."actor_id" WHERE "castings"."movie_id" = $1 AND (actors.name IN ('Ben Affleck','Matt Damon'))[0m  [["movie_id", 8]]
+  [1m[36mActor Load (0.4ms)[0m  [1m[34mSELECT "actors".* FROM "actors" INNER JOIN "castings" ON "actors"."id" = "castings"."actor_id" WHERE "castings"."movie_id" = $1 AND (actors.name IN ('Ben Affleck','Matt Damon'))[0m  [["movie_id", 29]]
+  [1m[36mActor Load (0.3ms)[0m  [1m[34mSELECT "actors".* FROM "actors" INNER JOIN "castings" ON "actors"."id" = "castings"."actor_id" WHERE "castings"."movie_id" = $1 AND (actors.name IN ('Ben Affleck','Matt Damon'))[0m  [["movie_id", 95]]
+  [1m[36mActor Load (0.3ms)[0m  [1m[34mSELECT "actors".* FROM "actors" INNER JOIN "castings" ON "actors"."id" = "castings"."actor_id" WHERE "castings"."movie_id" = $1 AND (actors.name IN ('Ben Affleck','Matt Damon'))[0m  [["movie_id", 98]]
+  [1m[36mActor Load (0.4ms)[0m  [1m[34mSELECT "actors".* FROM "actors" INNER JOIN "castings" ON "actors"."id" = "castings"."actor_id" WHERE "castings"."movie_id" = $1 AND (actors.name IN ('Ben Affleck','Matt Damon'))[0m  [["movie_id", 176]]
+  [1m[36mActor Load (1.0ms)[0m  [1m[34mSELECT "actors".* FROM "actors" INNER JOIN "castings" ON "actors"."id" = "castings"."actor_id" WHERE "castings"."movie_id" = $1 AND (actors.name IN ('Ben Affleck','Matt Damon'))[0m  [["movie_id", 452]]
+  [1m[36mActor Load (0.6ms)[0m  [1m[34mSELECT "actors".* FROM "actors" INNER JOIN "castings" ON "actors"."id" = "castings"."actor_id" WHERE "castings"."movie_id" = $1 AND (actors.name IN ('Ben Affleck','Matt Damon'))[0m  [["movie_id", 524]]
+  [1m[36mActor Load (0.4ms)[0m  [1m[34mSELECT "actors".* FROM "actors" INNER JOIN "castings" ON "actors"."id" = "castings"."actor_id" WHERE "castings"."movie_id" = $1 AND (actors.name IN ('Ben Affleck','Matt Damon'))[0m  [["movie_id", 576]]
+  [1m[36mActor Load (0.4ms)[0m  [1m[34mSELECT "actors".* FROM "actors" INNER JOIN "castings" ON "actors"."id" = "castings"."actor_id" WHERE "castings"."movie_id" = $1 AND (actors.name IN ('Ben Affleck','Matt Damon'))[0m  [["movie_id", 809]]
+  [1m[36mActor Load (0.6ms)[0m  [1m[34mSELECT "actors".* FROM "actors" INNER JOIN "castings" ON "actors"."id" = "castings"."actor_id" WHERE "castings"."movie_id" = $1 AND (actors.name IN ('Ben Affleck','Matt Damon'))[0m  [["movie_id", 1449]]
+  [1m[36mActiveRecord::InternalMetadata Pluck (0.4ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "schema_sha1"], ["LIMIT", 1]]
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mMovie Load (0.6ms)[0m  [1m[34mSELECT "movies"."title", "movies"."id" FROM "movies" INNER JOIN "castings" ON "castings"."movie_id" = "movies"."id" INNER JOIN "actors" ON "actors"."id" = "castings"."actor_id" WHERE (actors.name IN ('Ben Affleck','Matt Damon')) GROUP BY "movies"."id" HAVING (COUNT(id) = 2)[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mMovie Load (0.2ms)[0m  [1m[34mSELECT "movies"."title", "movies"."id" FROM "movies" INNER JOIN "castings" ON "castings"."movie_id" = "movies"."id" INNER JOIN "actors" ON "actors"."id" = "castings"."actor_id" WHERE (actors.name IN ('Ben Affleck','Matt Damon')) GROUP BY "movies"."id" HAVING (COUNT(id) = 2)[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActor Load (0.5ms)[0m  [1m[34mSELECT "actors".* FROM "actors" WHERE "actors"."name" = $1 LIMIT $2[0m  [["name", "Sylvester Stallone"], ["LIMIT", 1]]
+  [1m[36mMovie Load (1.7ms)[0m  [1m[34mSELECT "movies".* FROM "movies" INNER JOIN "castings" ON "movies"."id" = "castings"."movie_id" WHERE "castings"."actor_id" = $1[0m  [["actor_id", 5]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mActiveRecord::InternalMetadata Pluck (0.4ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "schema_sha1"], ["LIMIT", 1]]
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mMovie Load (2.2ms)[0m  [1m[34mSELECT "movies"."title", "movies"."id" FROM "movies" INNER JOIN "castings" ON "castings"."movie_id" = "movies"."id" INNER JOIN "actors" ON "actors"."id" = "castings"."actor_id" WHERE (actors.name IN ('Ben Affleck','Matt Damon')) GROUP BY "movies"."id" HAVING (COUNT(movies.id) = 2)[0m
+  [1m[36mMovie Load (0.9ms)[0m  [1m[34mSELECT "movies"."title", "movies"."id" FROM "movies" INNER JOIN "castings" ON "castings"."movie_id" = "movies"."id" INNER JOIN "actors" ON "actors"."id" = "castings"."actor_id" WHERE (actors.name IN ('Geena Davis','Susan Sarandon')) GROUP BY "movies"."id" HAVING (COUNT(movies.id) = 2)[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mMovie Load (0.7ms)[0m  [1m[34mSELECT "movies"."title", "movies"."id" FROM "movies" INNER JOIN "castings" ON "castings"."movie_id" = "movies"."id" INNER JOIN "actors" ON "actors"."id" = "castings"."actor_id" WHERE (actors.name IN ('Ben Affleck','Matt Damon')) GROUP BY "movies"."id" HAVING (COUNT(movies.id) = 2)[0m
+  [1m[36mMovie Load (0.6ms)[0m  [1m[34mSELECT "movies"."title", "movies"."id" FROM "movies" INNER JOIN "castings" ON "castings"."movie_id" = "movies"."id" INNER JOIN "actors" ON "actors"."id" = "castings"."actor_id" WHERE (actors.name IN ('Geena Davis','Susan Sarandon')) GROUP BY "movies"."id" HAVING (COUNT(movies.id) = 2)[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActor Load (0.1ms)[0m  [1m[34mSELECT "actors".* FROM "actors" WHERE "actors"."name" = $1 LIMIT $2[0m  [["name", "Sylvester Stallone"], ["LIMIT", 1]]
+  [1m[36mMovie Load (0.6ms)[0m  [1m[34mSELECT "movies".* FROM "movies" INNER JOIN "castings" ON "movies"."id" = "castings"."movie_id" WHERE "castings"."actor_id" = $1[0m  [["actor_id", 5]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mActiveRecord::InternalMetadata Pluck (0.4ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "schema_sha1"], ["LIMIT", 1]]
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mMovie Load (4.1ms)[0m  [1m[34mSELECT "movies"."title", "movies"."id" FROM "movies" INNER JOIN "castings" ON "castings"."movie_id" = "movies"."id" INNER JOIN "actors" ON "actors"."id" = "castings"."actor_id" WHERE (actors.name IN ('Ben Affleck','Matt Damon')) GROUP BY "movies"."id" HAVING (COUNT(*) = 2)[0m
+  [1m[36mMovie Load (1.3ms)[0m  [1m[34mSELECT "movies"."title", "movies"."id" FROM "movies" INNER JOIN "castings" ON "castings"."movie_id" = "movies"."id" INNER JOIN "actors" ON "actors"."id" = "castings"."actor_id" WHERE (actors.name IN ('Geena Davis','Susan Sarandon')) GROUP BY "movies"."id" HAVING (COUNT(*) = 2)[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mMovie Load (0.6ms)[0m  [1m[34mSELECT "movies"."title", "movies"."id" FROM "movies" INNER JOIN "castings" ON "castings"."movie_id" = "movies"."id" INNER JOIN "actors" ON "actors"."id" = "castings"."actor_id" WHERE (actors.name IN ('Ben Affleck','Matt Damon')) GROUP BY "movies"."id" HAVING (COUNT(*) = 2)[0m
+  [1m[36mMovie Load (0.6ms)[0m  [1m[34mSELECT "movies"."title", "movies"."id" FROM "movies" INNER JOIN "castings" ON "castings"."movie_id" = "movies"."id" INNER JOIN "actors" ON "actors"."id" = "castings"."actor_id" WHERE (actors.name IN ('Geena Davis','Susan Sarandon')) GROUP BY "movies"."id" HAVING (COUNT(*) = 2)[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActor Load (0.1ms)[0m  [1m[34mSELECT "actors".* FROM "actors" WHERE "actors"."name" = $1 LIMIT $2[0m  [["name", "Sylvester Stallone"], ["LIMIT", 1]]
+  [1m[36mMovie Load (1.1ms)[0m  [1m[34mSELECT "movies".* FROM "movies" INNER JOIN "castings" ON "movies"."id" = "castings"."movie_id" WHERE "castings"."actor_id" = $1[0m  [["actor_id", 5]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mMovie Load (2.7ms)[0m  [1m[34mSELECT floor(year/10)*10 FROM "movies"[0m
+  [1m[36mMovie Load (0.5ms)[0m  [1m[34mSELECT floor(year/10)*10 FROM "movies" /* loading for inspect */ LIMIT $1[0m  [["LIMIT", 11]]
+  [1m[36mMovie Load (2.5ms)[0m  [1m[34mSELECT floor(yr/10)*10 FROM "movies"[0m
+  [1m[36mMovie Load (1.0ms)[0m  [1m[34mSELECT floor(yr/10)*10 FROM "movies"[0m
+  [1m[36mMovie Load (1.1ms)[0m  [1m[34mSELECT floor(yr/10)*10 decade FROM "movies"[0m
+  [1m[36mMovie Load (1.8ms)[0m  [1m[34mSELECT floor(yr/10)*10 decade FROM "movies"[0m
+  [1m[36mMovie Load (1.5ms)[0m  [1m[34mSELECT floor(yr/10)*10 decade FROM "movies"[0m
+  [1m[36mMovie Load (5.8ms)[0m  [1m[34mSELECT floor(yr/10)*10 decade FROM "movies" GROUP BY decade ORDER BY AVG(score) LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mMovie Load (1.9ms)[0m  [1m[34mSELECT floor(yr/10)*10 decade FROM "movies" GROUP BY decade ORDER BY AVG(score) LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mMovie Load (2.1ms)[0m  [1m[34mSELECT floor(yr/10)*10 decade FROM "movies" GROUP BY decade ORDER BY AVG(score) LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mActiveRecord::InternalMetadata Pluck (0.4ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "schema_sha1"], ["LIMIT", 1]]
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mMovie Load (2.6ms)[0m  [1m[34mSELECT "movies"."title", "movies"."id" FROM "movies" INNER JOIN "castings" ON "castings"."movie_id" = "movies"."id" INNER JOIN "actors" ON "actors"."id" = "castings"."actor_id" WHERE (actors.name IN ('Ben Affleck','Matt Damon')) GROUP BY "movies"."id" HAVING (COUNT(*) = 2)[0m
+  [1m[36mMovie Load (1.2ms)[0m  [1m[34mSELECT "movies"."title", "movies"."id" FROM "movies" INNER JOIN "castings" ON "castings"."movie_id" = "movies"."id" INNER JOIN "actors" ON "actors"."id" = "castings"."actor_id" WHERE (actors.name IN ('Geena Davis','Susan Sarandon')) GROUP BY "movies"."id" HAVING (COUNT(*) = 2)[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mMovie Load (1.5ms)[0m  [1m[34mSELECT "movies"."title", "movies"."id" FROM "movies" INNER JOIN "castings" ON "castings"."movie_id" = "movies"."id" INNER JOIN "actors" ON "actors"."id" = "castings"."actor_id" WHERE (actors.name IN ('Ben Affleck','Matt Damon')) GROUP BY "movies"."id" HAVING (COUNT(*) = 2)[0m
+  [1m[36mMovie Load (0.7ms)[0m  [1m[34mSELECT "movies"."title", "movies"."id" FROM "movies" INNER JOIN "castings" ON "castings"."movie_id" = "movies"."id" INNER JOIN "actors" ON "actors"."id" = "castings"."actor_id" WHERE (actors.name IN ('Geena Davis','Susan Sarandon')) GROUP BY "movies"."id" HAVING (COUNT(*) = 2)[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mMovie Load (2.1ms)[0m  [1m[34mSELECT floor(yr/10)*10 decade FROM "movies" GROUP BY decade /* loading for inspect */ ORDER BY AVG(score) LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mMovie Load (1.0ms)[0m  [1m[34mSELECT floor(yr/10)*10 decade FROM "movies" GROUP BY decade /* loading for inspect */ ORDER BY AVG(score) LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mMovie Load (1.2ms)[0m  [1m[34mSELECT floor(yr/10)*10 decade FROM "movies" GROUP BY decade /* loading for inspect */ ORDER BY AVG(score) LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mMovie Load (1.0ms)[0m  [1m[34mSELECT floor(yr/10)*10 decade FROM "movies" GROUP BY decade ORDER BY AVG(score) LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActor Load (0.2ms)[0m  [1m[34mSELECT "actors".* FROM "actors" WHERE "actors"."name" = $1 LIMIT $2[0m  [["name", "Sylvester Stallone"], ["LIMIT", 1]]
+  [1m[36mMovie Load (0.6ms)[0m  [1m[34mSELECT "movies".* FROM "movies" INNER JOIN "castings" ON "movies"."id" = "castings"."movie_id" WHERE "castings"."actor_id" = $1[0m  [["actor_id", 5]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mActiveRecord::InternalMetadata Pluck (0.3ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "schema_sha1"], ["LIMIT", 1]]
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mMovie Load (2.2ms)[0m  [1m[34mSELECT "movies"."title", "movies"."id" FROM "movies" INNER JOIN "castings" ON "castings"."movie_id" = "movies"."id" INNER JOIN "actors" ON "actors"."id" = "castings"."actor_id" WHERE (actors.name IN ('Ben Affleck','Matt Damon')) GROUP BY "movies"."id" HAVING (COUNT(*) = 2)[0m
+  [1m[36mMovie Load (1.2ms)[0m  [1m[34mSELECT "movies"."title", "movies"."id" FROM "movies" INNER JOIN "castings" ON "castings"."movie_id" = "movies"."id" INNER JOIN "actors" ON "actors"."id" = "castings"."actor_id" WHERE (actors.name IN ('Geena Davis','Susan Sarandon')) GROUP BY "movies"."id" HAVING (COUNT(*) = 2)[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mMovie Load (0.9ms)[0m  [1m[34mSELECT "movies"."title", "movies"."id" FROM "movies" INNER JOIN "castings" ON "castings"."movie_id" = "movies"."id" INNER JOIN "actors" ON "actors"."id" = "castings"."actor_id" WHERE (actors.name IN ('Ben Affleck','Matt Damon')) GROUP BY "movies"."id" HAVING (COUNT(*) = 2)[0m
+  [1m[36mMovie Load (0.7ms)[0m  [1m[34mSELECT "movies"."title", "movies"."id" FROM "movies" INNER JOIN "castings" ON "castings"."movie_id" = "movies"."id" INNER JOIN "actors" ON "actors"."id" = "castings"."actor_id" WHERE (actors.name IN ('Geena Davis','Susan Sarandon')) GROUP BY "movies"."id" HAVING (COUNT(*) = 2)[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mMovie Load (2.0ms)[0m  [1m[34mSELECT floor(yr/10)*10 decade FROM "movies" GROUP BY decade ORDER BY AVG(score) LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mMovie Load (1.0ms)[0m  [1m[34mSELECT floor(yr/10)*10 decade FROM "movies" GROUP BY decade ORDER BY AVG(score) LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActor Load (0.2ms)[0m  [1m[34mSELECT "actors".* FROM "actors" WHERE "actors"."name" = $1 LIMIT $2[0m  [["name", "Sylvester Stallone"], ["LIMIT", 1]]
+  [1m[36mMovie Load (0.7ms)[0m  [1m[34mSELECT "movies".* FROM "movies" INNER JOIN "castings" ON "movies"."id" = "castings"."movie_id" WHERE "castings"."actor_id" = $1[0m  [["actor_id", 5]]
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mActiveRecord::InternalMetadata Pluck (0.5ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "schema_sha1"], ["LIMIT", 1]]
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mMovie Load (2.3ms)[0m  [1m[34mSELECT "movies"."title", "movies"."id" FROM "movies" INNER JOIN "castings" ON "castings"."movie_id" = "movies"."id" INNER JOIN "actors" ON "actors"."id" = "castings"."actor_id" WHERE (actors.name IN ('Ben Affleck','Matt Damon')) GROUP BY "movies"."id" HAVING (COUNT(*) = 2)[0m
+  [1m[36mMovie Load (0.8ms)[0m  [1m[34mSELECT "movies"."title", "movies"."id" FROM "movies" INNER JOIN "castings" ON "castings"."movie_id" = "movies"."id" INNER JOIN "actors" ON "actors"."id" = "castings"."actor_id" WHERE (actors.name IN ('Geena Davis','Susan Sarandon')) GROUP BY "movies"."id" HAVING (COUNT(*) = 2)[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mMovie Load (0.8ms)[0m  [1m[34mSELECT "movies"."title", "movies"."id" FROM "movies" INNER JOIN "castings" ON "castings"."movie_id" = "movies"."id" INNER JOIN "actors" ON "actors"."id" = "castings"."actor_id" WHERE (actors.name IN ('Ben Affleck','Matt Damon')) GROUP BY "movies"."id" HAVING (COUNT(*) = 2)[0m
+  [1m[36mMovie Load (0.7ms)[0m  [1m[34mSELECT "movies"."title", "movies"."id" FROM "movies" INNER JOIN "castings" ON "castings"."movie_id" = "movies"."id" INNER JOIN "actors" ON "actors"."id" = "castings"."actor_id" WHERE (actors.name IN ('Geena Davis','Susan Sarandon')) GROUP BY "movies"."id" HAVING (COUNT(*) = 2)[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mMovie Load (1.4ms)[0m  [1m[34mSELECT floor(yr/10)*10 decade FROM "movies" GROUP BY decade ORDER BY AVG(score) desc LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mMovie Load (0.9ms)[0m  [1m[34mSELECT floor(yr/10)*10 decade FROM "movies" GROUP BY decade ORDER BY AVG(score) desc LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActor Load (0.2ms)[0m  [1m[34mSELECT "actors".* FROM "actors" WHERE "actors"."name" = $1 LIMIT $2[0m  [["name", "Sylvester Stallone"], ["LIMIT", 1]]
+  [1m[36mMovie Load (1.0ms)[0m  [1m[34mSELECT "movies".* FROM "movies" INNER JOIN "castings" ON "movies"."id" = "castings"."movie_id" WHERE "castings"."actor_id" = $1[0m  [["actor_id", 5]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mActiveRecord::InternalMetadata Pluck (0.5ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "schema_sha1"], ["LIMIT", 1]]
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mMovie Load (4.3ms)[0m  [1m[34mSELECT "movies"."title", "movies"."id" FROM "movies" INNER JOIN "castings" ON "castings"."movie_id" = "movies"."id" INNER JOIN "actors" ON "actors"."id" = "castings"."actor_id" WHERE (actors.name IN ('Ben Affleck','Matt Damon')) GROUP BY "movies"."id" HAVING (COUNT(*) = 2)[0m
+  [1m[36mMovie Load (1.2ms)[0m  [1m[34mSELECT "movies"."title", "movies"."id" FROM "movies" INNER JOIN "castings" ON "castings"."movie_id" = "movies"."id" INNER JOIN "actors" ON "actors"."id" = "castings"."actor_id" WHERE (actors.name IN ('Geena Davis','Susan Sarandon')) GROUP BY "movies"."id" HAVING (COUNT(*) = 2)[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mMovie Load (1.3ms)[0m  [1m[34mSELECT "movies"."title", "movies"."id" FROM "movies" INNER JOIN "castings" ON "castings"."movie_id" = "movies"."id" INNER JOIN "actors" ON "actors"."id" = "castings"."actor_id" WHERE (actors.name IN ('Ben Affleck','Matt Damon')) GROUP BY "movies"."id" HAVING (COUNT(*) = 2)[0m
+  [1m[36mMovie Load (1.2ms)[0m  [1m[34mSELECT "movies"."title", "movies"."id" FROM "movies" INNER JOIN "castings" ON "castings"."movie_id" = "movies"."id" INNER JOIN "actors" ON "actors"."id" = "castings"."actor_id" WHERE (actors.name IN ('Geena Davis','Susan Sarandon')) GROUP BY "movies"."id" HAVING (COUNT(*) = 2)[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mMovie Load (1.8ms)[0m  [1m[34mSELECT floor(yr/10)*10 decade FROM "movies" GROUP BY decade ORDER BY AVG(score) desc LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mMovie Load (1.0ms)[0m  [1m[34mSELECT floor(yr/10)*10 decade FROM "movies" GROUP BY decade ORDER BY AVG(score) desc LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTRANSACTION (0.8ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActor Load (0.2ms)[0m  [1m[34mSELECT "actors".* FROM "actors" WHERE "actors"."name" = $1 LIMIT $2[0m  [["name", "Sylvester Stallone"], ["LIMIT", 1]]
+  [1m[36mMovie Load (0.8ms)[0m  [1m[34mSELECT "movies".* FROM "movies" INNER JOIN "castings" ON "movies"."id" = "castings"."movie_id" WHERE "castings"."actor_id" = $1[0m  [["actor_id", 5]]
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mMovie Load (2.2ms)[0m  [1m[34mSELECT floor(yr/10)*10 decade FROM "movies" GROUP BY decade ORDER BY AVG(score) desc LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mActiveRecord::InternalMetadata Pluck (0.5ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "schema_sha1"], ["LIMIT", 1]]
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mMovie Load (3.0ms)[0m  [1m[34mSELECT "movies"."title", "movies"."id" FROM "movies" INNER JOIN "castings" ON "castings"."movie_id" = "movies"."id" INNER JOIN "actors" ON "actors"."id" = "castings"."actor_id" WHERE (actors.name IN ('Ben Affleck','Matt Damon')) GROUP BY "movies"."id" HAVING (COUNT(*) = 2)[0m
+  [1m[36mMovie Load (1.1ms)[0m  [1m[34mSELECT "movies"."title", "movies"."id" FROM "movies" INNER JOIN "castings" ON "castings"."movie_id" = "movies"."id" INNER JOIN "actors" ON "actors"."id" = "castings"."actor_id" WHERE (actors.name IN ('Geena Davis','Susan Sarandon')) GROUP BY "movies"."id" HAVING (COUNT(*) = 2)[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mMovie Load (0.7ms)[0m  [1m[34mSELECT "movies"."title", "movies"."id" FROM "movies" INNER JOIN "castings" ON "castings"."movie_id" = "movies"."id" INNER JOIN "actors" ON "actors"."id" = "castings"."actor_id" WHERE (actors.name IN ('Ben Affleck','Matt Damon')) GROUP BY "movies"."id" HAVING (COUNT(*) = 2)[0m
+  [1m[36mMovie Load (0.6ms)[0m  [1m[34mSELECT "movies"."title", "movies"."id" FROM "movies" INNER JOIN "castings" ON "castings"."movie_id" = "movies"."id" INNER JOIN "actors" ON "actors"."id" = "castings"."actor_id" WHERE (actors.name IN ('Geena Davis','Susan Sarandon')) GROUP BY "movies"."id" HAVING (COUNT(*) = 2)[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mMovie Load (2.4ms)[0m  [1m[34mSELECT CAST(floor(yr/10)*10 decade as integer) FROM "movies" GROUP BY decade ORDER BY AVG(score) desc LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mMovie Load (0.3ms)[0m  [1m[34mSELECT CAST(floor(yr/10)*10 decade as integer) FROM "movies" GROUP BY decade ORDER BY AVG(score) desc LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActor Load (0.2ms)[0m  [1m[34mSELECT "actors".* FROM "actors" WHERE "actors"."name" = $1 LIMIT $2[0m  [["name", "Sylvester Stallone"], ["LIMIT", 1]]
+  [1m[36mMovie Load (1.1ms)[0m  [1m[34mSELECT "movies".* FROM "movies" INNER JOIN "castings" ON "movies"."id" = "castings"."movie_id" WHERE "castings"."actor_id" = $1[0m  [["actor_id", 5]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mActiveRecord::InternalMetadata Pluck (1.9ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "schema_sha1"], ["LIMIT", 1]]
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mMovie Load (2.4ms)[0m  [1m[34mSELECT "movies"."title", "movies"."id" FROM "movies" INNER JOIN "castings" ON "castings"."movie_id" = "movies"."id" INNER JOIN "actors" ON "actors"."id" = "castings"."actor_id" WHERE (actors.name IN ('Ben Affleck','Matt Damon')) GROUP BY "movies"."id" HAVING (COUNT(*) = 2)[0m
+  [1m[36mMovie Load (0.9ms)[0m  [1m[34mSELECT "movies"."title", "movies"."id" FROM "movies" INNER JOIN "castings" ON "castings"."movie_id" = "movies"."id" INNER JOIN "actors" ON "actors"."id" = "castings"."actor_id" WHERE (actors.name IN ('Geena Davis','Susan Sarandon')) GROUP BY "movies"."id" HAVING (COUNT(*) = 2)[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mMovie Load (0.7ms)[0m  [1m[34mSELECT "movies"."title", "movies"."id" FROM "movies" INNER JOIN "castings" ON "castings"."movie_id" = "movies"."id" INNER JOIN "actors" ON "actors"."id" = "castings"."actor_id" WHERE (actors.name IN ('Ben Affleck','Matt Damon')) GROUP BY "movies"."id" HAVING (COUNT(*) = 2)[0m
+  [1m[36mMovie Load (0.6ms)[0m  [1m[34mSELECT "movies"."title", "movies"."id" FROM "movies" INNER JOIN "castings" ON "castings"."movie_id" = "movies"."id" INNER JOIN "actors" ON "actors"."id" = "castings"."actor_id" WHERE (actors.name IN ('Geena Davis','Susan Sarandon')) GROUP BY "movies"."id" HAVING (COUNT(*) = 2)[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mMovie Load (2.2ms)[0m  [1m[34mSELECT CAST(floor(yr/10)*10 as integer) decade  FROM "movies" GROUP BY decade ORDER BY AVG(score) desc LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mMovie Load (1.8ms)[0m  [1m[34mSELECT CAST(floor(yr/10)*10 as integer) decade  FROM "movies" GROUP BY decade ORDER BY AVG(score) desc LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActor Load (0.2ms)[0m  [1m[34mSELECT "actors".* FROM "actors" WHERE "actors"."name" = $1 LIMIT $2[0m  [["name", "Sylvester Stallone"], ["LIMIT", 1]]
+  [1m[36mMovie Load (1.0ms)[0m  [1m[34mSELECT "movies".* FROM "movies" INNER JOIN "castings" ON "movies"."id" = "castings"."movie_id" WHERE "castings"."actor_id" = $1[0m  [["actor_id", 5]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mActor Load (1.0ms)[0m  [1m[34mSELECT "actors".* FROM "actors" WHERE (name = 'Ben Affleck') LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mActiveRecord::InternalMetadata Pluck (0.4ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "schema_sha1"], ["LIMIT", 1]]
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mMovie Load (4.6ms)[0m  [1m[34mSELECT "movies"."title", "movies"."id" FROM "movies" INNER JOIN "castings" ON "castings"."movie_id" = "movies"."id" INNER JOIN "actors" ON "actors"."id" = "castings"."actor_id" WHERE (actors.name IN ('Ben Affleck','Matt Damon')) GROUP BY "movies"."id" HAVING (COUNT(*) = 2)[0m
+  [1m[36mMovie Load (1.5ms)[0m  [1m[34mSELECT "movies"."title", "movies"."id" FROM "movies" INNER JOIN "castings" ON "castings"."movie_id" = "movies"."id" INNER JOIN "actors" ON "actors"."id" = "castings"."actor_id" WHERE (actors.name IN ('Geena Davis','Susan Sarandon')) GROUP BY "movies"."id" HAVING (COUNT(*) = 2)[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mMovie Load (0.7ms)[0m  [1m[34mSELECT "movies"."title", "movies"."id" FROM "movies" INNER JOIN "castings" ON "castings"."movie_id" = "movies"."id" INNER JOIN "actors" ON "actors"."id" = "castings"."actor_id" WHERE (actors.name IN ('Ben Affleck','Matt Damon')) GROUP BY "movies"."id" HAVING (COUNT(*) = 2)[0m
+  [1m[36mMovie Load (0.8ms)[0m  [1m[34mSELECT "movies"."title", "movies"."id" FROM "movies" INNER JOIN "castings" ON "castings"."movie_id" = "movies"."id" INNER JOIN "actors" ON "actors"."id" = "castings"."actor_id" WHERE (actors.name IN ('Geena Davis','Susan Sarandon')) GROUP BY "movies"."id" HAVING (COUNT(*) = 2)[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mMovie Load (2.5ms)[0m  [1m[34mSELECT CAST(floor(yr/10)*10 as integer) decade  FROM "movies" GROUP BY decade ORDER BY AVG(score) desc LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mMovie Load (0.8ms)[0m  [1m[34mSELECT CAST(floor(yr/10)*10 as integer) decade  FROM "movies" GROUP BY decade ORDER BY AVG(score) desc LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mMovie Pluck (0.6ms)[0m  [1m[34mSELECT "movies"."id" FROM "movies" INNER JOIN "castings" ON "castings"."movie_id" = "movies"."id" INNER JOIN "actors" ON "actors"."id" = "castings"."actor_id" WHERE (actors.name = 'Julie Andrews')[0m
+  [1m[36mActor Load (1.0ms)[0m  [1m[34mSELECT "actors".* FROM "actors" INNER JOIN "castings" ON "castings"."actor_id" = "actors"."id" INNER JOIN "movies" ON "movies"."id" = "castings"."movie_id" WHERE (movies.id IN (171,1233,1249))[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mMovie Pluck (0.7ms)[0m  [1m[34mSELECT "movies"."id" FROM "movies" INNER JOIN "castings" ON "castings"."movie_id" = "movies"."id" INNER JOIN "actors" ON "actors"."id" = "castings"."actor_id" WHERE (actors.name = 'Julie Andrews')[0m
+  [1m[36mActor Load (0.6ms)[0m  [1m[34mSELECT "actors".* FROM "actors" INNER JOIN "castings" ON "castings"."actor_id" = "actors"."id" INNER JOIN "movies" ON "movies"."id" = "castings"."movie_id" WHERE (movies.id IN (171,1233,1249))[0m
+  [1m[36mMovie Pluck (0.7ms)[0m  [1m[34mSELECT "movies"."id" FROM "movies" INNER JOIN "castings" ON "castings"."movie_id" = "movies"."id" INNER JOIN "actors" ON "actors"."id" = "castings"."actor_id" WHERE (actors.name = 'Humphrey Bogart')[0m
+  [1m[36mActor Load (1.2ms)[0m  [1m[34mSELECT "actors".* FROM "actors" INNER JOIN "castings" ON "castings"."actor_id" = "actors"."id" INNER JOIN "movies" ON "movies"."id" = "castings"."movie_id" WHERE (movies.id IN (27,299,565,584,1076,1246))[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActor Load (0.2ms)[0m  [1m[34mSELECT "actors".* FROM "actors" WHERE "actors"."name" = $1 LIMIT $2[0m  [["name", "Sylvester Stallone"], ["LIMIT", 1]]
+  [1m[36mMovie Load (0.9ms)[0m  [1m[34mSELECT "movies".* FROM "movies" INNER JOIN "castings" ON "movies"."id" = "castings"."movie_id" WHERE "castings"."actor_id" = $1[0m  [["actor_id", 5]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mActiveRecord::InternalMetadata Pluck (0.4ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "schema_sha1"], ["LIMIT", 1]]
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mMovie Load (4.3ms)[0m  [1m[34mSELECT "movies"."title", "movies"."id" FROM "movies" INNER JOIN "castings" ON "castings"."movie_id" = "movies"."id" INNER JOIN "actors" ON "actors"."id" = "castings"."actor_id" WHERE (actors.name IN ('Ben Affleck','Matt Damon')) GROUP BY "movies"."id" HAVING (COUNT(*) = 2)[0m
+  [1m[36mMovie Load (1.5ms)[0m  [1m[34mSELECT "movies"."title", "movies"."id" FROM "movies" INNER JOIN "castings" ON "castings"."movie_id" = "movies"."id" INNER JOIN "actors" ON "actors"."id" = "castings"."actor_id" WHERE (actors.name IN ('Geena Davis','Susan Sarandon')) GROUP BY "movies"."id" HAVING (COUNT(*) = 2)[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mMovie Load (1.0ms)[0m  [1m[34mSELECT "movies"."title", "movies"."id" FROM "movies" INNER JOIN "castings" ON "castings"."movie_id" = "movies"."id" INNER JOIN "actors" ON "actors"."id" = "castings"."actor_id" WHERE (actors.name IN ('Ben Affleck','Matt Damon')) GROUP BY "movies"."id" HAVING (COUNT(*) = 2)[0m
+  [1m[36mMovie Load (1.0ms)[0m  [1m[34mSELECT "movies"."title", "movies"."id" FROM "movies" INNER JOIN "castings" ON "castings"."movie_id" = "movies"."id" INNER JOIN "actors" ON "actors"."id" = "castings"."actor_id" WHERE (actors.name IN ('Geena Davis','Susan Sarandon')) GROUP BY "movies"."id" HAVING (COUNT(*) = 2)[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mMovie Load (1.9ms)[0m  [1m[34mSELECT CAST(floor(yr/10)*10 as integer) decade  FROM "movies" GROUP BY decade ORDER BY AVG(score) desc LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mMovie Load (1.5ms)[0m  [1m[34mSELECT CAST(floor(yr/10)*10 as integer) decade  FROM "movies" GROUP BY decade ORDER BY AVG(score) desc LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mMovie Pluck (0.9ms)[0m  [1m[34mSELECT "movies"."id" FROM "movies" INNER JOIN "castings" ON "castings"."movie_id" = "movies"."id" INNER JOIN "actors" ON "actors"."id" = "castings"."actor_id" WHERE (actors.name = 'Julie Andrews')[0m
+  [1m[36mActor Pluck (1.1ms)[0m  [1m[34mSELECT "actors"."name" FROM "actors" INNER JOIN "castings" ON "castings"."actor_id" = "actors"."id" INNER JOIN "movies" ON "movies"."id" = "castings"."movie_id" WHERE (movies.id IN (171,1233,1249))[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mMovie Pluck (1.1ms)[0m  [1m[34mSELECT "movies"."id" FROM "movies" INNER JOIN "castings" ON "castings"."movie_id" = "movies"."id" INNER JOIN "actors" ON "actors"."id" = "castings"."actor_id" WHERE (actors.name = 'Julie Andrews')[0m
+  [1m[36mActor Pluck (0.7ms)[0m  [1m[34mSELECT "actors"."name" FROM "actors" INNER JOIN "castings" ON "castings"."actor_id" = "actors"."id" INNER JOIN "movies" ON "movies"."id" = "castings"."movie_id" WHERE (movies.id IN (171,1233,1249))[0m
+  [1m[36mMovie Pluck (0.7ms)[0m  [1m[34mSELECT "movies"."id" FROM "movies" INNER JOIN "castings" ON "castings"."movie_id" = "movies"."id" INNER JOIN "actors" ON "actors"."id" = "castings"."actor_id" WHERE (actors.name = 'Humphrey Bogart')[0m
+  [1m[36mActor Pluck (1.1ms)[0m  [1m[34mSELECT "actors"."name" FROM "actors" INNER JOIN "castings" ON "castings"."actor_id" = "actors"."id" INNER JOIN "movies" ON "movies"."id" = "castings"."movie_id" WHERE (movies.id IN (27,299,565,584,1076,1246))[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActor Load (0.1ms)[0m  [1m[34mSELECT "actors".* FROM "actors" WHERE "actors"."name" = $1 LIMIT $2[0m  [["name", "Sylvester Stallone"], ["LIMIT", 1]]
+  [1m[36mMovie Load (0.6ms)[0m  [1m[34mSELECT "movies".* FROM "movies" INNER JOIN "castings" ON "movies"."id" = "castings"."movie_id" WHERE "castings"."actor_id" = $1[0m  [["actor_id", 5]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mMovie Pluck (2.0ms)[0m  [1m[34mSELECT "movies"."id" FROM "movies" INNER JOIN "castings" ON "castings"."movie_id" = "movies"."id" INNER JOIN "actors" ON "actors"."id" = "castings"."actor_id" WHERE (actors.name = 'Julie Andrews')[0m
+  [1m[36mActor Load (2.2ms)[0m  [1m[34mSELECT "actors".* FROM "actors" INNER JOIN "castings" ON "castings"."actor_id" = "actors"."id" INNER JOIN "movies" ON "movies"."id" = "castings"."movie_id" WHERE (movies.id IN (171,1233,1249))[0m
+  [1m[36mActor Pluck (2.4ms)[0m  [1m[34mSELECT "actors"."name" FROM "actors" INNER JOIN "castings" ON "castings"."actor_id" = "actors"."id" INNER JOIN "movies" ON "movies"."id" = "castings"."movie_id" WHERE (movies.id IN (171,1233,1249))[0m
+  [1m[36mActiveRecord::InternalMetadata Pluck (0.5ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "schema_sha1"], ["LIMIT", 1]]
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mMovie Load (3.3ms)[0m  [1m[34mSELECT "movies"."title", "movies"."id" FROM "movies" INNER JOIN "castings" ON "castings"."movie_id" = "movies"."id" INNER JOIN "actors" ON "actors"."id" = "castings"."actor_id" WHERE (actors.name IN ('Ben Affleck','Matt Damon')) GROUP BY "movies"."id" HAVING (COUNT(*) = 2)[0m
+  [1m[36mMovie Load (1.1ms)[0m  [1m[34mSELECT "movies"."title", "movies"."id" FROM "movies" INNER JOIN "castings" ON "castings"."movie_id" = "movies"."id" INNER JOIN "actors" ON "actors"."id" = "castings"."actor_id" WHERE (actors.name IN ('Geena Davis','Susan Sarandon')) GROUP BY "movies"."id" HAVING (COUNT(*) = 2)[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mMovie Load (0.8ms)[0m  [1m[34mSELECT "movies"."title", "movies"."id" FROM "movies" INNER JOIN "castings" ON "castings"."movie_id" = "movies"."id" INNER JOIN "actors" ON "actors"."id" = "castings"."actor_id" WHERE (actors.name IN ('Ben Affleck','Matt Damon')) GROUP BY "movies"."id" HAVING (COUNT(*) = 2)[0m
+  [1m[36mMovie Load (0.7ms)[0m  [1m[34mSELECT "movies"."title", "movies"."id" FROM "movies" INNER JOIN "castings" ON "castings"."movie_id" = "movies"."id" INNER JOIN "actors" ON "actors"."id" = "castings"."actor_id" WHERE (actors.name IN ('Geena Davis','Susan Sarandon')) GROUP BY "movies"."id" HAVING (COUNT(*) = 2)[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mMovie Load (1.8ms)[0m  [1m[34mSELECT CAST(floor(yr/10)*10 as integer) decade  FROM "movies" GROUP BY decade ORDER BY AVG(score) desc LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mMovie Load (1.5ms)[0m  [1m[34mSELECT CAST(floor(yr/10)*10 as integer) decade  FROM "movies" GROUP BY decade ORDER BY AVG(score) desc LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mMovie Pluck (1.2ms)[0m  [1m[34mSELECT "movies"."id" FROM "movies" INNER JOIN "castings" ON "castings"."movie_id" = "movies"."id" INNER JOIN "actors" ON "actors"."id" = "castings"."actor_id" WHERE (actors.name = 'Julie Andrews')[0m
+  [1m[36mActor Pluck (0.9ms)[0m  [1m[34mSELECT "actors"."name" FROM "actors" INNER JOIN "castings" ON "castings"."actor_id" = "actors"."id" INNER JOIN "movies" ON "movies"."id" = "castings"."movie_id" WHERE (movies.id IN (171,1233,1249)) AND "actors"."name" != $1[0m  [["name", "Julie Andrews"]]
+  [1m[36mMovie Pluck (0.5ms)[0m  [1m[34mSELECT "movies"."id" FROM "movies" INNER JOIN "castings" ON "castings"."movie_id" = "movies"."id" INNER JOIN "actors" ON "actors"."id" = "castings"."actor_id" WHERE (actors.name = 'Humphrey Bogart')[0m
+  [1m[36mActor Pluck (0.9ms)[0m  [1m[34mSELECT "actors"."name" FROM "actors" INNER JOIN "castings" ON "castings"."actor_id" = "actors"."id" INNER JOIN "movies" ON "movies"."id" = "castings"."movie_id" WHERE (movies.id IN (27,299,565,584,1076,1246)) AND "actors"."name" != $1[0m  [["name", "Humphrey Bogart"]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mMovie Pluck (0.5ms)[0m  [1m[34mSELECT "movies"."id" FROM "movies" INNER JOIN "castings" ON "castings"."movie_id" = "movies"."id" INNER JOIN "actors" ON "actors"."id" = "castings"."actor_id" WHERE (actors.name = 'Julie Andrews')[0m
+  [1m[36mActor Pluck (1.2ms)[0m  [1m[34mSELECT "actors"."name" FROM "actors" INNER JOIN "castings" ON "castings"."actor_id" = "actors"."id" INNER JOIN "movies" ON "movies"."id" = "castings"."movie_id" WHERE (movies.id IN (171,1233,1249)) AND "actors"."name" != $1[0m  [["name", "Julie Andrews"]]
+  [1m[36mMovie Pluck (0.6ms)[0m  [1m[34mSELECT "movies"."id" FROM "movies" INNER JOIN "castings" ON "castings"."movie_id" = "movies"."id" INNER JOIN "actors" ON "actors"."id" = "castings"."actor_id" WHERE (actors.name = 'Humphrey Bogart')[0m
+  [1m[36mActor Pluck (0.7ms)[0m  [1m[34mSELECT "actors"."name" FROM "actors" INNER JOIN "castings" ON "castings"."actor_id" = "actors"."id" INNER JOIN "movies" ON "movies"."id" = "castings"."movie_id" WHERE (movies.id IN (27,299,565,584,1076,1246)) AND "actors"."name" != $1[0m  [["name", "Humphrey Bogart"]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActor Load (0.1ms)[0m  [1m[34mSELECT "actors".* FROM "actors" WHERE "actors"."name" = $1 LIMIT $2[0m  [["name", "Sylvester Stallone"], ["LIMIT", 1]]
+  [1m[36mMovie Load (1.0ms)[0m  [1m[34mSELECT "movies".* FROM "movies" INNER JOIN "castings" ON "movies"."id" = "castings"."movie_id" WHERE "castings"."actor_id" = $1[0m  [["actor_id", 5]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mActiveRecord::InternalMetadata Pluck (0.4ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "schema_sha1"], ["LIMIT", 1]]
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mMovie Load (2.5ms)[0m  [1m[34mSELECT "movies"."title", "movies"."id" FROM "movies" INNER JOIN "castings" ON "castings"."movie_id" = "movies"."id" INNER JOIN "actors" ON "actors"."id" = "castings"."actor_id" WHERE (actors.name IN ('Ben Affleck','Matt Damon')) GROUP BY "movies"."id" HAVING (COUNT(*) = 2)[0m
+  [1m[36mMovie Load (0.9ms)[0m  [1m[34mSELECT "movies"."title", "movies"."id" FROM "movies" INNER JOIN "castings" ON "castings"."movie_id" = "movies"."id" INNER JOIN "actors" ON "actors"."id" = "castings"."actor_id" WHERE (actors.name IN ('Geena Davis','Susan Sarandon')) GROUP BY "movies"."id" HAVING (COUNT(*) = 2)[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mMovie Load (1.2ms)[0m  [1m[34mSELECT "movies"."title", "movies"."id" FROM "movies" INNER JOIN "castings" ON "castings"."movie_id" = "movies"."id" INNER JOIN "actors" ON "actors"."id" = "castings"."actor_id" WHERE (actors.name IN ('Ben Affleck','Matt Damon')) GROUP BY "movies"."id" HAVING (COUNT(*) = 2)[0m
+  [1m[36mMovie Load (1.0ms)[0m  [1m[34mSELECT "movies"."title", "movies"."id" FROM "movies" INNER JOIN "castings" ON "castings"."movie_id" = "movies"."id" INNER JOIN "actors" ON "actors"."id" = "castings"."actor_id" WHERE (actors.name IN ('Geena Davis','Susan Sarandon')) GROUP BY "movies"."id" HAVING (COUNT(*) = 2)[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mMovie Load (1.4ms)[0m  [1m[34mSELECT CAST(floor(yr/10)*10 as integer) decade  FROM "movies" GROUP BY decade ORDER BY AVG(score) desc LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mMovie Load (0.7ms)[0m  [1m[34mSELECT CAST(floor(yr/10)*10 as integer) decade  FROM "movies" GROUP BY decade ORDER BY AVG(score) desc LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mMovie Pluck (0.6ms)[0m  [1m[34mSELECT "movies"."id" FROM "movies" INNER JOIN "castings" ON "castings"."movie_id" = "movies"."id" INNER JOIN "actors" ON "actors"."id" = "castings"."actor_id" WHERE (actors.name = 'Julie Andrews')[0m
+  [1m[36mActor Pluck (1.3ms)[0m  [1m[34mSELECT "actors"."name" FROM "actors" INNER JOIN "castings" ON "castings"."actor_id" = "actors"."id" INNER JOIN "movies" ON "movies"."id" = "castings"."movie_id" WHERE (movies.id IN (171,1233,1249)) AND "actors"."name" != $1[0m  [["name", "Julie Andrews"]]
+  [1m[36mMovie Pluck (1.6ms)[0m  [1m[34mSELECT "movies"."id" FROM "movies" INNER JOIN "castings" ON "castings"."movie_id" = "movies"."id" INNER JOIN "actors" ON "actors"."id" = "castings"."actor_id" WHERE (actors.name = 'Humphrey Bogart')[0m
+  [1m[36mActor Pluck (1.5ms)[0m  [1m[34mSELECT "actors"."name" FROM "actors" INNER JOIN "castings" ON "castings"."actor_id" = "actors"."id" INNER JOIN "movies" ON "movies"."id" = "castings"."movie_id" WHERE (movies.id IN (27,299,565,584,1076,1246)) AND "actors"."name" != $1[0m  [["name", "Humphrey Bogart"]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mMovie Pluck (0.8ms)[0m  [1m[34mSELECT "movies"."id" FROM "movies" INNER JOIN "castings" ON "castings"."movie_id" = "movies"."id" INNER JOIN "actors" ON "actors"."id" = "castings"."actor_id" WHERE (actors.name = 'Julie Andrews')[0m
+  [1m[36mActor Pluck (0.8ms)[0m  [1m[34mSELECT "actors"."name" FROM "actors" INNER JOIN "castings" ON "castings"."actor_id" = "actors"."id" INNER JOIN "movies" ON "movies"."id" = "castings"."movie_id" WHERE (movies.id IN (171,1233,1249)) AND "actors"."name" != $1[0m  [["name", "Julie Andrews"]]
+  [1m[36mMovie Pluck (0.8ms)[0m  [1m[34mSELECT "movies"."id" FROM "movies" INNER JOIN "castings" ON "castings"."movie_id" = "movies"."id" INNER JOIN "actors" ON "actors"."id" = "castings"."actor_id" WHERE (actors.name = 'Humphrey Bogart')[0m
+  [1m[36mActor Pluck (1.1ms)[0m  [1m[34mSELECT "actors"."name" FROM "actors" INNER JOIN "castings" ON "castings"."actor_id" = "actors"."id" INNER JOIN "movies" ON "movies"."id" = "castings"."movie_id" WHERE (movies.id IN (27,299,565,584,1076,1246)) AND "actors"."name" != $1[0m  [["name", "Humphrey Bogart"]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActor Load (0.2ms)[0m  [1m[34mSELECT "actors".* FROM "actors" WHERE "actors"."name" = $1 LIMIT $2[0m  [["name", "Sylvester Stallone"], ["LIMIT", 1]]
+  [1m[36mMovie Load (0.6ms)[0m  [1m[34mSELECT "movies".* FROM "movies" INNER JOIN "castings" ON "movies"."id" = "castings"."movie_id" WHERE "castings"."actor_id" = $1[0m  [["actor_id", 5]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mMovie Pluck (2.5ms)[0m  [1m[34mSELECT "movies"."id" FROM "movies" INNER JOIN "castings" ON "castings"."movie_id" = "movies"."id" INNER JOIN "actors" ON "actors"."id" = "castings"."actor_id" WHERE (actors.name = 'Julie Andrews')[0m
+  [1m[36mActor Pluck (2.4ms)[0m  [1m[34mSELECT "actors"."name" FROM "actors" INNER JOIN "castings" ON "castings"."actor_id" = "actors"."id" INNER JOIN "movies" ON "movies"."id" = "castings"."movie_id" WHERE (movies.id IN (171,1233,1249)) AND "actors"."name" != $1[0m  [["name", "Julie Andrews"]]
+  [1m[36mMovie Pluck (1.8ms)[0m  [1m[34mSELECT "movies"."id" FROM "movies" INNER JOIN "castings" ON "castings"."movie_id" = "movies"."id" INNER JOIN "actors" ON "actors"."id" = "castings"."actor_id" WHERE (actors.name = 'Humphrey Bogart')[0m
+  [1m[36mActor Pluck (2.2ms)[0m  [1m[34mSELECT "actors"."name" FROM "actors" INNER JOIN "castings" ON "castings"."actor_id" = "actors"."id" INNER JOIN "movies" ON "movies"."id" = "castings"."movie_id" WHERE (movies.id IN (27,299,565,584,1076,1246)) AND "actors"."name" != $1[0m  [["name", "Humphrey Bogart"]]
+  [1m[36mActor Pluck (2.9ms)[0m  [1m[34mSELECT "actors"."name" FROM "actors" INNER JOIN "castings" ON "castings"."actor_id" = "actors"."id" INNER JOIN "movies" ON "movies"."id" = "castings"."movie_id" WHERE (movies.id IN (27,299,565,584,1076,1246))[0m
+  [1m[36mActiveRecord::InternalMetadata Pluck (0.6ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "schema_sha1"], ["LIMIT", 1]]
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mMovie Load (4.1ms)[0m  [1m[34mSELECT "movies"."title", "movies"."id" FROM "movies" INNER JOIN "castings" ON "castings"."movie_id" = "movies"."id" INNER JOIN "actors" ON "actors"."id" = "castings"."actor_id" WHERE (actors.name IN ('Ben Affleck','Matt Damon')) GROUP BY "movies"."id" HAVING (COUNT(*) = 2)[0m
+  [1m[36mMovie Load (1.0ms)[0m  [1m[34mSELECT "movies"."title", "movies"."id" FROM "movies" INNER JOIN "castings" ON "castings"."movie_id" = "movies"."id" INNER JOIN "actors" ON "actors"."id" = "castings"."actor_id" WHERE (actors.name IN ('Geena Davis','Susan Sarandon')) GROUP BY "movies"."id" HAVING (COUNT(*) = 2)[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mMovie Load (0.8ms)[0m  [1m[34mSELECT "movies"."title", "movies"."id" FROM "movies" INNER JOIN "castings" ON "castings"."movie_id" = "movies"."id" INNER JOIN "actors" ON "actors"."id" = "castings"."actor_id" WHERE (actors.name IN ('Ben Affleck','Matt Damon')) GROUP BY "movies"."id" HAVING (COUNT(*) = 2)[0m
+  [1m[36mMovie Load (0.7ms)[0m  [1m[34mSELECT "movies"."title", "movies"."id" FROM "movies" INNER JOIN "castings" ON "castings"."movie_id" = "movies"."id" INNER JOIN "actors" ON "actors"."id" = "castings"."actor_id" WHERE (actors.name IN ('Geena Davis','Susan Sarandon')) GROUP BY "movies"."id" HAVING (COUNT(*) = 2)[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mMovie Load (1.4ms)[0m  [1m[34mSELECT CAST(floor(yr/10)*10 as integer) decade  FROM "movies" GROUP BY decade ORDER BY AVG(score) desc LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mMovie Load (0.9ms)[0m  [1m[34mSELECT CAST(floor(yr/10)*10 as integer) decade  FROM "movies" GROUP BY decade ORDER BY AVG(score) desc LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mMovie Pluck (1.5ms)[0m  [1m[34mSELECT "movies"."id" FROM "movies" INNER JOIN "castings" ON "castings"."movie_id" = "movies"."id" INNER JOIN "actors" ON "actors"."id" = "castings"."actor_id" WHERE (actors.name = 'Julie Andrews')[0m
+  [1m[36mActor Pluck (1.2ms)[0m  [1m[34mSELECT "actors"."name" FROM "actors" INNER JOIN "castings" ON "castings"."actor_id" = "actors"."id" INNER JOIN "movies" ON "movies"."id" = "castings"."movie_id" WHERE (movies.id IN (171,1233,1249)) AND "actors"."name" != $1[0m  [["name", "Julie Andrews"]]
+  [1m[36mMovie Pluck (0.5ms)[0m  [1m[34mSELECT "movies"."id" FROM "movies" INNER JOIN "castings" ON "castings"."movie_id" = "movies"."id" INNER JOIN "actors" ON "actors"."id" = "castings"."actor_id" WHERE (actors.name = 'Humphrey Bogart')[0m
+  [1m[36mActor Pluck (0.8ms)[0m  [1m[34mSELECT "actors"."name" FROM "actors" INNER JOIN "castings" ON "castings"."actor_id" = "actors"."id" INNER JOIN "movies" ON "movies"."id" = "castings"."movie_id" WHERE (movies.id IN (27,299,565,584,1076,1246)) AND "actors"."name" != $1[0m  [["name", "Humphrey Bogart"]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mMovie Pluck (0.5ms)[0m  [1m[34mSELECT "movies"."id" FROM "movies" INNER JOIN "castings" ON "castings"."movie_id" = "movies"."id" INNER JOIN "actors" ON "actors"."id" = "castings"."actor_id" WHERE (actors.name = 'Julie Andrews')[0m
+  [1m[36mActor Pluck (0.5ms)[0m  [1m[34mSELECT "actors"."name" FROM "actors" INNER JOIN "castings" ON "castings"."actor_id" = "actors"."id" INNER JOIN "movies" ON "movies"."id" = "castings"."movie_id" WHERE (movies.id IN (171,1233,1249)) AND "actors"."name" != $1[0m  [["name", "Julie Andrews"]]
+  [1m[36mMovie Pluck (0.9ms)[0m  [1m[34mSELECT "movies"."id" FROM "movies" INNER JOIN "castings" ON "castings"."movie_id" = "movies"."id" INNER JOIN "actors" ON "actors"."id" = "castings"."actor_id" WHERE (actors.name = 'Humphrey Bogart')[0m
+  [1m[36mActor Pluck (1.7ms)[0m  [1m[34mSELECT "actors"."name" FROM "actors" INNER JOIN "castings" ON "castings"."actor_id" = "actors"."id" INNER JOIN "movies" ON "movies"."id" = "castings"."movie_id" WHERE (movies.id IN (27,299,565,584,1076,1246)) AND "actors"."name" != $1[0m  [["name", "Humphrey Bogart"]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActor Load (0.3ms)[0m  [1m[34mSELECT "actors".* FROM "actors" WHERE "actors"."name" = $1 LIMIT $2[0m  [["name", "Sylvester Stallone"], ["LIMIT", 1]]
+  [1m[36mMovie Load (0.8ms)[0m  [1m[34mSELECT "movies".* FROM "movies" INNER JOIN "castings" ON "movies"."id" = "castings"."movie_id" WHERE "castings"."actor_id" = $1[0m  [["actor_id", 5]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mActiveRecord::InternalMetadata Pluck (0.3ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "schema_sha1"], ["LIMIT", 1]]
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mMovie Load (2.4ms)[0m  [1m[34mSELECT "movies"."title", "movies"."id" FROM "movies" INNER JOIN "castings" ON "castings"."movie_id" = "movies"."id" INNER JOIN "actors" ON "actors"."id" = "castings"."actor_id" WHERE (actors.name IN ('Ben Affleck','Matt Damon')) GROUP BY "movies"."id" HAVING (COUNT(*) = 2)[0m
+  [1m[36mMovie Load (0.8ms)[0m  [1m[34mSELECT "movies"."title", "movies"."id" FROM "movies" INNER JOIN "castings" ON "castings"."movie_id" = "movies"."id" INNER JOIN "actors" ON "actors"."id" = "castings"."actor_id" WHERE (actors.name IN ('Geena Davis','Susan Sarandon')) GROUP BY "movies"."id" HAVING (COUNT(*) = 2)[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mMovie Load (1.1ms)[0m  [1m[34mSELECT "movies"."title", "movies"."id" FROM "movies" INNER JOIN "castings" ON "castings"."movie_id" = "movies"."id" INNER JOIN "actors" ON "actors"."id" = "castings"."actor_id" WHERE (actors.name IN ('Ben Affleck','Matt Damon')) GROUP BY "movies"."id" HAVING (COUNT(*) = 2)[0m
+  [1m[36mMovie Load (0.8ms)[0m  [1m[34mSELECT "movies"."title", "movies"."id" FROM "movies" INNER JOIN "castings" ON "castings"."movie_id" = "movies"."id" INNER JOIN "actors" ON "actors"."id" = "castings"."actor_id" WHERE (actors.name IN ('Geena Davis','Susan Sarandon')) GROUP BY "movies"."id" HAVING (COUNT(*) = 2)[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mMovie Load (1.5ms)[0m  [1m[34mSELECT CAST(floor(yr/10)*10 as integer) decade  FROM "movies" GROUP BY decade ORDER BY AVG(score) desc LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mMovie Load (1.3ms)[0m  [1m[34mSELECT CAST(floor(yr/10)*10 as integer) decade  FROM "movies" GROUP BY decade ORDER BY AVG(score) desc LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mMovie Pluck (0.8ms)[0m  [1m[34mSELECT "movies"."id" FROM "movies" INNER JOIN "castings" ON "castings"."movie_id" = "movies"."id" INNER JOIN "actors" ON "actors"."id" = "castings"."actor_id" WHERE (actors.name = 'Julie Andrews')[0m
+  [1m[36mActor Pluck (1.2ms)[0m  [1m[34mSELECT "actors"."name" FROM "actors" INNER JOIN "castings" ON "castings"."actor_id" = "actors"."id" INNER JOIN "movies" ON "movies"."id" = "castings"."movie_id" WHERE (movies.id IN (171,1233,1249)) AND "actors"."name" != $1[0m  [["name", "Julie Andrews"]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mMovie Pluck (0.5ms)[0m  [1m[34mSELECT "movies"."id" FROM "movies" INNER JOIN "castings" ON "castings"."movie_id" = "movies"."id" INNER JOIN "actors" ON "actors"."id" = "castings"."actor_id" WHERE (actors.name = 'Julie Andrews')[0m
+  [1m[36mActor Pluck (0.5ms)[0m  [1m[34mSELECT "actors"."name" FROM "actors" INNER JOIN "castings" ON "castings"."actor_id" = "actors"."id" INNER JOIN "movies" ON "movies"."id" = "castings"."movie_id" WHERE (movies.id IN (171,1233,1249)) AND "actors"."name" != $1[0m  [["name", "Julie Andrews"]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActor Load (0.2ms)[0m  [1m[34mSELECT "actors".* FROM "actors" WHERE "actors"."name" = $1 LIMIT $2[0m  [["name", "Sylvester Stallone"], ["LIMIT", 1]]
+  [1m[36mMovie Load (0.6ms)[0m  [1m[34mSELECT "movies".* FROM "movies" INNER JOIN "castings" ON "movies"."id" = "castings"."movie_id" WHERE "castings"."actor_id" = $1[0m  [["actor_id", 5]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mActiveRecord::InternalMetadata Pluck (0.4ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "schema_sha1"], ["LIMIT", 1]]
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mMovie Load (2.6ms)[0m  [1m[34mSELECT "movies"."title", "movies"."id" FROM "movies" INNER JOIN "castings" ON "castings"."movie_id" = "movies"."id" INNER JOIN "actors" ON "actors"."id" = "castings"."actor_id" WHERE (actors.name IN ('Ben Affleck','Matt Damon')) GROUP BY "movies"."id" HAVING (COUNT(*) = 2)[0m
+  [1m[36mMovie Load (1.1ms)[0m  [1m[34mSELECT "movies"."title", "movies"."id" FROM "movies" INNER JOIN "castings" ON "castings"."movie_id" = "movies"."id" INNER JOIN "actors" ON "actors"."id" = "castings"."actor_id" WHERE (actors.name IN ('Geena Davis','Susan Sarandon')) GROUP BY "movies"."id" HAVING (COUNT(*) = 2)[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mMovie Load (1.5ms)[0m  [1m[34mSELECT "movies"."title", "movies"."id" FROM "movies" INNER JOIN "castings" ON "castings"."movie_id" = "movies"."id" INNER JOIN "actors" ON "actors"."id" = "castings"."actor_id" WHERE (actors.name IN ('Ben Affleck','Matt Damon')) GROUP BY "movies"."id" HAVING (COUNT(*) = 2)[0m
+  [1m[36mMovie Load (0.8ms)[0m  [1m[34mSELECT "movies"."title", "movies"."id" FROM "movies" INNER JOIN "castings" ON "castings"."movie_id" = "movies"."id" INNER JOIN "actors" ON "actors"."id" = "castings"."actor_id" WHERE (actors.name IN ('Geena Davis','Susan Sarandon')) GROUP BY "movies"."id" HAVING (COUNT(*) = 2)[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mMovie Load (1.2ms)[0m  [1m[34mSELECT CAST(floor(yr/10)*10 as integer) decade  FROM "movies" GROUP BY decade ORDER BY AVG(score) desc LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mMovie Load (0.8ms)[0m  [1m[34mSELECT CAST(floor(yr/10)*10 as integer) decade  FROM "movies" GROUP BY decade ORDER BY AVG(score) desc LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mMovie Pluck (0.7ms)[0m  [1m[34mSELECT "movies"."id" FROM "movies" INNER JOIN "castings" ON "castings"."movie_id" = "movies"."id" INNER JOIN "actors" ON "actors"."id" = "castings"."actor_id" WHERE (actors.name = 'Julie Andrews')[0m
+  [1m[36mActor Pluck (1.1ms)[0m  [1m[34mSELECT "actors"."name" FROM "actors" INNER JOIN "castings" ON "castings"."actor_id" = "actors"."id" INNER JOIN "movies" ON "movies"."id" = "castings"."movie_id" WHERE (movies.id IN (171,1233,1249)) AND "actors"."name" != $1[0m  [["name", "Julie Andrews"]]
+  [1m[36mMovie Pluck (0.6ms)[0m  [1m[34mSELECT "movies"."id" FROM "movies" INNER JOIN "castings" ON "castings"."movie_id" = "movies"."id" INNER JOIN "actors" ON "actors"."id" = "castings"."actor_id" WHERE (actors.name = 'Humphrey Bogart')[0m
+  [1m[36mActor Pluck (0.9ms)[0m  [1m[34mSELECT "actors"."name" FROM "actors" INNER JOIN "castings" ON "castings"."actor_id" = "actors"."id" INNER JOIN "movies" ON "movies"."id" = "castings"."movie_id" WHERE (movies.id IN (27,299,565,584,1076,1246)) AND "actors"."name" != $1[0m  [["name", "Humphrey Bogart"]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mMovie Pluck (0.7ms)[0m  [1m[34mSELECT "movies"."id" FROM "movies" INNER JOIN "castings" ON "castings"."movie_id" = "movies"."id" INNER JOIN "actors" ON "actors"."id" = "castings"."actor_id" WHERE (actors.name = 'Julie Andrews')[0m
+  [1m[36mActor Pluck (0.6ms)[0m  [1m[34mSELECT "actors"."name" FROM "actors" INNER JOIN "castings" ON "castings"."actor_id" = "actors"."id" INNER JOIN "movies" ON "movies"."id" = "castings"."movie_id" WHERE (movies.id IN (171,1233,1249)) AND "actors"."name" != $1[0m  [["name", "Julie Andrews"]]
+  [1m[36mMovie Pluck (1.8ms)[0m  [1m[34mSELECT "movies"."id" FROM "movies" INNER JOIN "castings" ON "castings"."movie_id" = "movies"."id" INNER JOIN "actors" ON "actors"."id" = "castings"."actor_id" WHERE (actors.name = 'Humphrey Bogart')[0m
+  [1m[36mActor Pluck (1.5ms)[0m  [1m[34mSELECT "actors"."name" FROM "actors" INNER JOIN "castings" ON "castings"."actor_id" = "actors"."id" INNER JOIN "movies" ON "movies"."id" = "castings"."movie_id" WHERE (movies.id IN (27,299,565,584,1076,1246)) AND "actors"."name" != $1[0m  [["name", "Humphrey Bogart"]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActor Load (0.2ms)[0m  [1m[34mSELECT "actors".* FROM "actors" WHERE "actors"."name" = $1 LIMIT $2[0m  [["name", "Sylvester Stallone"], ["LIMIT", 1]]
+  [1m[36mMovie Load (0.7ms)[0m  [1m[34mSELECT "movies".* FROM "movies" INNER JOIN "castings" ON "movies"."id" = "castings"."movie_id" WHERE "castings"."actor_id" = $1[0m  [["actor_id", 5]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mActor Pluck (3.0ms)[0m  [1m[34mSELECT "actors"."name" FROM "actors" INNER JOIN "castings" ON "castings"."actor_id" = "actors"."id" INNER JOIN "movies" ON "movies"."id" = "castings"."movie_id" WHERE (movies.id IN (27,299,565,584,1076,1246)) AND "actors"."name" != $1[0m  [["name", "Humphrey Bogart"]]
+  [1m[36mActor Pluck (1.2ms)[0m  [1m[34mSELECT "actors"."name" FROM "actors" INNER JOIN "castings" ON "castings"."actor_id" = "actors"."id" INNER JOIN "movies" ON "movies"."id" = "castings"."movie_id" WHERE (movies.id IN (27,299,565,584,1076,1246)) AND "actors"."name" != $1[0m  [["name", "Humphrey Bogart"]]
+  [1m[36mActiveRecord::InternalMetadata Pluck (0.4ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "schema_sha1"], ["LIMIT", 1]]
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Pluck (0.4ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "schema_sha1"], ["LIMIT", 1]]
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Pluck (0.4ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "schema_sha1"], ["LIMIT", 1]]
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mMovie Load (2.1ms)[0m  [1m[34mSELECT "movies"."title", "movies"."id" FROM "movies" INNER JOIN "castings" ON "castings"."movie_id" = "movies"."id" INNER JOIN "actors" ON "actors"."id" = "castings"."actor_id" WHERE (actors.name IN ('Ben Affleck','Matt Damon')) GROUP BY "movies"."id" HAVING (COUNT(*) = 2)[0m
+  [1m[36mMovie Load (1.5ms)[0m  [1m[34mSELECT "movies"."title", "movies"."id" FROM "movies" INNER JOIN "castings" ON "castings"."movie_id" = "movies"."id" INNER JOIN "actors" ON "actors"."id" = "castings"."actor_id" WHERE (actors.name IN ('Geena Davis','Susan Sarandon')) GROUP BY "movies"."id" HAVING (COUNT(*) = 2)[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mMovie Load (0.9ms)[0m  [1m[34mSELECT "movies"."title", "movies"."id" FROM "movies" INNER JOIN "castings" ON "castings"."movie_id" = "movies"."id" INNER JOIN "actors" ON "actors"."id" = "castings"."actor_id" WHERE (actors.name IN ('Ben Affleck','Matt Damon')) GROUP BY "movies"."id" HAVING (COUNT(*) = 2)[0m
+  [1m[36mMovie Load (0.9ms)[0m  [1m[34mSELECT "movies"."title", "movies"."id" FROM "movies" INNER JOIN "castings" ON "castings"."movie_id" = "movies"."id" INNER JOIN "actors" ON "actors"."id" = "castings"."actor_id" WHERE (actors.name IN ('Geena Davis','Susan Sarandon')) GROUP BY "movies"."id" HAVING (COUNT(*) = 2)[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mMovie Load (1.2ms)[0m  [1m[34mSELECT CAST(floor(yr/10)*10 as integer) decade  FROM "movies" GROUP BY decade ORDER BY AVG(score) desc LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mMovie Load (0.8ms)[0m  [1m[34mSELECT CAST(floor(yr/10)*10 as integer) decade  FROM "movies" GROUP BY decade ORDER BY AVG(score) desc LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mMovie Pluck (0.5ms)[0m  [1m[34mSELECT "movies"."id" FROM "movies" INNER JOIN "castings" ON "castings"."movie_id" = "movies"."id" INNER JOIN "actors" ON "actors"."id" = "castings"."actor_id" WHERE (actors.name = 'Julie Andrews')[0m
+  [1m[36mActor Pluck (1.2ms)[0m  [1m[34mSELECT "actors"."name" FROM "actors" INNER JOIN "castings" ON "castings"."actor_id" = "actors"."id" INNER JOIN "movies" ON "movies"."id" = "castings"."movie_id" WHERE (movies.id IN (171,1233,1249)) AND "actors"."name" != $1 GROUP BY "actors"."name"[0m  [["name", "Julie Andrews"]]
+  [1m[36mMovie Pluck (0.5ms)[0m  [1m[34mSELECT "movies"."id" FROM "movies" INNER JOIN "castings" ON "castings"."movie_id" = "movies"."id" INNER JOIN "actors" ON "actors"."id" = "castings"."actor_id" WHERE (actors.name = 'Humphrey Bogart')[0m
+  [1m[36mActor Pluck (1.2ms)[0m  [1m[34mSELECT "actors"."name" FROM "actors" INNER JOIN "castings" ON "castings"."actor_id" = "actors"."id" INNER JOIN "movies" ON "movies"."id" = "castings"."movie_id" WHERE (movies.id IN (27,299,565,584,1076,1246)) AND "actors"."name" != $1 GROUP BY "actors"."name"[0m  [["name", "Humphrey Bogart"]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mMovie Pluck (0.8ms)[0m  [1m[34mSELECT "movies"."id" FROM "movies" INNER JOIN "castings" ON "castings"."movie_id" = "movies"."id" INNER JOIN "actors" ON "actors"."id" = "castings"."actor_id" WHERE (actors.name = 'Julie Andrews')[0m
+  [1m[36mActor Pluck (1.0ms)[0m  [1m[34mSELECT "actors"."name" FROM "actors" INNER JOIN "castings" ON "castings"."actor_id" = "actors"."id" INNER JOIN "movies" ON "movies"."id" = "castings"."movie_id" WHERE (movies.id IN (171,1233,1249)) AND "actors"."name" != $1 GROUP BY "actors"."name"[0m  [["name", "Julie Andrews"]]
+  [1m[36mMovie Pluck (0.5ms)[0m  [1m[34mSELECT "movies"."id" FROM "movies" INNER JOIN "castings" ON "castings"."movie_id" = "movies"."id" INNER JOIN "actors" ON "actors"."id" = "castings"."actor_id" WHERE (actors.name = 'Humphrey Bogart')[0m
+  [1m[36mActor Pluck (1.3ms)[0m  [1m[34mSELECT "actors"."name" FROM "actors" INNER JOIN "castings" ON "castings"."actor_id" = "actors"."id" INNER JOIN "movies" ON "movies"."id" = "castings"."movie_id" WHERE (movies.id IN (27,299,565,584,1076,1246)) AND "actors"."name" != $1 GROUP BY "actors"."name"[0m  [["name", "Humphrey Bogart"]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActor Load (0.2ms)[0m  [1m[34mSELECT "actors".* FROM "actors" WHERE "actors"."name" = $1 LIMIT $2[0m  [["name", "Sylvester Stallone"], ["LIMIT", 1]]
+  [1m[36mMovie Load (0.6ms)[0m  [1m[34mSELECT "movies".* FROM "movies" INNER JOIN "castings" ON "movies"."id" = "castings"."movie_id" WHERE "castings"."actor_id" = $1[0m  [["actor_id", 5]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mActiveRecord::InternalMetadata Pluck (0.5ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "schema_sha1"], ["LIMIT", 1]]
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mMovie Load (3.5ms)[0m  [1m[34mSELECT "movies"."title", "movies"."id" FROM "movies" INNER JOIN "castings" ON "castings"."movie_id" = "movies"."id" INNER JOIN "actors" ON "actors"."id" = "castings"."actor_id" WHERE (actors.name IN ('Ben Affleck','Matt Damon')) GROUP BY "movies"."id" HAVING (COUNT(*) = 2)[0m
+  [1m[36mMovie Load (1.5ms)[0m  [1m[34mSELECT "movies"."title", "movies"."id" FROM "movies" INNER JOIN "castings" ON "castings"."movie_id" = "movies"."id" INNER JOIN "actors" ON "actors"."id" = "castings"."actor_id" WHERE (actors.name IN ('Geena Davis','Susan Sarandon')) GROUP BY "movies"."id" HAVING (COUNT(*) = 2)[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mMovie Load (1.2ms)[0m  [1m[34mSELECT "movies"."title", "movies"."id" FROM "movies" INNER JOIN "castings" ON "castings"."movie_id" = "movies"."id" INNER JOIN "actors" ON "actors"."id" = "castings"."actor_id" WHERE (actors.name IN ('Ben Affleck','Matt Damon')) GROUP BY "movies"."id" HAVING (COUNT(*) = 2)[0m
+  [1m[36mMovie Load (4.2ms)[0m  [1m[34mSELECT "movies"."title", "movies"."id" FROM "movies" INNER JOIN "castings" ON "castings"."movie_id" = "movies"."id" INNER JOIN "actors" ON "actors"."id" = "castings"."actor_id" WHERE (actors.name IN ('Geena Davis','Susan Sarandon')) GROUP BY "movies"."id" HAVING (COUNT(*) = 2)[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mMovie Load (1.8ms)[0m  [1m[34mSELECT CAST(floor(yr/10)*10 as integer) decade  FROM "movies" GROUP BY decade ORDER BY AVG(score) desc LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mMovie Load (1.8ms)[0m  [1m[34mSELECT CAST(floor(yr/10)*10 as integer) decade  FROM "movies" GROUP BY decade ORDER BY AVG(score) desc LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mMovie Pluck (1.2ms)[0m  [1m[34mSELECT "movies"."id" FROM "movies" INNER JOIN "castings" ON "castings"."movie_id" = "movies"."id" INNER JOIN "actors" ON "actors"."id" = "castings"."actor_id" WHERE (actors.name = 'Julie Andrews')[0m
+  [1m[36mActor Pluck (1.9ms)[0m  [1m[34mSELECT "actors"."name" FROM "actors" INNER JOIN "castings" ON "castings"."actor_id" = "actors"."id" INNER JOIN "movies" ON "movies"."id" = "castings"."movie_id" WHERE (movies.id IN (171,1233,1249)) AND "actors"."name" != $1 GROUP BY "actors"."name"[0m  [["name", "Julie Andrews"]]
+  [1m[36mMovie Pluck (1.0ms)[0m  [1m[34mSELECT "movies"."id" FROM "movies" INNER JOIN "castings" ON "castings"."movie_id" = "movies"."id" INNER JOIN "actors" ON "actors"."id" = "castings"."actor_id" WHERE (actors.name = 'Humphrey Bogart')[0m
+  [1m[36mActor Pluck (2.0ms)[0m  [1m[34mSELECT "actors"."name" FROM "actors" INNER JOIN "castings" ON "castings"."actor_id" = "actors"."id" INNER JOIN "movies" ON "movies"."id" = "castings"."movie_id" WHERE (movies.id IN (27,299,565,584,1076,1246)) AND "actors"."name" != $1 GROUP BY "actors"."name"[0m  [["name", "Humphrey Bogart"]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mMovie Pluck (0.9ms)[0m  [1m[34mSELECT "movies"."id" FROM "movies" INNER JOIN "castings" ON "castings"."movie_id" = "movies"."id" INNER JOIN "actors" ON "actors"."id" = "castings"."actor_id" WHERE (actors.name = 'Julie Andrews')[0m
+  [1m[36mActor Pluck (1.5ms)[0m  [1m[34mSELECT "actors"."name" FROM "actors" INNER JOIN "castings" ON "castings"."actor_id" = "actors"."id" INNER JOIN "movies" ON "movies"."id" = "castings"."movie_id" WHERE (movies.id IN (171,1233,1249)) AND "actors"."name" != $1 GROUP BY "actors"."name"[0m  [["name", "Julie Andrews"]]
+  [1m[36mMovie Pluck (1.1ms)[0m  [1m[34mSELECT "movies"."id" FROM "movies" INNER JOIN "castings" ON "castings"."movie_id" = "movies"."id" INNER JOIN "actors" ON "actors"."id" = "castings"."actor_id" WHERE (actors.name = 'Humphrey Bogart')[0m
+  [1m[36mActor Pluck (2.0ms)[0m  [1m[34mSELECT "actors"."name" FROM "actors" INNER JOIN "castings" ON "castings"."actor_id" = "actors"."id" INNER JOIN "movies" ON "movies"."id" = "castings"."movie_id" WHERE (movies.id IN (27,299,565,584,1076,1246)) AND "actors"."name" != $1 GROUP BY "actors"."name"[0m  [["name", "Humphrey Bogart"]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActor Load (0.2ms)[0m  [1m[34mSELECT "actors".* FROM "actors" WHERE "actors"."name" = $1 LIMIT $2[0m  [["name", "Sylvester Stallone"], ["LIMIT", 1]]
+  [1m[36mMovie Load (0.5ms)[0m  [1m[34mSELECT "movies".* FROM "movies" INNER JOIN "castings" ON "movies"."id" = "castings"."movie_id" WHERE "castings"."actor_id" = $1[0m  [["actor_id", 5]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (3.9ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mActiveRecord::InternalMetadata Pluck (0.4ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "schema_sha1"], ["LIMIT", 1]]
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mMovie Load (7.3ms)[0m  [1m[34mSELECT "movies"."title", "movies"."id" FROM "movies" INNER JOIN "castings" ON "castings"."movie_id" = "movies"."id" INNER JOIN "actors" ON "actors"."id" = "castings"."actor_id" WHERE (actors.name IN ('Ben Affleck','Matt Damon')) GROUP BY "movies"."id" HAVING (COUNT(*) = 2)[0m
+  [1m[36mMovie Load (1.1ms)[0m  [1m[34mSELECT "movies"."title", "movies"."id" FROM "movies" INNER JOIN "castings" ON "castings"."movie_id" = "movies"."id" INNER JOIN "actors" ON "actors"."id" = "castings"."actor_id" WHERE (actors.name IN ('Geena Davis','Susan Sarandon')) GROUP BY "movies"."id" HAVING (COUNT(*) = 2)[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mMovie Load (0.8ms)[0m  [1m[34mSELECT "movies"."title", "movies"."id" FROM "movies" INNER JOIN "castings" ON "castings"."movie_id" = "movies"."id" INNER JOIN "actors" ON "actors"."id" = "castings"."actor_id" WHERE (actors.name IN ('Ben Affleck','Matt Damon')) GROUP BY "movies"."id" HAVING (COUNT(*) = 2)[0m
+  [1m[36mMovie Load (0.7ms)[0m  [1m[34mSELECT "movies"."title", "movies"."id" FROM "movies" INNER JOIN "castings" ON "castings"."movie_id" = "movies"."id" INNER JOIN "actors" ON "actors"."id" = "castings"."actor_id" WHERE (actors.name IN ('Geena Davis','Susan Sarandon')) GROUP BY "movies"."id" HAVING (COUNT(*) = 2)[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mMovie Load (1.6ms)[0m  [1m[34mSELECT CAST(floor(yr/10)*10 as integer) decade  FROM "movies" GROUP BY decade ORDER BY AVG(score) desc LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mMovie Load (0.8ms)[0m  [1m[34mSELECT CAST(floor(yr/10)*10 as integer) decade  FROM "movies" GROUP BY decade ORDER BY AVG(score) desc LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mMovie Pluck (0.9ms)[0m  [1m[34mSELECT "movies"."id" FROM "movies" INNER JOIN "castings" ON "castings"."movie_id" = "movies"."id" INNER JOIN "actors" ON "actors"."id" = "castings"."actor_id" WHERE (actors.name = 'Julie Andrews')[0m
+  [1m[36mActor Pluck (2.1ms)[0m  [1m[34mSELECT "actors"."name" FROM "actors" INNER JOIN "castings" ON "castings"."actor_id" = "actors"."id" INNER JOIN "movies" ON "movies"."id" = "castings"."movie_id" WHERE (movies.id IN (171,1233,1249)) AND "actors"."name" != $1 GROUP BY "actors"."name"[0m  [["name", "Julie Andrews"]]
+  [1m[36mMovie Pluck (1.0ms)[0m  [1m[34mSELECT "movies"."id" FROM "movies" INNER JOIN "castings" ON "castings"."movie_id" = "movies"."id" INNER JOIN "actors" ON "actors"."id" = "castings"."actor_id" WHERE (actors.name = 'Humphrey Bogart')[0m
+  [1m[36mActor Pluck (1.1ms)[0m  [1m[34mSELECT "actors"."name" FROM "actors" INNER JOIN "castings" ON "castings"."actor_id" = "actors"."id" INNER JOIN "movies" ON "movies"."id" = "castings"."movie_id" WHERE (movies.id IN (27,299,565,584,1076,1246)) AND "actors"."name" != $1 GROUP BY "actors"."name"[0m  [["name", "Humphrey Bogart"]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mMovie Pluck (0.5ms)[0m  [1m[34mSELECT "movies"."id" FROM "movies" INNER JOIN "castings" ON "castings"."movie_id" = "movies"."id" INNER JOIN "actors" ON "actors"."id" = "castings"."actor_id" WHERE (actors.name = 'Julie Andrews')[0m
+  [1m[36mActor Pluck (0.8ms)[0m  [1m[34mSELECT "actors"."name" FROM "actors" INNER JOIN "castings" ON "castings"."actor_id" = "actors"."id" INNER JOIN "movies" ON "movies"."id" = "castings"."movie_id" WHERE (movies.id IN (171,1233,1249)) AND "actors"."name" != $1 GROUP BY "actors"."name"[0m  [["name", "Julie Andrews"]]
+  [1m[36mMovie Pluck (0.5ms)[0m  [1m[34mSELECT "movies"."id" FROM "movies" INNER JOIN "castings" ON "castings"."movie_id" = "movies"."id" INNER JOIN "actors" ON "actors"."id" = "castings"."actor_id" WHERE (actors.name = 'Humphrey Bogart')[0m
+  [1m[36mActor Pluck (0.9ms)[0m  [1m[34mSELECT "actors"."name" FROM "actors" INNER JOIN "castings" ON "castings"."actor_id" = "actors"."id" INNER JOIN "movies" ON "movies"."id" = "castings"."movie_id" WHERE (movies.id IN (27,299,565,584,1076,1246)) AND "actors"."name" != $1 GROUP BY "actors"."name"[0m  [["name", "Humphrey Bogart"]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActor Load (0.2ms)[0m  [1m[34mSELECT "actors".* FROM "actors" WHERE "actors"."name" = $1 LIMIT $2[0m  [["name", "Sylvester Stallone"], ["LIMIT", 1]]
+  [1m[36mMovie Load (0.6ms)[0m  [1m[34mSELECT "movies".* FROM "movies" INNER JOIN "castings" ON "movies"."id" = "castings"."movie_id" WHERE "castings"."actor_id" = $1[0m  [["actor_id", 5]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mActiveRecord::InternalMetadata Pluck (0.4ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "schema_sha1"], ["LIMIT", 1]]
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mMovie Load (4.6ms)[0m  [1m[34mSELECT "movies"."title", "movies"."id" FROM "movies" INNER JOIN "castings" ON "castings"."movie_id" = "movies"."id" INNER JOIN "actors" ON "actors"."id" = "castings"."actor_id" WHERE (actors.name IN ('Ben Affleck','Matt Damon')) GROUP BY "movies"."id" HAVING (COUNT(*) = 2)[0m
+  [1m[36mMovie Load (1.3ms)[0m  [1m[34mSELECT "movies"."title", "movies"."id" FROM "movies" INNER JOIN "castings" ON "castings"."movie_id" = "movies"."id" INNER JOIN "actors" ON "actors"."id" = "castings"."actor_id" WHERE (actors.name IN ('Geena Davis','Susan Sarandon')) GROUP BY "movies"."id" HAVING (COUNT(*) = 2)[0m
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mMovie Load (1.4ms)[0m  [1m[34mSELECT "movies"."title", "movies"."id" FROM "movies" INNER JOIN "castings" ON "castings"."movie_id" = "movies"."id" INNER JOIN "actors" ON "actors"."id" = "castings"."actor_id" WHERE (actors.name IN ('Ben Affleck','Matt Damon')) GROUP BY "movies"."id" HAVING (COUNT(*) = 2)[0m
+  [1m[36mMovie Load (1.4ms)[0m  [1m[34mSELECT "movies"."title", "movies"."id" FROM "movies" INNER JOIN "castings" ON "castings"."movie_id" = "movies"."id" INNER JOIN "actors" ON "actors"."id" = "castings"."actor_id" WHERE (actors.name IN ('Geena Davis','Susan Sarandon')) GROUP BY "movies"."id" HAVING (COUNT(*) = 2)[0m
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mMovie Load (3.3ms)[0m  [1m[34mSELECT CAST(floor(yr/10)*10 as integer) decade  FROM "movies" GROUP BY decade ORDER BY AVG(score) desc LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mMovie Load (1.1ms)[0m  [1m[34mSELECT CAST(floor(yr/10)*10 as integer) decade  FROM "movies" GROUP BY decade ORDER BY AVG(score) desc LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mMovie Pluck (1.1ms)[0m  [1m[34mSELECT "movies"."id" FROM "movies" INNER JOIN "castings" ON "castings"."movie_id" = "movies"."id" INNER JOIN "actors" ON "actors"."id" = "castings"."actor_id" WHERE (actors.name = 'Julie Andrews')[0m
+  [1m[36mActor Pluck (1.5ms)[0m  [1m[34mSELECT "actors"."name" FROM "actors" INNER JOIN "castings" ON "castings"."actor_id" = "actors"."id" INNER JOIN "movies" ON "movies"."id" = "castings"."movie_id" WHERE (movies.id IN (171,1233,1249)) AND "actors"."name" != $1 GROUP BY "actors"."name"[0m  [["name", "Julie Andrews"]]
+  [1m[36mMovie Pluck (0.7ms)[0m  [1m[34mSELECT "movies"."id" FROM "movies" INNER JOIN "castings" ON "castings"."movie_id" = "movies"."id" INNER JOIN "actors" ON "actors"."id" = "castings"."actor_id" WHERE (actors.name = 'Humphrey Bogart')[0m
+  [1m[36mActor Pluck (1.5ms)[0m  [1m[34mSELECT "actors"."name" FROM "actors" INNER JOIN "castings" ON "castings"."actor_id" = "actors"."id" INNER JOIN "movies" ON "movies"."id" = "castings"."movie_id" WHERE (movies.id IN (27,299,565,584,1076,1246)) AND "actors"."name" != $1 GROUP BY "actors"."name"[0m  [["name", "Humphrey Bogart"]]
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mMovie Pluck (1.0ms)[0m  [1m[34mSELECT "movies"."id" FROM "movies" INNER JOIN "castings" ON "castings"."movie_id" = "movies"."id" INNER JOIN "actors" ON "actors"."id" = "castings"."actor_id" WHERE (actors.name = 'Julie Andrews')[0m
+  [1m[36mActor Pluck (2.0ms)[0m  [1m[34mSELECT "actors"."name" FROM "actors" INNER JOIN "castings" ON "castings"."actor_id" = "actors"."id" INNER JOIN "movies" ON "movies"."id" = "castings"."movie_id" WHERE (movies.id IN (171,1233,1249)) AND "actors"."name" != $1 GROUP BY "actors"."name"[0m  [["name", "Julie Andrews"]]
+  [1m[36mMovie Pluck (1.0ms)[0m  [1m[34mSELECT "movies"."id" FROM "movies" INNER JOIN "castings" ON "castings"."movie_id" = "movies"."id" INNER JOIN "actors" ON "actors"."id" = "castings"."actor_id" WHERE (actors.name = 'Humphrey Bogart')[0m
+  [1m[36mActor Pluck (2.8ms)[0m  [1m[34mSELECT "actors"."name" FROM "actors" INNER JOIN "castings" ON "castings"."actor_id" = "actors"."id" INNER JOIN "movies" ON "movies"."id" = "castings"."movie_id" WHERE (movies.id IN (27,299,565,584,1076,1246)) AND "actors"."name" != $1 GROUP BY "actors"."name"[0m  [["name", "Humphrey Bogart"]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActor Pluck (16.5ms)[0m  [1m[34mSELECT "actors"."id" FROM "actors" LEFT OUTER JOIN "castings" ON "castings"."actor_id" = "actors"."id" LEFT OUTER JOIN "movies" ON "movies"."id" = "castings"."movie_id" WHERE (movies.id is NULL) GROUP BY "actors"."id"[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActor Pluck (12.7ms)[0m  [1m[34mSELECT "actors"."id" FROM "actors" LEFT OUTER JOIN "castings" ON "castings"."actor_id" = "actors"."id" LEFT OUTER JOIN "movies" ON "movies"."id" = "castings"."movie_id" WHERE (movies.id is NULL) GROUP BY "actors"."id"[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActor Load (0.3ms)[0m  [1m[34mSELECT "actors".* FROM "actors" WHERE "actors"."name" = $1 LIMIT $2[0m  [["name", "Sylvester Stallone"], ["LIMIT", 1]]
+  [1m[36mMovie Load (0.6ms)[0m  [1m[34mSELECT "movies".* FROM "movies" INNER JOIN "castings" ON "movies"."id" = "castings"."movie_id" WHERE "castings"."actor_id" = $1[0m  [["actor_id", 5]]
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mActor Load (2.9ms)[0m  [1m[34mSELECT DISTINCT actors.name FROM "actors" INNER JOIN "castings" ON "castings"."actor_id" = "actors"."id" INNER JOIN "movies" ON "movies"."id" = "castings"."movie_id" WHERE (movies.id IN (27,299,565,584,1076,1246)) AND "actors"."name" != $1[0m  [["name", "Humphrey Bogart"]]
+  [1m[36mActor Load (5.5ms)[0m  [1m[34mSELECT DISTINCT actors.name FROM "actors" INNER JOIN "castings" ON "castings"."actor_id" = "actors"."id" INNER JOIN "movies" ON "movies"."id" = "castings"."movie_id" WHERE (movies.id IN (27,299,565,584,1076,1246)) AND "actors"."name" != $1[0m  [["name", "Humphrey Bogart"]]
+  [1m[36mActiveRecord::InternalMetadata Pluck (0.4ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "schema_sha1"], ["LIMIT", 1]]
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mMovie Load (3.0ms)[0m  [1m[34mSELECT "movies"."title", "movies"."id" FROM "movies" INNER JOIN "castings" ON "castings"."movie_id" = "movies"."id" INNER JOIN "actors" ON "actors"."id" = "castings"."actor_id" WHERE (actors.name IN ('Ben Affleck','Matt Damon')) GROUP BY "movies"."id" HAVING (COUNT(*) = 2)[0m
+  [1m[36mMovie Load (0.8ms)[0m  [1m[34mSELECT "movies"."title", "movies"."id" FROM "movies" INNER JOIN "castings" ON "castings"."movie_id" = "movies"."id" INNER JOIN "actors" ON "actors"."id" = "castings"."actor_id" WHERE (actors.name IN ('Geena Davis','Susan Sarandon')) GROUP BY "movies"."id" HAVING (COUNT(*) = 2)[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mMovie Load (1.1ms)[0m  [1m[34mSELECT "movies"."title", "movies"."id" FROM "movies" INNER JOIN "castings" ON "castings"."movie_id" = "movies"."id" INNER JOIN "actors" ON "actors"."id" = "castings"."actor_id" WHERE (actors.name IN ('Ben Affleck','Matt Damon')) GROUP BY "movies"."id" HAVING (COUNT(*) = 2)[0m
+  [1m[36mMovie Load (0.7ms)[0m  [1m[34mSELECT "movies"."title", "movies"."id" FROM "movies" INNER JOIN "castings" ON "castings"."movie_id" = "movies"."id" INNER JOIN "actors" ON "actors"."id" = "castings"."actor_id" WHERE (actors.name IN ('Geena Davis','Susan Sarandon')) GROUP BY "movies"."id" HAVING (COUNT(*) = 2)[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mMovie Load (1.5ms)[0m  [1m[34mSELECT CAST(floor(yr/10)*10 as integer) decade  FROM "movies" GROUP BY decade ORDER BY AVG(score) desc LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mMovie Load (1.1ms)[0m  [1m[34mSELECT CAST(floor(yr/10)*10 as integer) decade  FROM "movies" GROUP BY decade ORDER BY AVG(score) desc LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mMovie Pluck (1.3ms)[0m  [1m[34mSELECT "movies"."id" FROM "movies" INNER JOIN "castings" ON "castings"."movie_id" = "movies"."id" INNER JOIN "actors" ON "actors"."id" = "castings"."actor_id" WHERE (actors.name = 'Julie Andrews')[0m
+  [1m[36mActor Pluck (1.1ms)[0m  [1m[34mSELECT DISTINCT "actors"."name" FROM "actors" INNER JOIN "castings" ON "castings"."actor_id" = "actors"."id" INNER JOIN "movies" ON "movies"."id" = "castings"."movie_id" WHERE (movies.id IN (171,1233,1249)) AND "actors"."name" != $1[0m  [["name", "Julie Andrews"]]
+  [1m[36mMovie Pluck (0.6ms)[0m  [1m[34mSELECT "movies"."id" FROM "movies" INNER JOIN "castings" ON "castings"."movie_id" = "movies"."id" INNER JOIN "actors" ON "actors"."id" = "castings"."actor_id" WHERE (actors.name = 'Humphrey Bogart')[0m
+  [1m[36mActor Pluck (1.2ms)[0m  [1m[34mSELECT DISTINCT "actors"."name" FROM "actors" INNER JOIN "castings" ON "castings"."actor_id" = "actors"."id" INNER JOIN "movies" ON "movies"."id" = "castings"."movie_id" WHERE (movies.id IN (27,299,565,584,1076,1246)) AND "actors"."name" != $1[0m  [["name", "Humphrey Bogart"]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mMovie Pluck (0.6ms)[0m  [1m[34mSELECT "movies"."id" FROM "movies" INNER JOIN "castings" ON "castings"."movie_id" = "movies"."id" INNER JOIN "actors" ON "actors"."id" = "castings"."actor_id" WHERE (actors.name = 'Julie Andrews')[0m
+  [1m[36mActor Pluck (0.8ms)[0m  [1m[34mSELECT DISTINCT "actors"."name" FROM "actors" INNER JOIN "castings" ON "castings"."actor_id" = "actors"."id" INNER JOIN "movies" ON "movies"."id" = "castings"."movie_id" WHERE (movies.id IN (171,1233,1249)) AND "actors"."name" != $1[0m  [["name", "Julie Andrews"]]
+  [1m[36mMovie Pluck (0.6ms)[0m  [1m[34mSELECT "movies"."id" FROM "movies" INNER JOIN "castings" ON "castings"."movie_id" = "movies"."id" INNER JOIN "actors" ON "actors"."id" = "castings"."actor_id" WHERE (actors.name = 'Humphrey Bogart')[0m
+  [1m[36mActor Pluck (1.0ms)[0m  [1m[34mSELECT DISTINCT "actors"."name" FROM "actors" INNER JOIN "castings" ON "castings"."actor_id" = "actors"."id" INNER JOIN "movies" ON "movies"."id" = "castings"."movie_id" WHERE (movies.id IN (27,299,565,584,1076,1246)) AND "actors"."name" != $1[0m  [["name", "Humphrey Bogart"]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActor Pluck (10.0ms)[0m  [1m[34mSELECT "actors"."id" FROM "actors" LEFT OUTER JOIN "castings" ON "castings"."actor_id" = "actors"."id" LEFT OUTER JOIN "movies" ON "movies"."id" = "castings"."movie_id" WHERE (movies.id is NULL) GROUP BY "actors"."id"[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActor Pluck (10.9ms)[0m  [1m[34mSELECT "actors"."id" FROM "actors" LEFT OUTER JOIN "castings" ON "castings"."actor_id" = "actors"."id" LEFT OUTER JOIN "movies" ON "movies"."id" = "castings"."movie_id" WHERE (movies.id is NULL) GROUP BY "actors"."id"[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActor Load (0.2ms)[0m  [1m[34mSELECT "actors".* FROM "actors" WHERE "actors"."name" = $1 LIMIT $2[0m  [["name", "Sylvester Stallone"], ["LIMIT", 1]]
+  [1m[36mMovie Load (0.8ms)[0m  [1m[34mSELECT "movies".* FROM "movies" INNER JOIN "castings" ON "movies"."id" = "castings"."movie_id" WHERE "castings"."actor_id" = $1[0m  [["actor_id", 5]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mActiveRecord::InternalMetadata Pluck (0.5ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "schema_sha1"], ["LIMIT", 1]]
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mMovie Load (3.8ms)[0m  [1m[34mSELECT "movies"."title", "movies"."id" FROM "movies" INNER JOIN "castings" ON "castings"."movie_id" = "movies"."id" INNER JOIN "actors" ON "actors"."id" = "castings"."actor_id" WHERE (actors.name IN ('Ben Affleck','Matt Damon')) GROUP BY "movies"."id" HAVING (COUNT(*) = 2)[0m
+  [1m[36mMovie Load (1.5ms)[0m  [1m[34mSELECT "movies"."title", "movies"."id" FROM "movies" INNER JOIN "castings" ON "castings"."movie_id" = "movies"."id" INNER JOIN "actors" ON "actors"."id" = "castings"."actor_id" WHERE (actors.name IN ('Geena Davis','Susan Sarandon')) GROUP BY "movies"."id" HAVING (COUNT(*) = 2)[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mMovie Load (0.7ms)[0m  [1m[34mSELECT "movies"."title", "movies"."id" FROM "movies" INNER JOIN "castings" ON "castings"."movie_id" = "movies"."id" INNER JOIN "actors" ON "actors"."id" = "castings"."actor_id" WHERE (actors.name IN ('Ben Affleck','Matt Damon')) GROUP BY "movies"."id" HAVING (COUNT(*) = 2)[0m
+  [1m[36mMovie Load (0.9ms)[0m  [1m[34mSELECT "movies"."title", "movies"."id" FROM "movies" INNER JOIN "castings" ON "castings"."movie_id" = "movies"."id" INNER JOIN "actors" ON "actors"."id" = "castings"."actor_id" WHERE (actors.name IN ('Geena Davis','Susan Sarandon')) GROUP BY "movies"."id" HAVING (COUNT(*) = 2)[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mMovie Load (1.9ms)[0m  [1m[34mSELECT CAST(floor(yr/10)*10 as integer) decade  FROM "movies" GROUP BY decade ORDER BY AVG(score) desc LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mMovie Load (1.1ms)[0m  [1m[34mSELECT CAST(floor(yr/10)*10 as integer) decade  FROM "movies" GROUP BY decade ORDER BY AVG(score) desc LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mMovie Pluck (1.1ms)[0m  [1m[34mSELECT "movies"."id" FROM "movies" INNER JOIN "castings" ON "castings"."movie_id" = "movies"."id" INNER JOIN "actors" ON "actors"."id" = "castings"."actor_id" WHERE (actors.name = 'Julie Andrews')[0m
+  [1m[36mActor Pluck (1.9ms)[0m  [1m[34mSELECT DISTINCT "actors"."name" FROM "actors" INNER JOIN "castings" ON "castings"."actor_id" = "actors"."id" INNER JOIN "movies" ON "movies"."id" = "castings"."movie_id" WHERE (movies.id IN (171,1233,1249)) AND "actors"."name" != $1[0m  [["name", "Julie Andrews"]]
+  [1m[36mMovie Pluck (2.6ms)[0m  [1m[34mSELECT "movies"."id" FROM "movies" INNER JOIN "castings" ON "castings"."movie_id" = "movies"."id" INNER JOIN "actors" ON "actors"."id" = "castings"."actor_id" WHERE (actors.name = 'Humphrey Bogart')[0m
+  [1m[36mActor Pluck (2.2ms)[0m  [1m[34mSELECT DISTINCT "actors"."name" FROM "actors" INNER JOIN "castings" ON "castings"."actor_id" = "actors"."id" INNER JOIN "movies" ON "movies"."id" = "castings"."movie_id" WHERE (movies.id IN (27,299,565,584,1076,1246)) AND "actors"."name" != $1[0m  [["name", "Humphrey Bogart"]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mMovie Pluck (2.2ms)[0m  [1m[34mSELECT "movies"."id" FROM "movies" INNER JOIN "castings" ON "castings"."movie_id" = "movies"."id" INNER JOIN "actors" ON "actors"."id" = "castings"."actor_id" WHERE (actors.name = 'Julie Andrews')[0m
+  [1m[36mActor Pluck (0.9ms)[0m  [1m[34mSELECT DISTINCT "actors"."name" FROM "actors" INNER JOIN "castings" ON "castings"."actor_id" = "actors"."id" INNER JOIN "movies" ON "movies"."id" = "castings"."movie_id" WHERE (movies.id IN (171,1233,1249)) AND "actors"."name" != $1[0m  [["name", "Julie Andrews"]]
+  [1m[36mMovie Pluck (0.5ms)[0m  [1m[34mSELECT "movies"."id" FROM "movies" INNER JOIN "castings" ON "castings"."movie_id" = "movies"."id" INNER JOIN "actors" ON "actors"."id" = "castings"."actor_id" WHERE (actors.name = 'Humphrey Bogart')[0m
+  [1m[36mActor Pluck (0.9ms)[0m  [1m[34mSELECT DISTINCT "actors"."name" FROM "actors" INNER JOIN "castings" ON "castings"."actor_id" = "actors"."id" INNER JOIN "movies" ON "movies"."id" = "castings"."movie_id" WHERE (movies.id IN (27,299,565,584,1076,1246)) AND "actors"."name" != $1[0m  [["name", "Humphrey Bogart"]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActor Pluck (10.7ms)[0m  [1m[34mSELECT "actors"."id" FROM "actors" LEFT OUTER JOIN "castings" ON "castings"."actor_id" = "actors"."id" LEFT OUTER JOIN "movies" ON "movies"."id" = "castings"."movie_id" WHERE (movies.id is NULL) GROUP BY "actors"."id"[0m
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActor Pluck (11.1ms)[0m  [1m[34mSELECT "actors"."id" FROM "actors" LEFT OUTER JOIN "castings" ON "castings"."actor_id" = "actors"."id" LEFT OUTER JOIN "movies" ON "movies"."id" = "castings"."movie_id" WHERE (movies.id is NULL) GROUP BY "actors"."id"[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActor Load (0.3ms)[0m  [1m[34mSELECT "actors".* FROM "actors" WHERE "actors"."name" = $1 LIMIT $2[0m  [["name", "Sylvester Stallone"], ["LIMIT", 1]]
+  [1m[36mMovie Load (0.7ms)[0m  [1m[34mSELECT "movies".* FROM "movies" INNER JOIN "castings" ON "movies"."id" = "castings"."movie_id" WHERE "castings"."actor_id" = $1[0m  [["actor_id", 5]]
+  [1m[36mMovie Load (7.5ms)[0m  [1m[34mSELECT "movies".* FROM "movies" INNER JOIN "castings" ON "castings"."movie_id" = "movies"."id" INNER JOIN "actors" ON "actors"."id" = "castings"."actor_id" WHERE (name ILIKE '%l%e%s%t%e%r% %s%t%o%n%e%')[0m
+  [1m[36mActor Load (0.2ms)[0m  [1m[34mSELECT "actors".* FROM "actors" WHERE "actors"."name" = $1 LIMIT $2[0m  [["name", "Mel Brooks"], ["LIMIT", 1]]
+  [1m[36mMovie Load (0.3ms)[0m  [1m[34mSELECT "movies".* FROM "movies" INNER JOIN "castings" ON "movies"."id" = "castings"."movie_id" WHERE "castings"."actor_id" = $1[0m  [["actor_id", 29]]
+  [1m[36mMovie Load (7.9ms)[0m  [1m[34mSELECT "movies".* FROM "movies" INNER JOIN "castings" ON "castings"."movie_id" = "movies"."id" INNER JOIN "actors" ON "actors"."id" = "castings"."actor_id" WHERE (name ILIKE '%m%e% %b%o%o%k%')[0m
+  [1m[36mActor Load (0.3ms)[0m  [1m[34mSELECT "actors".* FROM "actors" WHERE "actors"."name" = $1 LIMIT $2[0m  [["name", "Meryl Streep"], ["LIMIT", 1]]
+  [1m[36mMovie Load (5.0ms)[0m  [1m[34mSELECT "movies".* FROM "movies" INNER JOIN "castings" ON "movies"."id" = "castings"."movie_id" WHERE "castings"."actor_id" = $1[0m  [["actor_id", 63]]
+  [1m[36mMovie Load (8.8ms)[0m  [1m[34mSELECT "movies".* FROM "movies" INNER JOIN "castings" ON "castings"."movie_id" = "movies"."id" INNER JOIN "actors" ON "actors"."id" = "castings"."actor_id" WHERE (name ILIKE '%e%r%y% %s%t%e%e%p%')[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mMovie Load (9.6ms)[0m  [1m[34mSELECT "movies".* FROM "movies" INNER JOIN "castings" ON "castings"."movie_id" = "movies"."id" INNER JOIN "actors" ON "actors"."id" = "castings"."actor_id" WHERE (name ILIKE '%l%e%s%t%e%r% %s%t%o%n%e%')[0m
+  [1m[36mMovie Load (6.5ms)[0m  [1m[34mSELECT "movies".* FROM "movies" INNER JOIN "castings" ON "castings"."movie_id" = "movies"."id" INNER JOIN "actors" ON "actors"."id" = "castings"."actor_id" WHERE (name ILIKE '%m%e% %b%o%o%k%')[0m
+  [1m[36mMovie Load (8.3ms)[0m  [1m[34mSELECT "movies".* FROM "movies" INNER JOIN "castings" ON "castings"."movie_id" = "movies"."id" INNER JOIN "actors" ON "actors"."id" = "castings"."actor_id" WHERE (name ILIKE '%e%r%y% %s%t%e%e%p%')[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK[0m
